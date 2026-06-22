@@ -1,0 +1,110 @@
+name: CI — Tripwires + Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# All jobs run in Sydney region where possible.
+# Vercel and Supabase region enforcement is checked by the au-region tripwire, not by the runner.
+
+jobs:
+  # ─── Tripwires ────────────────────────────────────────────────────────────────
+  # These must pass before any feature work is merged. They enforce CONTRACT.md invariants.
+  tripwires:
+    name: Tripwires (CONTRACT.md guardrails)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: no-tracker — zero analytics/tracker packages
+        run: npx vitest run tests/tripwires/no-tracker.test.ts
+
+      - name: no-PII-field — no banned columns in migrations
+        run: npx vitest run tests/tripwires/no-pii-field.test.ts
+
+      - name: rls-on — all user-data tables have RLS + policies
+        run: npx vitest run tests/tripwires/rls-on.test.ts
+
+      - name: au-region — Supabase pinned to ap-southeast-2
+        run: npx vitest run tests/tripwires/au-region.test.ts
+
+      - name: no-runtime-ai — no LLM imports in student path
+        run: npx vitest run tests/tripwires/no-runtime-ai.test.ts
+
+      - name: content-gate — verified questions, correct filenames, required fields
+        run: npx vitest run tests/tripwires/content-gate.test.ts
+
+      - name: hard-delete — cascade schema, no soft-delete
+        run: npx vitest run tests/tripwires/hard-delete.test.ts
+
+  # ─── Unit tests ───────────────────────────────────────────────────────────────
+  unit:
+    name: Unit tests
+    runs-on: ubuntu-latest
+    needs: tripwires
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Run unit tests
+        run: npx vitest run tests/unit
+
+  # ─── Type check ───────────────────────────────────────────────────────────────
+  typecheck:
+    name: TypeScript
+    runs-on: ubuntu-latest
+    needs: tripwires
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+
+  # ─── Accessibility ────────────────────────────────────────────────────────────
+  # axe checks against key screens. Regressions fail the build (PLAN.md → Tripwires).
+  # Activated once src/ has runnable pages — placeholder until then.
+  a11y:
+    name: Accessibility (axe)
+    runs-on: ubuntu-latest
+    needs: [tripwires, unit]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: https://placeholder.supabase.co
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: placeholder
+      - name: Run axe accessibility checks
+        # Playwright + axe-core against built app
+        # TODO: expand to cover all key screens once Phase 1 is complete
+        run: echo "axe placeholder — activate once pages exist"
+
+  # ─── Deliberately-bad PR test (local only — documents how to verify tripwires) ─
+  # To verify the tripwires FAIL a bad change, run locally:
+  #   echo '{ "dependencies": { "mixpanel-browser": "^2" } }' > /tmp/bad-pkg.json
+  #   cp /tmp/bad-pkg.json package.json && npx vitest run tests/tripwires/no-tracker.test.ts
+  #   # → should FAIL
+  #   git checkout package.json  # restore

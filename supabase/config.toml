@@ -1,0 +1,20 @@
+# Supabase project config
+# AU-region tripwire checks this file for ap-southeast-2
+
+[api]
+# Region MUST be Sydney — CONTRACT.md §2, compliance.md APP 8
+# This value is also checked by the au-region tripwire test.
+project_ref = ""   # fill in after creating the project in Supabase dashboard
+
+[db]
+# All user data stored in Australia (ap-southeast-2)
+region = "ap-southeast-2"
+
+[auth]
+site_url = "http://localhost:3000"
+# Students do NOT get auth.users rows — only teachers and parents do.
+# See architecture.md → Auth model.
+
+[storage]
+# No user-uploaded content in V1.
+enabled = false

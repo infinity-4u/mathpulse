@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js
+.next/
+out/
+
+# Build
+dist/
+build/
+
+# Environment — NEVER commit real secrets
+.env
+.env.local
+.env.*.local
+
+# Supabase local
+supabase/.branches
+supabase/.temp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Test output
+coverage/
+.nyc_output/
+
+# Logs — no PII must appear in these anyway (CONTRACT.md §2)
+*.log
+logs/
+from_claude.zip
+from_claude_unpacked/

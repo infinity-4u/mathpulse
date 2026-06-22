@@ -1,0 +1,163 @@
+{
+  "code": "AC9M7N01",
+  "year": 7,
+  "strand": "Number and Algebra",
+  "substrand": "Number",
+  "acara_description": "Describe the relationship between perfect square numbers and square roots, and use squares of numbers and square roots of perfect square numbers to solve problems.",
+  "verified": true,
+  "schema_version": 2,
+  "questions": [
+    {
+      "id": "AC9M7N01-001",
+      "type": "multiple_choice",
+      "stem": "What is \\(\\sqrt{144}\\)?",
+      "options": ["10", "11", "12", "14"],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "12"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "A square root asks: which number multiplied by itself gives 144?",
+          "Try 12 × 12. Work it out step by step: 12 × 10 = 120, then 12 × 2 = 24, so 12 × 12 = ?",
+          "12 × 12 = 144. So \\(\\sqrt{144}\\) = ?"
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_equals_half_value" },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Halving 144 gives 72 — but that is not a square root. A square root asks: which number times itself equals 144? Halving is a different operation."
+        },
+        {
+          "id": "CE002",
+          "type": "careless",
+          "detect": { "rule": "answer_matches", "params": { "value": "14" } },
+          "repair_path": ["contextual_hint", "check_arithmetic"],
+          "contextual_hint": "Close! But check: does 14 × 14 = 144? Try the multiplication carefully."
+        }
+      ],
+      "worked_solution": "We need a number \\(n\\) such that \\(n \\times n = 144\\).\n\nTesting systematically:\n- \\(10 \\times 10 = 100\\) (too small)\n- \\(11 \\times 11 = 121\\) (too small)\n- \\(12 \\times 12 = 144\\) ✓\n\nTherefore \\(\\sqrt{144} = 12\\)."
+    },
+    {
+      "id": "AC9M7N01-002",
+      "type": "numeric",
+      "stem": "What is \\(9^2\\)?",
+      "answer": {
+        "type": "numeric",
+        "value": 81,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "\\(9^2\\) means 9 multiplied by itself, not 9 multiplied by 2.",
+          "Calculate 9 × 9. Try: 9 × 9 = 9 × 10 − 9 = ?",
+          "9 × 10 = 90, then 90 − 9 = 81."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_equals_2x_value" },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "\\(9^2\\) does not mean 9 × 2. The small 2 (called an exponent) tells you to multiply 9 by itself: 9 × 9."
+        }
+      ],
+      "worked_solution": "\\(9^2 = 9 \\times 9\\)\n\nUsing a helpful strategy: \\(9 \\times 9 = 9 \\times 10 - 9 = 90 - 9 = 81\\)\n\nTherefore \\(9^2 = 81\\)."
+    },
+    {
+      "id": "AC9M7N01-003",
+      "type": "multiple_choice",
+      "stem": "Which of the following is a perfect square?",
+      "options": ["50", "64", "72", "90"],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "64"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "A perfect square is the result of multiplying a whole number by itself. Check each option.",
+          "Try to find a whole number that, when squared, gives each option. Does any whole number square to 50? To 64?",
+          "8 × 8 = 64. So 64 is a perfect square (\\(8^2 = 64\\))."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "50" } },
+          "repair_path": ["contextual_hint", "check_arithmetic"],
+          "contextual_hint": "Check: is there a whole number whose square is 50? Try 7 × 7 = 49 and 8 × 8 = 64. Neither gives 50, so 50 is not a perfect square."
+        }
+      ],
+      "worked_solution": "A perfect square is a number equal to \\(n^2\\) for some whole number \\(n\\).\n\nChecking each option:\n- 50: \\(\\sqrt{50} \\approx 7.07\\) — not a whole number ✗\n- 64: \\(\\sqrt{64} = 8\\) — whole number ✓\n- 72: \\(\\sqrt{72} \\approx 8.49\\) — not a whole number ✗\n- 90: \\(\\sqrt{90} \\approx 9.49\\) — not a whole number ✗\n\nAnswer: **64** (since \\(8^2 = 64\\))."
+    },
+    {
+      "id": "AC9M7N01-004",
+      "type": "numeric",
+      "stem": "A square garden has an area of 225 m². What is the side length of the garden in metres?",
+      "answer": {
+        "type": "numeric",
+        "value": 15,
+        "tolerance": 0,
+        "units": "m"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "For a square, Area = side length × side length. You need to find the side length, so ask: what number multiplied by itself equals 225?",
+          "You need \\(\\sqrt{225}\\). Think about perfect squares near 225. What is \\(15^2\\)?",
+          "\\(15 \\times 15 = 225\\). So \\(\\sqrt{225} = 15\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_equals_half_value" },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Halving the area gives 112.5 — but that is not how you find a side length. For a square, side = √Area, not Area ÷ 2."
+        },
+        {
+          "id": "CE002",
+          "type": "conceptual",
+          "detect": { "rule": "near_numeric", "params": { "value": 56.25, "tolerance_factor": 0.02 } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Dividing by 4 gives the perimeter relationship, not the side length. For a square, side = √Area."
+        }
+      ],
+      "worked_solution": "For a square: \\(\\text{Area} = \\text{side}^2\\)\n\nSo: \\(\\text{side} = \\sqrt{\\text{Area}} = \\sqrt{225}\\)\n\nFinding \\(\\sqrt{225}\\):\n- \\(10^2 = 100\\) (too small)\n- \\(15^2 = 225\\) ✓\n\nThe side length is **15 m**."
+    },
+    {
+      "id": "AC9M7N01-005",
+      "type": "multiple_choice",
+      "stem": "Which statement about \\(\\sqrt{36}\\) is correct?",
+      "options": [
+        "\\(\\sqrt{36} = 18\\) because 36 ÷ 2 = 18",
+        "\\(\\sqrt{36} = 6\\) because 6 × 6 = 36",
+        "\\(\\sqrt{36} = 9\\) because 9 × 4 = 36",
+        "\\(\\sqrt{36} = 6\\) because 6 × 4 = 24"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(\\sqrt{36} = 6\\) because 6 × 6 = 36"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "The square root of a number n is the value that, when multiplied by itself, gives n. Which option shows that correctly?",
+          "You need x such that x × x = 36. Check option B: does 6 × 6 = 36?",
+          "6 × 6 = 36. ✓ Option B gives the correct value AND the correct reasoning."
+        ]
+      },
+      "common_errors": [],
+      "worked_solution": "\\(\\sqrt{36}\\) means: find \\(x\\) where \\(x \\times x = 36\\).\n\n\\(6 \\times 6 = 36\\) ✓\n\nSo \\(\\sqrt{36} = 6\\).\n\nThe correct statement is: **\\(\\sqrt{36} = 6\\) because 6 × 6 = 36**.\n\nThe other options use incorrect methods (halving, or finding a different factor pair)."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+# CODEOWNERS — scope tripwire
+# These paths require human review before merge (CONTRACT.md §6, PLAN.md → Tripwires).
+# In GitHub: Settings → Branches → protect main → Require review from code owners.
+
+# Auth, DB schema, RLS — scope-locked
+/supabase/                          @husain
+/supabase/migrations/               @husain
+/src/lib/auth*                      @husain
+/src/app/api/auth/                  @husain
+
+# Privacy and consent flows
+/src/app/register/                  @husain
+/src/app/api/delete/                @husain
+/docs/privacy-policy*.md            @husain
+/docs/dpa-template*.md              @husain
+/docs/compliance.md                 @husain
+
+# Data residency config
+/.env.example                       @husain
+/next.config.ts                     @husain
+
+# Content verification gate
+/content/                           @husain
+/tests/tripwires/content-gate*      @husain
+
+# Contract and plan
+/docs/CONTRACT.md                   @husain
+/docs/PLAN.md                       @husain
+/CLAUDE.md                          @husain

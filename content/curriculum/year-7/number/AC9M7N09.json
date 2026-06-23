@@ -1,0 +1,218 @@
+{
+  "code": "AC9M7N09",
+  "year": 7,
+  "strand": "Number",
+  "substrand": "Ratios",
+  "acara_description": "Recognise and use ratios to compare quantities; solve ratio problems in practical contexts.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7N09-001",
+      "type": "multiple_choice",
+      "stem": "Simplify the ratio 6:10.",
+      "options": [
+        "3:5",
+        "2:3",
+        "1:2",
+        "6:10"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "3:5"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Divide both parts by their GCD.",
+          "GCD of 6 and 10 is 2.",
+          "6÷2 : 10÷2 = 3 : 5."
+        ]
+      },
+      "worked_solution": "6:10 = 3:5 (divide both by 2)."
+    },
+    {
+      "id": "AC9M7N09-002",
+      "type": "multiple_choice",
+      "stem": "Simplify the ratio 8:12.",
+      "options": [
+        "4:6",
+        "3:4",
+        "2:3",
+        "1:3"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "2:3"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "GCD of 8 and 12 is 4.",
+          "8÷4 : 12÷4 = 2 : 3.",
+          "Check: 2+3=5 parts total."
+        ]
+      },
+      "worked_solution": "8:12 = 2:3 (divide both by 4)."
+    },
+    {
+      "id": "AC9M7N09-003",
+      "type": "numeric",
+      "stem": "Share $40 in the ratio 3:5. How many dollars does the first person receive?",
+      "answer": {
+        "type": "numeric",
+        "value": 15,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Total parts = 3 + 5 = 8.",
+          "Each part = $40 ÷ 8 = $5.",
+          "First person gets 3 parts: 3 × $5 = ?"
+        ]
+      },
+      "worked_solution": "Total = 8 parts. Each part = $40 ÷ 8 = $5. First: 3 × $5 = $15."
+    },
+    {
+      "id": "AC9M7N09-004",
+      "type": "numeric",
+      "stem": "Share $72 in the ratio 1:2. How many dollars does the first person receive?",
+      "answer": {
+        "type": "numeric",
+        "value": 24,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Total parts = 1 + 2 = 3.",
+          "Each part = $72 ÷ 3 = $24.",
+          "First person gets 1 part."
+        ]
+      },
+      "worked_solution": "Total = 3 parts. Each = $72 ÷ 3 = $24. First gets 1 × $24 = $24."
+    },
+    {
+      "id": "AC9M7N09-005",
+      "type": "numeric",
+      "stem": "If the ratio 2:3 = 8:?, find the missing value.",
+      "answer": {
+        "type": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "What do you multiply 2 by to get 8?",
+          "2 × 4 = 8, so multiply the other side by 4 too.",
+          "3 × 4 = ?"
+        ]
+      },
+      "worked_solution": "2:3 = 8:12 (multiply both by 4)."
+    },
+    {
+      "id": "AC9M7N09-006",
+      "type": "numeric",
+      "stem": "A recipe needs 3 eggs to make 12 cookies. How many eggs are needed for 36 cookies?",
+      "answer": {
+        "type": "numeric",
+        "value": 9,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Find how many times larger 36 is compared to 12.",
+          "36 ÷ 12 = 3 times as many.",
+          "Multiply the eggs by 3: 3 × 3 = ?"
+        ]
+      },
+      "worked_solution": "Scale factor = 36 ÷ 12 = 3. Eggs = 3 × 3 = 9."
+    },
+    {
+      "id": "AC9M7N09-007",
+      "type": "multiple_choice",
+      "stem": "Which ratio is equivalent to 2:5?",
+      "options": [
+        "3:7",
+        "4:10",
+        "6:13",
+        "4:9"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "4:10"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Multiply both parts of 2:5 by the same number.",
+          "2×2 = 4 and 5×2 = 10.",
+          "4:10 equals 2:5."
+        ]
+      },
+      "worked_solution": "2:5 = 4:10 (multiply both by 2)."
+    },
+    {
+      "id": "AC9M7N09-008",
+      "type": "numeric",
+      "stem": "Paint is mixed blue to yellow in ratio 3:2. If you use 15 mL of blue, how many mL of yellow is needed?",
+      "answer": {
+        "type": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Blue : Yellow = 3 : 2.",
+          "Blue = 15 mL. Scale factor = 15 ÷ 3 = 5.",
+          "Yellow = 2 × 5 = ?"
+        ]
+      },
+      "worked_solution": "Scale factor: 15 ÷ 3 = 5. Yellow = 2 × 5 = 10 mL."
+    },
+    {
+      "id": "AC9M7N09-009",
+      "type": "numeric",
+      "stem": "In a class the ratio of boys to girls is 2:3. There are 30 students. How many boys are there?",
+      "answer": {
+        "type": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Total parts = 2 + 3 = 5.",
+          "Each part = 30 ÷ 5 = 6 students.",
+          "Boys = 2 parts = 2 × 6 = ?"
+        ]
+      },
+      "worked_solution": "Total = 5 parts. Each part = 6. Boys = 2 × 6 = 12."
+    },
+    {
+      "id": "AC9M7N09-010",
+      "type": "numeric",
+      "stem": "The ratio 3:? = 12:20. Find the missing value.",
+      "answer": {
+        "type": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "What do you multiply 3 by to get 12?",
+          "3 × 4 = 12, so divide the other side by 4.",
+          "20 ÷ 4 = ?"
+        ]
+      },
+      "worked_solution": "3:? = 12:20. Scale factor = 12÷3=4. Missing = 20÷4 = 5."
+    }
+  ]
+}

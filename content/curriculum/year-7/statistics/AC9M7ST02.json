@@ -1,0 +1,238 @@
+{
+  "code": "AC9M7ST02",
+  "year": 7,
+  "strand": "Statistics",
+  "substrand": "Data Displays",
+  "acara_description": "Create dot plots and stem-and-leaf plots; describe and compare distributions by referring to shape, centre and spread.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7ST02-001",
+      "type": "multiple_choice",
+      "stem": "In a stem-and-leaf plot, the stem '3' with leaves '2, 4, 8' represents which values?",
+      "options": [
+        "3, 2, 4, 8",
+        "32, 34, 38",
+        "2, 4, 8",
+        "30, 40, 80"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "32, 34, 38"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Stem-and-leaf: the stem is the tens digit, the leaf is the units digit.",
+          "Stem 3, leaves 2, 4, 8 → 32, 34, 38.",
+          "32, 34, 38."
+        ]
+      },
+      "worked_solution": "Stem 3 | leaves 2, 4, 8 → values 32, 34, 38."
+    },
+    {
+      "id": "AC9M7ST02-002",
+      "type": "multiple_choice",
+      "stem": "A dot plot shows dots above the values 3, 4, 4, 5, 5, 5, 6. What is the mode?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "3"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "5"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "The mode is the value with the most dots.",
+          "5 has three dots — more than any other.",
+          "Mode = 5."
+        ]
+      },
+      "worked_solution": "5 has 3 dots (most frequent). Mode = 5."
+    },
+    {
+      "id": "AC9M7ST02-003",
+      "type": "numeric",
+      "stem": "A stem-and-leaf plot shows: 2|3,5,7 and 3|1,4. How many data values are there?",
+      "answer": {
+        "type": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Count all the leaves.",
+          "Stem 2: leaves 3, 5, 7 → 3 values. Stem 3: leaves 1, 4 → 2 values.",
+          "3 + 2 = 5."
+        ]
+      },
+      "worked_solution": "3 leaves for stem 2 + 2 leaves for stem 3 = 5 values."
+    },
+    {
+      "id": "AC9M7ST02-004",
+      "type": "numeric",
+      "stem": "From the dot plot with values (one dot each): 3, 4, 4, 5, 5, 5, 6, 7, find the median.",
+      "answer": {
+        "type": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "There are 8 values. Order them.",
+          "Ordered: 3, 4, 4, 5, 5, 5, 6, 7. With 8 values, median = average of 4th and 5th.",
+          "4th = 5, 5th = 5. Average = (5+5)/2 = 5."
+        ]
+      },
+      "worked_solution": "8 values: median = average of 4th and 5th = (5+5)/2 = 5."
+    },
+    {
+      "id": "AC9M7ST02-005",
+      "type": "multiple_choice",
+      "stem": "What is a stem-and-leaf plot best used for?",
+      "options": [
+        "Showing proportions in a whole",
+        "Displaying small to medium numerical datasets",
+        "Comparing categorical data",
+        "Showing data over time"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Displaying small to medium numerical datasets"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Stem-and-leaf plots organise numerical data while preserving individual values.",
+          "They work well when there are roughly 10–50 data points.",
+          "They're not suitable for very large datasets."
+        ]
+      },
+      "worked_solution": "Stem-and-leaf plots are best for displaying and analysing small to medium numerical datasets."
+    },
+    {
+      "id": "AC9M7ST02-006",
+      "type": "multiple_choice",
+      "stem": "In a dot plot, what does each dot represent?",
+      "options": [
+        "The mean",
+        "The median",
+        "One data value",
+        "A frequency of 10"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "One data value"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Every individual data point gets one dot placed above its value.",
+          "So 3 dots above 5 means the value 5 occurs 3 times.",
+          "Each dot = one data value."
+        ]
+      },
+      "worked_solution": "In a dot plot, each dot represents one individual data value."
+    },
+    {
+      "id": "AC9M7ST02-007",
+      "type": "numeric",
+      "stem": "From stem-and-leaf: 2|4,6 and 3|0,2,8. Find the mean.",
+      "answer": {
+        "type": "numeric",
+        "value": 30,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Values are: 24, 26, 30, 32, 38.",
+          "Sum = 24+26+30+32+38 = 150.",
+          "Mean = 150 ÷ 5 = 30."
+        ]
+      },
+      "worked_solution": "Values: 24, 26, 30, 32, 38. Sum = 150. Mean = 150÷5 = 30."
+    },
+    {
+      "id": "AC9M7ST02-008",
+      "type": "multiple_choice",
+      "stem": "A dataset is {1, 2, 3, 4, 5, 100}. Which statement is true about the mean and median?",
+      "options": [
+        "Mean and median are close",
+        "Mean is much higher than median",
+        "Median is much higher than mean",
+        "Mean and median are both 100"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Mean is much higher than median"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "The outlier 100 pulls the mean upward.",
+          "Mean = (1+2+3+4+5+100)/6 = 115/6 ≈ 19.2. Median = (3+4)/2 = 3.5.",
+          "Mean ≈ 19.2, median = 3.5. Mean is much higher."
+        ]
+      },
+      "worked_solution": "Outlier pulls mean high: mean ≈ 19.2. Median = 3.5. Mean >> median."
+    },
+    {
+      "id": "AC9M7ST02-009",
+      "type": "multiple_choice",
+      "stem": "A back-to-back stem-and-leaf plot is useful for:",
+      "options": [
+        "Showing one dataset over time",
+        "Comparing two datasets side by side",
+        "Displaying categorical data",
+        "Showing proportions"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Comparing two datasets side by side"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Back-to-back means two sets of leaves on either side of the stems.",
+          "This allows visual comparison of two groups.",
+          "For example, compare heights of boys and girls."
+        ]
+      },
+      "worked_solution": "Back-to-back stem-and-leaf plots compare two datasets sharing the same stems."
+    },
+    {
+      "id": "AC9M7ST02-010",
+      "type": "multiple_choice",
+      "stem": "A dot plot is right-skewed (tail to the right). This means:",
+      "options": [
+        "Most data is on the right",
+        "Most data is clustered on the left with a few high values on the right",
+        "Mean equals median",
+        "The data is symmetric"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Most data is clustered on the left with a few high values on the right"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Right-skewed (positive skew) means the tail extends to the right.",
+          "Most data clusters at lower values; a few high outliers create the tail.",
+          "The mean is pulled right by the outliers, so mean > median."
+        ]
+      },
+      "worked_solution": "Right skew: cluster of data on left, long tail extending to higher values on right."
+    }
+  ]
+}

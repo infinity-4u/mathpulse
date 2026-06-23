@@ -1,0 +1,208 @@
+{
+  "code": "AC9M7A03",
+  "year": 7,
+  "strand": "Algebra",
+  "substrand": "Linear Equations",
+  "acara_description": "Solve one-variable linear equations and verify solutions by substitution.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7A03-001",
+      "type": "numeric",
+      "stem": "Solve \\(x+7=15\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "To find \\(x\\), undo the +7 by subtracting 7 from both sides.",
+          "\\(x+7-7=15-7\\).",
+          "\\(x=8\\)."
+        ]
+      },
+      "worked_solution": "\\(x+7=15\\;\\Rightarrow\\;x=15-7=8\\)."
+    },
+    {
+      "id": "AC9M7A03-002",
+      "type": "numeric",
+      "stem": "Solve \\(2x=14\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "To find \\(x\\), divide both sides by 2.",
+          "\\(\\frac{2x}{2}=\\frac{14}{2}\\).",
+          "\\(x=7\\)."
+        ]
+      },
+      "worked_solution": "\\(2x=14\\;\\Rightarrow\\;x=14\\div2=7\\)."
+    },
+    {
+      "id": "AC9M7A03-003",
+      "type": "numeric",
+      "stem": "Solve \\(x-4=11\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 15,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Add 4 to both sides to undo the subtraction.",
+          "\\(x-4+4=11+4\\).",
+          "\\(x=15\\)."
+        ]
+      },
+      "worked_solution": "\\(x-4=11\\;\\Rightarrow\\;x=11+4=15\\)."
+    },
+    {
+      "id": "AC9M7A03-004",
+      "type": "numeric",
+      "stem": "Solve \\(3x+2=11\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "First subtract 2 from both sides.",
+          "\\(3x=9\\). Now divide by 3.",
+          "\\(x=3\\). Check: \\(3(3)+2=9+2=11\\). ✓"
+        ]
+      },
+      "worked_solution": "\\(3x+2=11\\;\\Rightarrow\\;3x=9\\;\\Rightarrow\\;x=3\\)."
+    },
+    {
+      "id": "AC9M7A03-005",
+      "type": "numeric",
+      "stem": "Solve \\(\\frac{x}{5}=6\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 30,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Multiply both sides by 5 to undo the division.",
+          "\\(x=6\\times5\\).",
+          "\\(x=30\\)."
+        ]
+      },
+      "worked_solution": "\\(\\frac{x}{5}=6\\;\\Rightarrow\\;x=30\\)."
+    },
+    {
+      "id": "AC9M7A03-006",
+      "type": "numeric",
+      "stem": "Solve \\(4x-3=13\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Add 3 to both sides first.",
+          "\\(4x=16\\). Divide both sides by 4.",
+          "\\(x=4\\). Check: \\(4(4)-3=13\\). ✓"
+        ]
+      },
+      "worked_solution": "\\(4x-3=13\\;\\Rightarrow\\;4x=16\\;\\Rightarrow\\;x=4\\)."
+    },
+    {
+      "id": "AC9M7A03-007",
+      "type": "numeric",
+      "stem": "Solve \\(2x+7=19\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Subtract 7 from both sides.",
+          "\\(2x=12\\).",
+          "\\(x=6\\)."
+        ]
+      },
+      "worked_solution": "\\(2x+7=19\\;\\Rightarrow\\;2x=12\\;\\Rightarrow\\;x=6\\)."
+    },
+    {
+      "id": "AC9M7A03-008",
+      "type": "numeric",
+      "stem": "Solve \\(\\frac{x}{3}+2=5\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 9,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Subtract 2 from both sides: \\(\\frac{x}{3}=3\\).",
+          "Multiply both sides by 3.",
+          "\\(x=9\\). Check: \\(\\frac{9}{3}+2=3+2=5\\). ✓"
+        ]
+      },
+      "worked_solution": "\\(\\frac{x}{3}+2=5\\;\\Rightarrow\\;\\frac{x}{3}=3\\;\\Rightarrow\\;x=9\\)."
+    },
+    {
+      "id": "AC9M7A03-009",
+      "type": "numeric",
+      "stem": "Solve \\(3(x+2)=12\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Expand the brackets: \\(3x+6=12\\).",
+          "Subtract 6: \\(3x=6\\).",
+          "Divide by 3: \\(x=2\\). Check: \\(3(2+2)=12\\). ✓"
+        ]
+      },
+      "worked_solution": "\\(3(x+2)=12\\;\\Rightarrow\\;3x+6=12\\;\\Rightarrow\\;3x=6\\;\\Rightarrow\\;x=2\\)."
+    },
+    {
+      "id": "AC9M7A03-010",
+      "type": "multiple_choice",
+      "stem": "Which value of \\(x\\) satisfies \\(3x=18\\)?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "6"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Divide both sides by 3.",
+          "\\(x=18\\div3\\).",
+          "\\(x=6\\). Check: \\(3\\times6=18\\). ✓"
+        ]
+      },
+      "worked_solution": "\\(3x=18\\;\\Rightarrow\\;x=6\\)."
+    }
+  ]
+}

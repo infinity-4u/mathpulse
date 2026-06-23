@@ -1,0 +1,203 @@
+{
+  "code": "AC9M7N07",
+  "year": 7,
+  "strand": "Number",
+  "substrand": "Percentages",
+  "acara_description": "Find percentages of quantities and express one quantity as a percentage of another, with and without digital tools.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7N07-001",
+      "type": "numeric",
+      "stem": "Calculate 25% of 80.",
+      "answer": {
+        "type": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "25% means 25 per hundred, or one quarter.",
+          "25% of 80 = 80 ÷ 4.",
+          "80 ÷ 4 = 20."
+        ]
+      },
+      "worked_solution": "25% = ¼, so 25% of 80 = 80 ÷ 4 = 20."
+    },
+    {
+      "id": "AC9M7N07-002",
+      "type": "numeric",
+      "stem": "Calculate 10% of 150.",
+      "answer": {
+        "type": "numeric",
+        "value": 15,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "10% means one tenth.",
+          "10% of 150 = 150 ÷ 10.",
+          "150 ÷ 10 = 15."
+        ]
+      },
+      "worked_solution": "10% of 150 = 150 ÷ 10 = 15."
+    },
+    {
+      "id": "AC9M7N07-003",
+      "type": "numeric",
+      "stem": "Calculate 50% of 44.",
+      "answer": {
+        "type": "numeric",
+        "value": 22,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "50% means one half.",
+          "50% of 44 = 44 ÷ 2.",
+          "44 ÷ 2 = 22."
+        ]
+      },
+      "worked_solution": "50% of 44 = 22."
+    },
+    {
+      "id": "AC9M7N07-004",
+      "type": "numeric",
+      "stem": "Calculate 15% of 80.",
+      "answer": {
+        "type": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "10% of 80 = 8. Find 5% then add.",
+          "5% = half of 10% = 4.",
+          "15% = 10% + 5% = 8 + 4 = 12."
+        ]
+      },
+      "worked_solution": "15% of 80: 10% = 8, 5% = 4, total = 12."
+    },
+    {
+      "id": "AC9M7N07-005",
+      "type": "numeric",
+      "stem": "Calculate 20% of 65.",
+      "answer": {
+        "type": "numeric",
+        "value": 13,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "20% = 2 × 10%.",
+          "10% of 65 = 6.5.",
+          "20% = 2 × 6.5 = 13."
+        ]
+      },
+      "worked_solution": "20% of 65 = 2 × (10% of 65) = 2 × 6.5 = 13."
+    },
+    {
+      "id": "AC9M7N07-006",
+      "type": "numeric",
+      "stem": "Express 18 as a percentage of 72.",
+      "answer": {
+        "type": "numeric",
+        "value": 25,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Percentage = \\(\\frac{18}{72}\\times100\\).",
+          "\\(\\frac{18}{72}=\\frac{1}{4}\\).",
+          "\\(\\frac{1}{4}\\times100=?\\)."
+        ]
+      },
+      "worked_solution": "\\(\\frac{18}{72}\\times100=\\frac{1}{4}\\times100=25\\%\\)."
+    },
+    {
+      "id": "AC9M7N07-007",
+      "type": "numeric",
+      "stem": "A shirt costs $70. The price increases by 10%. What is the new price in dollars?",
+      "answer": {
+        "type": "numeric",
+        "value": 77,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Find 10% of $70, then add it.",
+          "10% of 70 = 7.",
+          "New price = 70 + 7 = ?"
+        ]
+      },
+      "worked_solution": "10% of $70 = $7. New price = $70 + $7 = $77."
+    },
+    {
+      "id": "AC9M7N07-008",
+      "type": "numeric",
+      "stem": "A jacket costs $90. It is discounted by 20%. What is the sale price in dollars?",
+      "answer": {
+        "type": "numeric",
+        "value": 72,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Find 20% of $90, then subtract.",
+          "20% of 90 = 18.",
+          "Sale price = 90 − 18 = ?"
+        ]
+      },
+      "worked_solution": "20% of $90 = $18. Sale price = $90 − $18 = $72."
+    },
+    {
+      "id": "AC9M7N07-009",
+      "type": "numeric",
+      "stem": "Calculate 30% of 150.",
+      "answer": {
+        "type": "numeric",
+        "value": 45,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Break 30% into 3 × 10%.",
+          "10% of 150 = 15.",
+          "30% = 3 × 15 = 45."
+        ]
+      },
+      "worked_solution": "30% of 150 = 3 × 15 = 45."
+    },
+    {
+      "id": "AC9M7N07-010",
+      "type": "numeric",
+      "stem": "Express 45 as a percentage of 180.",
+      "answer": {
+        "type": "numeric",
+        "value": 25,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Percentage = \\(\\frac{45}{180}\\times100\\).",
+          "Simplify \\(\\frac{45}{180}=\\frac{1}{4}\\).",
+          "\\(\\frac{1}{4}\\times100=25\\)."
+        ]
+      },
+      "worked_solution": "\\(\\frac{45}{180}\\times100=25\\%\\)."
+    }
+  ]
+}

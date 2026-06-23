@@ -1,0 +1,238 @@
+{
+  "code": "AC9M7A04",
+  "year": 7,
+  "strand": "Algebra",
+  "substrand": "Graphs from Real Data",
+  "acara_description": "Describe and interpret graphs of real-world situations; identify key features including gradient, intercepts and shape.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7A04-001",
+      "type": "multiple_choice",
+      "stem": "A distance–time graph shows a horizontal flat line. What does this tell us about the object?",
+      "options": [
+        "It is moving at constant speed",
+        "It is stationary (not moving)",
+        "It is speeding up",
+        "It is moving backwards"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "It is stationary (not moving)"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "In a distance–time graph, the y-axis shows distance from start.",
+          "If the line is horizontal, the distance is not changing.",
+          "No change in distance means the object is not moving."
+        ]
+      },
+      "worked_solution": "A horizontal line in a distance–time graph means distance is constant — the object is stationary."
+    },
+    {
+      "id": "AC9M7A04-002",
+      "type": "multiple_choice",
+      "stem": "A travel graph is steeper at the start than at the end. What does this mean?",
+      "options": [
+        "Speed was slower at the start",
+        "Speed was faster at the start",
+        "The object reversed direction",
+        "Distance increased at the end"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Speed was faster at the start"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "In a distance–time graph, steeper slope = faster speed.",
+          "Steeper at start → moving faster at the start.",
+          "Less steep at end → slowing down."
+        ]
+      },
+      "worked_solution": "Steeper gradient = greater speed. Steeper at start means faster speed at the start."
+    },
+    {
+      "id": "AC9M7A04-003",
+      "type": "multiple_choice",
+      "stem": "A temperature graph shows the line going up steeply, then becoming flat. What does the flat section show?",
+      "options": [
+        "Temperature falling",
+        "Temperature rising slowly",
+        "Temperature remaining constant",
+        "Temperature cycling"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Temperature remaining constant"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "A flat line means no change in the quantity.",
+          "If temperature is constant, the flat section shows no increase or decrease.",
+          "A horizontal line always means no change in the y-value."
+        ]
+      },
+      "worked_solution": "A flat section means the temperature stopped changing — it is constant."
+    },
+    {
+      "id": "AC9M7A04-004",
+      "type": "numeric",
+      "stem": "A distance–time graph shows a car at 0 km at t = 0 and at 120 km at t = 2 hours. What is the average speed in km/h?",
+      "answer": {
+        "type": "numeric",
+        "value": 60,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Speed = \\(\\frac{\\text{distance}}{\\text{time}}\\).",
+          "Distance = 120 km, time = 2 h.",
+          "\\(120\\div2=?\\)."
+        ]
+      },
+      "worked_solution": "Speed = \\(\\frac{120}{2} = 60\\) km/h."
+    },
+    {
+      "id": "AC9M7A04-005",
+      "type": "multiple_choice",
+      "stem": "A graph shows the cost C (in dollars) of hiring a bike: it starts at $5 (the hire fee) and increases by $3 per hour. Which statement is correct?",
+      "options": [
+        "The cost starts at $3",
+        "The cost increases by $5 each hour",
+        "The initial hire fee is $5",
+        "The graph is curved"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "The initial hire fee is $5"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "The starting point of the graph (at 0 hours) shows the initial cost.",
+          "The graph starts at $5, meaning the hire fee before any hours is $5.",
+          "The increase per hour ($3) is the gradient."
+        ]
+      },
+      "worked_solution": "The y-intercept ($5 at 0 hours) is the fixed hire fee. The gradient ($3/hour) is the rate."
+    },
+    {
+      "id": "AC9M7A04-006",
+      "type": "numeric",
+      "stem": "A cost formula is \\(C=3n+5\\). What is \\(C\\) when \\(n=10\\)?",
+      "answer": {
+        "type": "numeric",
+        "value": 35,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Substitute \\(n=10\\).",
+          "\\(C=3\\times10+5\\).",
+          "\\(30+5=?\\)."
+        ]
+      },
+      "worked_solution": "\\(C=3(10)+5=35\\)."
+    },
+    {
+      "id": "AC9M7A04-007",
+      "type": "multiple_choice",
+      "stem": "In a distance–time graph, a downward sloping line means:",
+      "options": [
+        "Object is getting faster",
+        "Object is moving back towards the starting point",
+        "Object is moving at constant speed",
+        "Object stopped"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Object is moving back towards the starting point"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Going down means distance from start is decreasing.",
+          "If the object started further away, it must be moving closer to the origin.",
+          "Decreasing distance from start = moving back."
+        ]
+      },
+      "worked_solution": "A downward slope in a distance–time graph means the object is moving back towards its starting point."
+    },
+    {
+      "id": "AC9M7A04-008",
+      "type": "multiple_choice",
+      "stem": "A graph shows two lines representing two cars leaving the same point. Car A has a steeper line than Car B. What does this mean?",
+      "options": [
+        "Car A is slower",
+        "Car A is faster",
+        "Car B started later",
+        "Car B went further"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Car A is faster"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "In a distance–time graph, gradient = speed.",
+          "Steeper gradient = greater speed.",
+          "Car A has a steeper slope, so it covers more distance per unit time."
+        ]
+      },
+      "worked_solution": "Steeper gradient = higher speed. Car A is faster."
+    },
+    {
+      "id": "AC9M7A04-009",
+      "type": "multiple_choice",
+      "stem": "A graph of water in a tank shows it filling at a constant rate, then the rate doubles. What does the graph look like?",
+      "options": [
+        "A flat line then a steeper line",
+        "A curved line",
+        "A straight line then a horizontal line",
+        "A steeper line then a less steep line"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "A flat line then a steeper line"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Constant rate = constant gradient = straight line.",
+          "Doubling the rate means the gradient doubles.",
+          "Second section will be steeper."
+        ]
+      },
+      "worked_solution": "Constant fill rate = straight line; doubling the rate = steeper straight line in the second section."
+    },
+    {
+      "id": "AC9M7A04-010",
+      "type": "numeric",
+      "stem": "A graph shows: at x = 0, y = 4; at x = 2, y = 10. Assuming a straight-line relationship, what is y when x = 3?",
+      "answer": {
+        "type": "numeric",
+        "value": 13,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Find the gradient (rate of change).",
+          "Rise = 10 − 4 = 6 over run = 2. Gradient = 3.",
+          "Starting at y=4, add 3 per unit of x. At x=3: 4 + 3×3 = ?"
+        ]
+      },
+      "worked_solution": "Gradient = (10−4)/(2−0) = 3. y = 4 + 3×3 = 13."
+    }
+  ]
+}

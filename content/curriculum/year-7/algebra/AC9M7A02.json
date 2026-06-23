@@ -1,0 +1,238 @@
+{
+  "code": "AC9M7A02",
+  "year": 7,
+  "strand": "Algebra",
+  "substrand": "Algebraic Expressions",
+  "acara_description": "Formulate and simplify algebraic expressions using properties and laws, including with substitution.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7A02-001",
+      "type": "multiple_choice",
+      "stem": "Simplify \\(3x+2x\\).",
+      "options": [
+        "\\(5x^2\\)",
+        "\\(5x\\)",
+        "\\(6x\\)",
+        "\\(5\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(5x\\)"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Add the like terms — they both have x.",
+          "3 of something + 2 of the same thing = 5 of it.",
+          "\\(3x+2x=(3+2)x\\)."
+        ]
+      },
+      "worked_solution": "\\(3x+2x=5x\\)."
+    },
+    {
+      "id": "AC9M7A02-002",
+      "type": "multiple_choice",
+      "stem": "Simplify \\(4y-y\\).",
+      "options": [
+        "\\(3y\\)",
+        "\\(4\\)",
+        "\\(3\\)",
+        "\\(5y\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(3y\\)"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Think of \\(y\\) as \\(1y\\).",
+          "\\(4y-1y=(4-1)y\\).",
+          "\\(3y\\)."
+        ]
+      },
+      "worked_solution": "\\(4y-y=3y\\)."
+    },
+    {
+      "id": "AC9M7A02-003",
+      "type": "multiple_choice",
+      "stem": "Simplify \\(2x+3y+x\\).",
+      "options": [
+        "\\(6xy\\)",
+        "\\(3x+3y\\)",
+        "\\(5xy\\)",
+        "\\(2x+4y\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(3x+3y\\)"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Collect like terms — group x terms and y terms separately.",
+          "\\(2x+x=3x\\). The y term stays.",
+          "\\(3x+3y\\)."
+        ]
+      },
+      "worked_solution": "\\(2x+3y+x=(2x+x)+3y=3x+3y\\)."
+    },
+    {
+      "id": "AC9M7A02-004",
+      "type": "numeric",
+      "stem": "Evaluate \\(2a+3b\\) when \\(a=4,\\;b=2\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 14,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Replace \\(a=4\\) and \\(b=2\\).",
+          "\\(2\\times4+3\\times2\\).",
+          "\\(8+6=?\\)."
+        ]
+      },
+      "worked_solution": "\\(2(4)+3(2)=8+6=14\\)."
+    },
+    {
+      "id": "AC9M7A02-005",
+      "type": "multiple_choice",
+      "stem": "Expand \\(3(x+4)\\).",
+      "options": [
+        "\\(3x+4\\)",
+        "\\(3x+7\\)",
+        "\\(3x+12\\)",
+        "\\(x+12\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(3x+12\\)"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Multiply 3 by each term inside the brackets.",
+          "\\(3\\times x=3x\\) and \\(3\\times4=12\\).",
+          "Combine: \\(3x+12\\)."
+        ]
+      },
+      "worked_solution": "\\(3(x+4)=3\\times x+3\\times4=3x+12\\)."
+    },
+    {
+      "id": "AC9M7A02-006",
+      "type": "multiple_choice",
+      "stem": "Simplify \\(5m-2m+3m\\).",
+      "options": [
+        "\\(10m\\)",
+        "\\(6m\\)",
+        "\\(0m\\)",
+        "\\(4m\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(6m\\)"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "All terms have m — collect them left to right.",
+          "\\(5m-2m=3m\\), then \\(3m+3m=?\\).",
+          "\\(6m\\)."
+        ]
+      },
+      "worked_solution": "\\(5m-2m+3m=3m+3m=6m\\)."
+    },
+    {
+      "id": "AC9M7A02-007",
+      "type": "multiple_choice",
+      "stem": "Which pair are like terms?",
+      "options": [
+        "\\(3x\\) and \\(3y\\)",
+        "\\(4x^2\\) and \\(4x\\)",
+        "\\(2a\\) and \\(5a\\)",
+        "\\(3b\\) and \\(3b^2\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(2a\\) and \\(5a\\)"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Like terms have exactly the same variable(s) with the same power(s).",
+          "\\(2a\\) and \\(5a\\) both have the variable \\(a\\) to the power 1.",
+          "The others mix different variables or different powers."
+        ]
+      },
+      "worked_solution": "\\(2a\\) and \\(5a\\) are like terms because they share the same variable \\(a\\)."
+    },
+    {
+      "id": "AC9M7A02-008",
+      "type": "numeric",
+      "stem": "Evaluate \\(3x^2+2x\\) when \\(x=2\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 16,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Substitute \\(x=2\\) into each term.",
+          "\\(3\\times(2^2)+2\\times2\\).",
+          "\\(3\\times4+4=12+4=?\\)."
+        ]
+      },
+      "worked_solution": "\\(3(2)^2+2(2)=3\\times4+4=12+4=16\\)."
+    },
+    {
+      "id": "AC9M7A02-009",
+      "type": "numeric",
+      "stem": "Evaluate \\(a^2-b^2\\) when \\(a=5,\\;b=3\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 16,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "\\(5^2=25\\) and \\(3^2=9\\).",
+          "\\(25-9=?\\).",
+          "16."
+        ]
+      },
+      "worked_solution": "\\(a^2-b^2=5^2-3^2=25-9=16\\)."
+    },
+    {
+      "id": "AC9M7A02-010",
+      "type": "multiple_choice",
+      "stem": "Expand \\(2(2x-3)\\).",
+      "options": [
+        "\\(4x-3\\)",
+        "\\(4x-6\\)",
+        "\\(2x-6\\)",
+        "\\(4x-5\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(4x-6\\)"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Multiply 2 by each term inside the brackets.",
+          "\\(2\\times2x=4x\\) and \\(2\\times(-3)=-6\\).",
+          "Combine: \\(4x-6\\)."
+        ]
+      },
+      "worked_solution": "\\(2(2x-3)=4x-6\\)."
+    }
+  ]
+}

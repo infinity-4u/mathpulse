@@ -1,0 +1,208 @@
+{
+  "code": "AC9M7ST01",
+  "year": 7,
+  "strand": "Statistics",
+  "substrand": "Mean, Median, Mode and Range",
+  "acara_description": "Calculate range, median, mean and mode for numerical data sets; justify which measure best describes the distribution.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7ST01-001",
+      "type": "numeric",
+      "stem": "Find the mean of the dataset: 3, 5, 7, 9, 6.",
+      "answer": {
+        "type": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Mean = sum of all values ÷ number of values.",
+          "Sum = 3+5+7+9+6 = 30. Count = 5.",
+          "30 ÷ 5 = ?"
+        ]
+      },
+      "worked_solution": "Mean = (3+5+7+9+6) ÷ 5 = 30 ÷ 5 = 6."
+    },
+    {
+      "id": "AC9M7ST01-002",
+      "type": "numeric",
+      "stem": "Find the mean of: 10, 20, 30, 40, 50.",
+      "answer": {
+        "type": "numeric",
+        "value": 30,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Add all values, then divide by how many there are.",
+          "Sum = 10+20+30+40+50 = 150. Count = 5.",
+          "150 ÷ 5 = ?"
+        ]
+      },
+      "worked_solution": "Mean = 150 ÷ 5 = 30."
+    },
+    {
+      "id": "AC9M7ST01-003",
+      "type": "numeric",
+      "stem": "Find the median of: 2, 4, 7, 9, 11.",
+      "answer": {
+        "type": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "First make sure the data is in order.",
+          "2, 4, 7, 9, 11 — already ordered. There are 5 values.",
+          "The middle (3rd) value is the median."
+        ]
+      },
+      "worked_solution": "Ordered: 2, 4, 7, 9, 11. Middle value (position 3) = 7."
+    },
+    {
+      "id": "AC9M7ST01-004",
+      "type": "numeric",
+      "stem": "Find the median of: 7, 2, 9, 1, 5.",
+      "answer": {
+        "type": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Step 1: Order the values from smallest to largest.",
+          "Ordered: 1, 2, 5, 7, 9. 5 values.",
+          "Middle value = position 3 = 5."
+        ]
+      },
+      "worked_solution": "Ordered: 1, 2, 5, 7, 9. Median = 5."
+    },
+    {
+      "id": "AC9M7ST01-005",
+      "type": "numeric",
+      "stem": "Find the mode of: 3, 5, 3, 7, 3, 9.",
+      "answer": {
+        "type": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "The mode is the value that appears most often.",
+          "Count how many times each value appears.",
+          "3 appears 3 times — more than any other."
+        ]
+      },
+      "worked_solution": "3 appears 3 times. Mode = 3."
+    },
+    {
+      "id": "AC9M7ST01-006",
+      "type": "numeric",
+      "stem": "Find the range of: 4, 8, 3, 12, 1.",
+      "answer": {
+        "type": "numeric",
+        "value": 11,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Range = highest value − lowest value.",
+          "Highest = 12, lowest = 1.",
+          "12 − 1 = ?"
+        ]
+      },
+      "worked_solution": "Range = 12 − 1 = 11."
+    },
+    {
+      "id": "AC9M7ST01-007",
+      "type": "numeric",
+      "stem": "Find the range of: −3, 7, 2, 15, −1.",
+      "answer": {
+        "type": "numeric",
+        "value": 18,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Range = maximum − minimum.",
+          "Max = 15, min = −3.",
+          "15 − (−3) = 15 + 3 = ?"
+        ]
+      },
+      "worked_solution": "Range = 15 − (−3) = 18."
+    },
+    {
+      "id": "AC9M7ST01-008",
+      "type": "multiple_choice",
+      "stem": "Which measure of centre is most affected by an outlier (extreme value)?",
+      "options": [
+        "Median",
+        "Mode",
+        "Mean",
+        "Range"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Mean"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "An outlier pulls the average in its direction.",
+          "The mean uses ALL values, so one extreme value changes it significantly.",
+          "The median (middle value) is resistant to outliers."
+        ]
+      },
+      "worked_solution": "The mean is most affected by outliers because it uses the sum of all values."
+    },
+    {
+      "id": "AC9M7ST01-009",
+      "type": "numeric",
+      "stem": "Find the mode of: 5, 5, 7, 7, 7, 9.",
+      "answer": {
+        "type": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Count the frequency of each value.",
+          "5 appears 2 times, 7 appears 3 times, 9 appears 1 time.",
+          "Most frequent: 7."
+        ]
+      },
+      "worked_solution": "7 appears most often (3 times). Mode = 7."
+    },
+    {
+      "id": "AC9M7ST01-010",
+      "type": "numeric",
+      "stem": "Find the mean of: 4, 8, 12.",
+      "answer": {
+        "type": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Sum = 4 + 8 + 12 = 24.",
+          "Count = 3 values.",
+          "Mean = 24 ÷ 3."
+        ]
+      },
+      "worked_solution": "Mean = (4+8+12) ÷ 3 = 24 ÷ 3 = 8."
+    }
+  ]
+}

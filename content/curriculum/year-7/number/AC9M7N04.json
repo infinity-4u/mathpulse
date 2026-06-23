@@ -1,0 +1,218 @@
+{
+  "code": "AC9M7N04",
+  "year": 7,
+  "strand": "Number",
+  "substrand": "Rounding and Estimation",
+  "acara_description": "Round decimals to a specified number of decimal places and use estimation to check the reasonableness of computations.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7N04-001",
+      "type": "numeric",
+      "stem": "Round 3.467 to 1 decimal place.",
+      "answer": {
+        "type": "numeric",
+        "value": 3.5,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Look at the digit in the 2nd decimal place (hundredths).",
+          "The hundredths digit is 6. Since 6 ≥ 5, round up.",
+          "3.467 rounded to 1dp: 3.4 rounds up to 3.5."
+        ]
+      },
+      "worked_solution": "3.467 → the 2nd decimal place is 6 ≥ 5, so the 1st decimal place rounds up: 3.5."
+    },
+    {
+      "id": "AC9M7N04-002",
+      "type": "numeric",
+      "stem": "Round 2.73 to 1 decimal place.",
+      "answer": {
+        "type": "numeric",
+        "value": 2.7,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Look at the 2nd decimal place (hundredths digit).",
+          "The hundredths digit is 3. Since 3 < 5, round down (keep).",
+          "2.73 rounded to 1dp: 2.7."
+        ]
+      },
+      "worked_solution": "2.73: hundredths = 3 < 5, so 2.7."
+    },
+    {
+      "id": "AC9M7N04-003",
+      "type": "numeric",
+      "stem": "Round 3.467 to 2 decimal places.",
+      "answer": {
+        "type": "numeric",
+        "value": 3.47,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Look at the 3rd decimal place (thousandths).",
+          "The thousandths digit is 7. Since 7 ≥ 5, round up.",
+          "3.46 rounds up to 3.47."
+        ]
+      },
+      "worked_solution": "3.467 → thousandths = 7 ≥ 5, so round up: 3.47."
+    },
+    {
+      "id": "AC9M7N04-004",
+      "type": "numeric",
+      "stem": "Round 0.085 to 2 decimal places.",
+      "answer": {
+        "type": "numeric",
+        "value": 0.09,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Look at the 3rd decimal place.",
+          "The 3rd decimal digit is 5. Since 5 ≥ 5, round up.",
+          "0.08 rounds up to 0.09."
+        ]
+      },
+      "worked_solution": "0.085 → 3rd dp = 5 ≥ 5, so round up: 0.09."
+    },
+    {
+      "id": "AC9M7N04-005",
+      "type": "numeric",
+      "stem": "Round 4.7 to the nearest whole number.",
+      "answer": {
+        "type": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Look at the 1st decimal place.",
+          "The tenths digit is 7. Since 7 ≥ 5, round up.",
+          "4 rounds up to 5."
+        ]
+      },
+      "worked_solution": "4.7 → tenths = 7 ≥ 5, round up: 5."
+    },
+    {
+      "id": "AC9M7N04-006",
+      "type": "numeric",
+      "stem": "Round 2.3 to the nearest whole number.",
+      "answer": {
+        "type": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Look at the tenths digit.",
+          "The tenths digit is 3. Since 3 < 5, round down (keep).",
+          "2.3 rounds to 2."
+        ]
+      },
+      "worked_solution": "2.3 → tenths = 3 < 5, round down: 2."
+    },
+    {
+      "id": "AC9M7N04-007",
+      "type": "multiple_choice",
+      "stem": "Estimate 49.7 × 3.2 by rounding each number to the nearest whole number.",
+      "options": [
+        "100",
+        "120",
+        "150",
+        "160"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "150"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Round each factor to the nearest whole number first.",
+          "49.7 ≈ 50 and 3.2 ≈ 3.",
+          "50 × 3 = ?"
+        ]
+      },
+      "worked_solution": "49.7 ≈ 50, 3.2 ≈ 3. Estimate: 50 × 3 = 150."
+    },
+    {
+      "id": "AC9M7N04-008",
+      "type": "numeric",
+      "stem": "Round 1.995 to 2 decimal places.",
+      "answer": {
+        "type": "numeric",
+        "value": 2.0,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Look at the 3rd decimal place.",
+          "The 3rd decimal digit is 5. Round up the 2nd decimal place.",
+          "1.99 rounds up. 9 + 1 = 10, so carry: 2.00."
+        ]
+      },
+      "worked_solution": "1.995 → 3rd dp = 5 ≥ 5. Round up: 1.99 → 2.00."
+    },
+    {
+      "id": "AC9M7N04-009",
+      "type": "multiple_choice",
+      "stem": "Which is the best estimate for 197 ÷ 4?",
+      "options": [
+        "40",
+        "50",
+        "60",
+        "70"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "50"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Round 197 to a number that divides easily by 4.",
+          "200 ÷ 4 = ?",
+          "200 ÷ 4 = 50."
+        ]
+      },
+      "worked_solution": "197 ≈ 200. 200 ÷ 4 = 50."
+    },
+    {
+      "id": "AC9M7N04-010",
+      "type": "multiple_choice",
+      "stem": "A student calculates 8.7 × 5.2 and gets 452.4. Without calculating exactly, explain the error.",
+      "options": [
+        "The decimal point is misplaced",
+        "8 × 5 = 40, so the answer is too large",
+        "Rounding error only",
+        "The answer is correct"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "The decimal point is misplaced"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Estimate first: 8.7 ≈ 9 and 5.2 ≈ 5.",
+          "9 × 5 = 45, so the exact answer should be close to 45.",
+          "452.4 is about 10 times too large."
+        ]
+      },
+      "worked_solution": "Estimate: 9 × 5 = 45. The answer 452.4 has a misplaced decimal — it should be about 45.24."
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "code": "AC9M7N08",
+  "year": 7,
+  "strand": "Number",
+  "substrand": "Integers",
+  "acara_description": "Compare, order, add and subtract integers; use integers to solve everyday problems.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7N08-001",
+      "type": "numeric",
+      "stem": "Calculate (−3) + 7.",
+      "answer": {
+        "type": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "On a number line, start at −3 and move 7 steps right.",
+          "−3 + 7: distance from −3 to 0 is 3, then 4 more steps right.",
+          "−3 + 7 = 4."
+        ]
+      },
+      "worked_solution": "−3 + 7 = 4."
+    },
+    {
+      "id": "AC9M7N08-002",
+      "type": "numeric",
+      "stem": "Calculate 5 + (−8).",
+      "answer": {
+        "type": "numeric",
+        "value": -3,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Adding a negative is the same as subtracting.",
+          "5 + (−8) = 5 − 8.",
+          "5 − 8 = −3."
+        ]
+      },
+      "worked_solution": "5 + (−8) = 5 − 8 = −3."
+    },
+    {
+      "id": "AC9M7N08-003",
+      "type": "numeric",
+      "stem": "Calculate (−4) − (−2).",
+      "answer": {
+        "type": "numeric",
+        "value": -2,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Subtracting a negative is the same as adding.",
+          "(−4) − (−2) = −4 + 2.",
+          "−4 + 2 = −2."
+        ]
+      },
+      "worked_solution": "(−4) − (−2) = −4 + 2 = −2."
+    },
+    {
+      "id": "AC9M7N08-004",
+      "type": "numeric",
+      "stem": "Calculate (−6) + (−3).",
+      "answer": {
+        "type": "numeric",
+        "value": -9,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Adding two negatives: combine the values and keep the negative sign.",
+          "6 + 3 = 9.",
+          "Both negative, so answer is −9."
+        ]
+      },
+      "worked_solution": "(−6) + (−3) = −9."
+    },
+    {
+      "id": "AC9M7N08-005",
+      "type": "multiple_choice",
+      "stem": "Which integer is greater: −8 or −3?",
+      "options": [
+        "-8",
+        "-3",
+        "They are equal",
+        "Cannot compare"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "-3"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "On a number line, numbers further right are greater.",
+          "−3 is to the right of −8.",
+          "Numbers closer to zero are greater when negative."
+        ]
+      },
+      "worked_solution": "−3 > −8 because −3 is closer to zero (further right on the number line)."
+    },
+    {
+      "id": "AC9M7N08-006",
+      "type": "numeric",
+      "stem": "Calculate 10 − (−4).",
+      "answer": {
+        "type": "numeric",
+        "value": 14,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Subtracting a negative is the same as adding.",
+          "10 − (−4) = 10 + 4.",
+          "10 + 4 = 14."
+        ]
+      },
+      "worked_solution": "10 − (−4) = 10 + 4 = 14."
+    },
+    {
+      "id": "AC9M7N08-007",
+      "type": "numeric",
+      "stem": "Calculate (−7) + 12.",
+      "answer": {
+        "type": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Start at −7 on the number line and move 12 steps right.",
+          "From −7 to 0 is 7 steps. Remaining: 12 − 7 = 5.",
+          "End up at +5."
+        ]
+      },
+      "worked_solution": "(−7) + 12 = 5."
+    },
+    {
+      "id": "AC9M7N08-008",
+      "type": "numeric",
+      "stem": "The temperature is −3°C. It drops by 5°C. What is the new temperature?",
+      "answer": {
+        "type": "numeric",
+        "value": -8,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "A drop means we subtract.",
+          "−3 − 5 = ?",
+          "Moving 5 more in the negative direction from −3."
+        ]
+      },
+      "worked_solution": "−3 − 5 = −8°C."
+    },
+    {
+      "id": "AC9M7N08-009",
+      "type": "numeric",
+      "stem": "Calculate (−20) + 15.",
+      "answer": {
+        "type": "numeric",
+        "value": -5,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Start at −20 and add 15 (move right).",
+          "−20 + 15: from −20 move 15 right.",
+          "−20 + 15 = −5."
+        ]
+      },
+      "worked_solution": "−20 + 15 = −5."
+    },
+    {
+      "id": "AC9M7N08-010",
+      "type": "multiple_choice",
+      "stem": "Order from least to greatest: \\(−5,\\;2,\\;−3,\\;0,\\;7\\).",
+      "options": [
+        "\\(−5,−3,0,2,7\\)",
+        "\\(7,2,0,−3,−5\\)",
+        "\\(−3,−5,0,2,7\\)",
+        "\\(0,−3,−5,2,7\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(−5,−3,0,2,7\\)"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "On a number line, numbers increase from left to right.",
+          "Negative numbers with larger absolute value are further left.",
+          "−5 < −3 < 0 < 2 < 7."
+        ]
+      },
+      "worked_solution": "From least to greatest: −5, −3, 0, 2, 7."
+    }
+  ]
+}

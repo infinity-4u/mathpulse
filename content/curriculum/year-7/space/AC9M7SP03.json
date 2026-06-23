@@ -1,0 +1,243 @@
+{
+  "code": "AC9M7SP03",
+  "year": 7,
+  "strand": "Space",
+  "substrand": "Transformations",
+  "acara_description": "Describe the effect of translations, reflections in an axis, and rotations about the origin on the Cartesian plane.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7SP03-001",
+      "type": "multiple_choice",
+      "stem": "Translate the point \\((3,\\;2)\\) right by 4 units. What is the new point?",
+      "options": [
+        "(7, 2)",
+        "(3, 6)",
+        "(−1, 2)",
+        "(7, 6)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "(7, 2)"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Translation right means adding to the x-coordinate.",
+          "New x = 3 + 4 = 7. y stays the same.",
+          "(7, 2)."
+        ]
+      },
+      "worked_solution": "Translating \\((3,2)\\) right 4: new x = 3+4=7, y unchanged. New point: (7, 2)."
+    },
+    {
+      "id": "AC9M7SP03-002",
+      "type": "multiple_choice",
+      "stem": "Translate \\((5,\\;1)\\) left 3 and down 2. What is the new point?",
+      "options": [
+        "(8, 3)",
+        "(2, −1)",
+        "(2, 3)",
+        "(8, −1)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "(2, −1)"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Left = subtract from x. Down = subtract from y.",
+          "New x = 5 − 3 = 2. New y = 1 − 2 = −1.",
+          "(2, −1)."
+        ]
+      },
+      "worked_solution": "\\((5,1)\\): x−3=2, y−2=−1. New point: \\((2,−1)\\)."
+    },
+    {
+      "id": "AC9M7SP03-003",
+      "type": "numeric",
+      "stem": "Reflect the point \\((4,\\;3)\\) in the \\(x\\)-axis. What is the new \\(y\\)-coordinate?",
+      "answer": {
+        "type": "numeric",
+        "value": -3,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Reflection in the x-axis: the x-coordinate stays, the y-coordinate changes sign.",
+          "\\(y\\to-y\\).",
+          "New \\(y=-3\\)."
+        ]
+      },
+      "worked_solution": "Reflecting \\((4,3)\\) in x-axis: \\(y\\to-y\\). New y = −3."
+    },
+    {
+      "id": "AC9M7SP03-004",
+      "type": "numeric",
+      "stem": "Reflect the point \\((-2,\\;5)\\) in the \\(y\\)-axis. What is the new \\(x\\)-coordinate?",
+      "answer": {
+        "type": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Reflection in the y-axis: the y-coordinate stays, the x-coordinate changes sign.",
+          "\\(x\\to-x\\).",
+          "New \\(x=-(-2)=2\\)."
+        ]
+      },
+      "worked_solution": "Reflecting \\((-2,5)\\) in y-axis: \\(x\\to-x\\). New x = 2."
+    },
+    {
+      "id": "AC9M7SP03-005",
+      "type": "multiple_choice",
+      "stem": "Rotate \\((3,\\;0)\\) by 90° anticlockwise about the origin. What is the new point?",
+      "options": [
+        "(0, 3)",
+        "(−3, 0)",
+        "(0, −3)",
+        "(3, 0)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "(0, 3)"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "90° anticlockwise rotation rule: \\((x,y)\\to(-y,x)\\).",
+          "\\((3,0)\\to(-0,3)=(0,3)\\).",
+          "(0, 3)."
+        ]
+      },
+      "worked_solution": "90° anticlockwise: \\((x,y)\\to(-y,x)\\). \\((3,0)\\to(0,3)\\)."
+    },
+    {
+      "id": "AC9M7SP03-006",
+      "type": "multiple_choice",
+      "stem": "Rotate \\((1,\\;2)\\) by 90° clockwise about the origin. What is the new point?",
+      "options": [
+        "(−2, 1)",
+        "(2, −1)",
+        "(−1, 2)",
+        "(2, 1)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "(2, −1)"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "90° clockwise rotation rule: \\((x,y)\\to(y,-x)\\).",
+          "\\((1,2)\\to(2,-1)\\).",
+          "(2, −1)."
+        ]
+      },
+      "worked_solution": "90° clockwise: \\((x,y)\\to(y,-x)\\). \\((1,2)\\to(2,-1)\\)."
+    },
+    {
+      "id": "AC9M7SP03-007",
+      "type": "multiple_choice",
+      "stem": "Which transformation preserves both the shape AND size of a figure?",
+      "options": [
+        "Enlargement only",
+        "Translation, reflection and rotation",
+        "Dilation only",
+        "None of the above"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Translation, reflection and rotation"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Transformations that preserve size are called 'isometries'.",
+          "Translations, reflections and rotations all keep the original size.",
+          "Enlargements change the size."
+        ]
+      },
+      "worked_solution": "Translations, reflections and rotations are all isometries — they preserve shape and size."
+    },
+    {
+      "id": "AC9M7SP03-008",
+      "type": "multiple_choice",
+      "stem": "A reflection in the x-axis maps \\((a,\\;b)\\) to:",
+      "options": [
+        "\\((a,b)\\)",
+        "\\((-a,b)\\)",
+        "\\((a,-b)\\)",
+        "\\((-a,-b)\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\((a,-b)\\)"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "The x-axis is the horizontal axis \\((y=0)\\).",
+          "Reflecting across a horizontal axis flips the y-coordinate.",
+          "\\((a,b)\\to(a,-b)\\)."
+        ]
+      },
+      "worked_solution": "Reflection in x-axis: \\((a,b)\\to(a,-b)\\)."
+    },
+    {
+      "id": "AC9M7SP03-009",
+      "type": "multiple_choice",
+      "stem": "Which transformation maps \\((2,\\;3)\\) to \\((-2,\\;3)\\)?",
+      "options": [
+        "Reflection in x-axis",
+        "Reflection in y-axis",
+        "Rotation 90° clockwise",
+        "Translation left 4"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Reflection in y-axis"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "The x-coordinate changed sign (2 → −2); the y-coordinate is unchanged.",
+          "Reflection in y-axis: \\(x\\to-x\\).",
+          "\\((2,3)\\to(-2,3)\\). ✓"
+        ]
+      },
+      "worked_solution": "Reflection in y-axis: \\((x,y)\\to(-x,y)\\). \\((2,3)\\to(-2,3)\\). ✓"
+    },
+    {
+      "id": "AC9M7SP03-010",
+      "type": "multiple_choice",
+      "stem": "What is the image of \\((4,\\;-3)\\) after reflection in the x-axis?",
+      "options": [
+        "(4, 3)",
+        "(−4, 3)",
+        "(−4, −3)",
+        "(3, 4)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "(4, 3)"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Reflection in x-axis: \\((x,y)\\to(x,-y)\\).",
+          "\\((4,-3)\\to(4,-(-3))\\).",
+          "\\((4,3)\\)."
+        ]
+      },
+      "worked_solution": "Reflection in x-axis: \\((4,-3)\\to(4,3)\\)."
+    }
+  ]
+}

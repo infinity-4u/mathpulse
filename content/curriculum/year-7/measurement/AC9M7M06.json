@@ -1,0 +1,213 @@
+{
+  "code": "AC9M7M06",
+  "year": 7,
+  "strand": "Measurement",
+  "substrand": "Mathematical Modelling with Ratios",
+  "acara_description": "Use mathematical modelling to solve practical problems involving ratios of lengths, areas and volumes.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7M06-001",
+      "type": "multiple_choice",
+      "stem": "A scale model uses a scale of 1:20. If the model is 15 cm long, how long is the real object?",
+      "options": [
+        "15 cm",
+        "30 cm",
+        "300 cm",
+        "150 cm"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "300 cm"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Scale 1:20 means 1 cm on model = 20 cm in real life.",
+          "Real length = 15 × 20.",
+          "15 × 20 = 300 cm."
+        ]
+      },
+      "worked_solution": "Real length = 15 × 20 = 300 cm."
+    },
+    {
+      "id": "AC9M7M06-002",
+      "type": "numeric",
+      "stem": "A scale drawing uses a scale of 1:100. A measured length is 3.5 cm. What is the real length in cm?",
+      "answer": {
+        "type": "numeric",
+        "value": 350,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Real length = map length × scale factor.",
+          "Real = 3.5 × 100.",
+          "3.5 × 100 = 350 cm."
+        ]
+      },
+      "worked_solution": "Real length = 3.5 × 100 = 350 cm."
+    },
+    {
+      "id": "AC9M7M06-003",
+      "type": "numeric",
+      "stem": "Mix ratio of orange juice to water is 1:4. To make 20 L of drink, how many litres of orange juice are needed?",
+      "answer": {
+        "type": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Total parts = 1 + 4 = 5.",
+          "Each part = 20 ÷ 5 = 4 L.",
+          "Orange juice = 1 part = 4 L."
+        ]
+      },
+      "worked_solution": "Each part = 4 L. Orange juice = 1 × 4 = 4 L."
+    },
+    {
+      "id": "AC9M7M06-004",
+      "type": "numeric",
+      "stem": "A concrete mix uses cement:sand:gravel in ratio 1:2:4. If you use 40 kg of gravel, how many kg of cement do you need?",
+      "answer": {
+        "type": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Gravel is 4 parts. Cement is 1 part.",
+          "1 part = 40 ÷ 4 = 10 kg.",
+          "Cement = 1 × 10 = 10 kg."
+        ]
+      },
+      "worked_solution": "4 parts = 40 kg → 1 part = 10 kg. Cement = 10 kg."
+    },
+    {
+      "id": "AC9M7M06-005",
+      "type": "numeric",
+      "stem": "Blue paint to yellow paint ratio is 3:2. If 15 mL of blue is used, how many mL of yellow is needed?",
+      "answer": {
+        "type": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Blue is 3 parts, yellow is 2 parts.",
+          "Scale factor = 15 ÷ 3 = 5.",
+          "Yellow = 2 × 5 = 10 mL."
+        ]
+      },
+      "worked_solution": "Scale factor = 5. Yellow = 2 × 5 = 10 mL."
+    },
+    {
+      "id": "AC9M7M06-006",
+      "type": "numeric",
+      "stem": "Share $42 in the ratio 3:4. How many dollars does the first person receive?",
+      "answer": {
+        "type": "numeric",
+        "value": 18,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Total parts = 3 + 4 = 7.",
+          "Each part = $42 ÷ 7 = $6.",
+          "First: 3 × $6 = $18."
+        ]
+      },
+      "worked_solution": "Each part = $6. First = 3 × $6 = $18."
+    },
+    {
+      "id": "AC9M7M06-007",
+      "type": "numeric",
+      "stem": "A recipe for 4 people needs 300 g of flour. How much flour (in grams) is needed for 6 people?",
+      "answer": {
+        "type": "numeric",
+        "value": 450,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Scale factor = 6 ÷ 4 = 1.5.",
+          "Flour = 300 × 1.5.",
+          "300 × 1.5 = 450 g."
+        ]
+      },
+      "worked_solution": "Scale factor = 1.5. Flour = 300 × 1.5 = 450 g."
+    },
+    {
+      "id": "AC9M7M06-008",
+      "type": "multiple_choice",
+      "stem": "A model car is built to scale 1:50. Its length is 8 cm. What is the length of the real car in metres?",
+      "options": [
+        "4 m",
+        "40 m",
+        "400 cm = 4 m",
+        "0.4 m"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "4 m"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Real length = 8 × 50 = 400 cm.",
+          "400 cm ÷ 100 = 4 m.",
+          "8 × 50 = 400 cm = 4 m."
+        ]
+      },
+      "worked_solution": "Real = 8 × 50 = 400 cm = 4 m."
+    },
+    {
+      "id": "AC9M7M06-009",
+      "type": "numeric",
+      "stem": "Mixing ratio blue:yellow = 2:3. Total paint needed = 25 L. How many litres of blue paint are needed?",
+      "answer": {
+        "type": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Total parts = 2 + 3 = 5.",
+          "Each part = 25 ÷ 5 = 5 L.",
+          "Blue = 2 × 5 = 10 L."
+        ]
+      },
+      "worked_solution": "Each part = 5 L. Blue = 2 × 5 = 10 L."
+    },
+    {
+      "id": "AC9M7M06-010",
+      "type": "numeric",
+      "stem": "A rectangle is enlarged by scale factor 3. Original area = 20 cm². What is the new area in cm²?",
+      "answer": {
+        "type": "numeric",
+        "value": 180,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "When lengths scale by factor k, area scales by k².",
+          "Area scale factor = 3² = 9.",
+          "New area = 20 × 9 = 180 cm²."
+        ]
+      },
+      "worked_solution": "Area scales by k² = 9. New area = 20 × 9 = 180 cm²."
+    }
+  ]
+}

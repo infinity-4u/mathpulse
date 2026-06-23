@@ -1,0 +1,208 @@
+{
+  "code": "AC9M7A01",
+  "year": 7,
+  "strand": "Algebra",
+  "substrand": "Variables and Formulas",
+  "acara_description": "Recognise and use variables in formulas for everyday situations; substitute values to evaluate formulas.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7A01-001",
+      "type": "numeric",
+      "stem": "The perimeter of a rectangle is \\(P=2l+2w\\). Find \\(P\\) when \\(l=8\\) and \\(w=5\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 26,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Substitute the values: \\(P=2\\times8+2\\times5\\).",
+          "\\(2\\times8=16\\) and \\(2\\times5=10\\).",
+          "\\(16+10=?\\)."
+        ]
+      },
+      "worked_solution": "\\(P=2(8)+2(5)=16+10=26\\)."
+    },
+    {
+      "id": "AC9M7A01-002",
+      "type": "numeric",
+      "stem": "Using \\(s=\\frac{d}{t}\\), find \\(s\\) when \\(d=90\\) km and \\(t=3\\) hours.",
+      "answer": {
+        "type": "numeric",
+        "value": 30,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Substitute: \\(s=\\frac{90}{3}\\).",
+          "\\(90\\div3=?\\).",
+          "\\(s=30\\) km/h."
+        ]
+      },
+      "worked_solution": "\\(s=\\frac{d}{t}=\\frac{90}{3}=30\\) km/h."
+    },
+    {
+      "id": "AC9M7A01-003",
+      "type": "numeric",
+      "stem": "Substitute \\(x=4\\) into \\(3x-2\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Replace \\(x\\) with 4.",
+          "\\(3\\times4-2\\).",
+          "\\(12-2=?\\)."
+        ]
+      },
+      "worked_solution": "\\(3(4)-2=12-2=10\\)."
+    },
+    {
+      "id": "AC9M7A01-004",
+      "type": "numeric",
+      "stem": "Substitute \\(x=5\\) into \\(2x+7\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 17,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Replace \\(x\\) with 5.",
+          "\\(2\\times5+7\\).",
+          "\\(10+7=?\\)."
+        ]
+      },
+      "worked_solution": "\\(2(5)+7=10+7=17\\)."
+    },
+    {
+      "id": "AC9M7A01-005",
+      "type": "numeric",
+      "stem": "Substitute \\(a=4,\\;b=3\\) into \\(2a+b\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 11,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Replace each variable with its value.",
+          "\\(2\\times4+3\\).",
+          "\\(8+3=?\\)."
+        ]
+      },
+      "worked_solution": "\\(2(4)+3=8+3=11\\)."
+    },
+    {
+      "id": "AC9M7A01-006",
+      "type": "numeric",
+      "stem": "A formula for cost is \\(C=5n+10\\). Find \\(C\\) when \\(n=3\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 25,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Substitute \\(n=3\\) into \\(C=5n+10\\).",
+          "\\(C=5\\times3+10\\).",
+          "\\(15+10=?\\)."
+        ]
+      },
+      "worked_solution": "\\(C=5(3)+10=15+10=25\\)."
+    },
+    {
+      "id": "AC9M7A01-007",
+      "type": "numeric",
+      "stem": "Using \\(F=\\frac{9C}{5}+32\\), find \\(F\\) when \\(C=20\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 68,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Substitute \\(C=20\\): \\(F=\\frac{9\\times20}{5}+32\\).",
+          "\\(\\frac{9\\times20}{5}=\\frac{180}{5}=36\\).",
+          "\\(36+32=?\\)."
+        ]
+      },
+      "worked_solution": "\\(F=\\frac{9\\times20}{5}+32=36+32=68\\)°F."
+    },
+    {
+      "id": "AC9M7A01-008",
+      "type": "numeric",
+      "stem": "Using \\(V=lwh\\), find \\(V\\) when \\(l=5,\\;w=4,\\;h=3\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 60,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Substitute all values: \\(V=5\\times4\\times3\\).",
+          "\\(5\\times4=20\\).",
+          "\\(20\\times3=?\\)."
+        ]
+      },
+      "worked_solution": "\\(V=5\\times4\\times3=60\\)."
+    },
+    {
+      "id": "AC9M7A01-009",
+      "type": "multiple_choice",
+      "stem": "In the formula \\(A=lw\\), if \\(l\\) doubles and \\(w\\) stays the same, what happens to \\(A\\)?",
+      "options": [
+        "A doubles",
+        "A is halved",
+        "A quadruples",
+        "A stays the same"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "A doubles"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "\\(A=lw\\). Write the new area with \\(l\\) replaced by \\(2l\\).",
+          "New area \\(= (2l)\\times w = 2lw\\).",
+          "This is 2 times the original \\(A=lw\\)."
+        ]
+      },
+      "worked_solution": "If \\(l\\) doubles: new \\(A=(2l)w=2lw\\). So \\(A\\) doubles."
+    },
+    {
+      "id": "AC9M7A01-010",
+      "type": "numeric",
+      "stem": "Substitute \\(x=6\\) into \\(x^2-1\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 35,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "\\(x^2\\) means \\(x\\times x\\).",
+          "\\(6^2=6\\times6=36\\).",
+          "\\(36-1=?\\)."
+        ]
+      },
+      "worked_solution": "\\(6^2-1=36-1=35\\)."
+    }
+  ]
+}

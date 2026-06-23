@@ -1,0 +1,253 @@
+{
+  "code": "AC9M7SP02",
+  "year": 7,
+  "strand": "Space",
+  "substrand": "Classifying Shapes",
+  "acara_description": "Classify triangles, quadrilaterals and other polygons according to their properties.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7SP02-001",
+      "type": "multiple_choice",
+      "stem": "An equilateral triangle has:",
+      "options": [
+        "No equal sides",
+        "Exactly 2 equal sides",
+        "All 3 sides equal and all angles 60°",
+        "Only right angles"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "All 3 sides equal and all angles 60°"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "'Equilateral' means all sides equal.",
+          "If all sides are equal, all angles must also be equal.",
+          "3 equal angles each = 180° ÷ 3 = 60°."
+        ]
+      },
+      "worked_solution": "Equilateral triangle: all 3 sides equal, all 3 angles = 60°."
+    },
+    {
+      "id": "AC9M7SP02-002",
+      "type": "multiple_choice",
+      "stem": "A scalene triangle has:",
+      "options": [
+        "All sides equal",
+        "Exactly 2 equal sides",
+        "No equal sides",
+        "A right angle"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "No equal sides"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "'Scalene' means unequal.",
+          "All three sides have different lengths.",
+          "All three angles are also different."
+        ]
+      },
+      "worked_solution": "Scalene: no sides equal (and no angles equal)."
+    },
+    {
+      "id": "AC9M7SP02-003",
+      "type": "multiple_choice",
+      "stem": "A rhombus has:",
+      "options": [
+        "All angles 90°",
+        "All sides equal",
+        "Exactly 2 pairs of parallel sides but unequal sides",
+        "No parallel sides"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "All sides equal"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "A rhombus is like a diamond shape.",
+          "Its defining property is 4 equal sides.",
+          "It has parallel opposite sides, but angles are not necessarily 90°."
+        ]
+      },
+      "worked_solution": "A rhombus has all 4 sides equal."
+    },
+    {
+      "id": "AC9M7SP02-004",
+      "type": "multiple_choice",
+      "stem": "How many lines of symmetry does an equilateral triangle have?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "6"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "3"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Draw a line from each vertex to the midpoint of the opposite side.",
+          "There are 3 vertices, so there are 3 such lines.",
+          "3 lines of symmetry."
+        ]
+      },
+      "worked_solution": "An equilateral triangle has 3 lines of symmetry."
+    },
+    {
+      "id": "AC9M7SP02-005",
+      "type": "multiple_choice",
+      "stem": "A square is a special type of:",
+      "options": [
+        "Only a rectangle",
+        "Only a rhombus",
+        "Both a rectangle and a rhombus",
+        "Neither a rectangle nor a rhombus"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Both a rectangle and a rhombus"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "A rectangle has 4 right angles and opposite sides equal.",
+          "A rhombus has all 4 sides equal.",
+          "A square has all 4 right angles AND all 4 sides equal."
+        ]
+      },
+      "worked_solution": "A square satisfies the conditions for both a rectangle and a rhombus."
+    },
+    {
+      "id": "AC9M7SP02-006",
+      "type": "multiple_choice",
+      "stem": "How many lines of symmetry does a kite have?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "1"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "A kite has one pair of adjacent equal sides and one pair.",
+          "Draw a line along its main axis (joining the two 'tips').",
+          "This is the only line that reflects the kite onto itself."
+        ]
+      },
+      "worked_solution": "A kite has exactly 1 line of symmetry."
+    },
+    {
+      "id": "AC9M7SP02-007",
+      "type": "multiple_choice",
+      "stem": "Which of these is NOT a quadrilateral?",
+      "options": [
+        "Trapezium",
+        "Rhombus",
+        "Pentagon",
+        "Parallelogram"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Pentagon"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "A quadrilateral has exactly 4 sides.",
+          "Count the sides of each shape.",
+          "A pentagon has 5 sides, not 4."
+        ]
+      },
+      "worked_solution": "Pentagon (5 sides) is not a quadrilateral."
+    },
+    {
+      "id": "AC9M7SP02-008",
+      "type": "multiple_choice",
+      "stem": "An isosceles triangle has angles of 70°, 70° and 40°. How many lines of symmetry does it have?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "1"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "An isosceles triangle (not equilateral) has exactly 1 line of symmetry.",
+          "The line passes from the apex (40° angle) to the midpoint of the base.",
+          "1 line of symmetry."
+        ]
+      },
+      "worked_solution": "A non-equilateral isosceles triangle has 1 line of symmetry."
+    },
+    {
+      "id": "AC9M7SP02-009",
+      "type": "multiple_choice",
+      "stem": "Which quadrilateral has diagonals that bisect each other at right angles?",
+      "options": [
+        "Rectangle",
+        "Parallelogram",
+        "Rhombus",
+        "Trapezium"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Rhombus"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Consider which shapes have perpendicular diagonals.",
+          "A rhombus has all sides equal; its diagonals cross at right angles.",
+          "A rectangle's diagonals bisect each other but not at right angles."
+        ]
+      },
+      "worked_solution": "A rhombus has diagonals that bisect each other at right angles."
+    },
+    {
+      "id": "AC9M7SP02-010",
+      "type": "multiple_choice",
+      "stem": "A parallelogram has:",
+      "options": [
+        "All sides equal",
+        "All angles 90°",
+        "Opposite sides parallel and equal",
+        "Diagonals equal in length"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Opposite sides parallel and equal"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "'Parallelogram' means parallel sides.",
+          "Opposite sides are parallel AND equal in length.",
+          "Angles are not necessarily 90°."
+        ]
+      },
+      "worked_solution": "A parallelogram has 2 pairs of parallel, equal sides."
+    }
+  ]
+}

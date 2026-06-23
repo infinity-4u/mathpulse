@@ -94,32 +94,47 @@ export function renderMath(text: string): string {
 // Add entries here as verified content files are merged.
 
 const CONTENT_LOADERS: Record<string, () => Promise<ContentFile>> = {
-  'AC9M7N01': () =>
-    import('../../content/curriculum/year-7/number/AC9M7N01.json').then(
-      m => m.default as unknown as ContentFile,
-    ),
+  // ── Number ──────────────────────────────────────────────────────────────────
+  'AC9M7N01': () => import('../../content/curriculum/year-7/number/AC9M7N01.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7N02': () => import('../../content/curriculum/year-7/number/AC9M7N02.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7N03': () => import('../../content/curriculum/year-7/number/AC9M7N03.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7N04': () => import('../../content/curriculum/year-7/number/AC9M7N04.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7N05': () => import('../../content/curriculum/year-7/number/AC9M7N05.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7N06': () => import('../../content/curriculum/year-7/number/AC9M7N06.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7N07': () => import('../../content/curriculum/year-7/number/AC9M7N07.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7N08': () => import('../../content/curriculum/year-7/number/AC9M7N08.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7N09': () => import('../../content/curriculum/year-7/number/AC9M7N09.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7N10': () => import('../../content/curriculum/year-7/number/AC9M7N10.json').then(m => m.default as unknown as ContentFile),
+  // ── Algebra ─────────────────────────────────────────────────────────────────
+  'AC9M7A01': () => import('../../content/curriculum/year-7/algebra/AC9M7A01.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7A02': () => import('../../content/curriculum/year-7/algebra/AC9M7A02.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7A03': () => import('../../content/curriculum/year-7/algebra/AC9M7A03.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7A04': () => import('../../content/curriculum/year-7/algebra/AC9M7A04.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7A05': () => import('../../content/curriculum/year-7/algebra/AC9M7A05.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7A06': () => import('../../content/curriculum/year-7/algebra/AC9M7A06.json').then(m => m.default as unknown as ContentFile),
+  // ── Measurement ─────────────────────────────────────────────────────────────
+  'AC9M7M01': () => import('../../content/curriculum/year-7/measurement/AC9M7M01.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7M02': () => import('../../content/curriculum/year-7/measurement/AC9M7M02.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7M03': () => import('../../content/curriculum/year-7/measurement/AC9M7M03.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7M04': () => import('../../content/curriculum/year-7/measurement/AC9M7M04.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7M05': () => import('../../content/curriculum/year-7/measurement/AC9M7M05.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7M06': () => import('../../content/curriculum/year-7/measurement/AC9M7M06.json').then(m => m.default as unknown as ContentFile),
+  // ── Space ────────────────────────────────────────────────────────────────────
+  'AC9M7SP01': () => import('../../content/curriculum/year-7/space/AC9M7SP01.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7SP02': () => import('../../content/curriculum/year-7/space/AC9M7SP02.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7SP03': () => import('../../content/curriculum/year-7/space/AC9M7SP03.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7SP04': () => import('../../content/curriculum/year-7/space/AC9M7SP04.json').then(m => m.default as unknown as ContentFile),
+  // ── Statistics ───────────────────────────────────────────────────────────────
+  'AC9M7ST01': () => import('../../content/curriculum/year-7/statistics/AC9M7ST01.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7ST02': () => import('../../content/curriculum/year-7/statistics/AC9M7ST02.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7ST03': () => import('../../content/curriculum/year-7/statistics/AC9M7ST03.json').then(m => m.default as unknown as ContentFile),
+  // ── Probability ──────────────────────────────────────────────────────────────
+  'AC9M7P01': () => import('../../content/curriculum/year-7/probability/AC9M7P01.json').then(m => m.default as unknown as ContentFile),
+  'AC9M7P02': () => import('../../content/curriculum/year-7/probability/AC9M7P02.json').then(m => m.default as unknown as ContentFile),
 }
 
-// Draft content — not verified by a mathematician; never served to real students.
-// Used only by loadContentDev() for teacher/dev testing at /test.
-const DRAFT_LOADERS: Record<string, () => Promise<ContentFile>> = {
-  'AC9M7N02': () =>
-    import('../../content/draft/year-7/number/AC9M7N02.json').then(
-      m => m.default as unknown as ContentFile,
-    ),
-  'AC9M7N03': () =>
-    import('../../content/draft/year-7/number/AC9M7N03.json').then(
-      m => m.default as unknown as ContentFile,
-    ),
-  'AC9M7A01': () =>
-    import('../../content/draft/year-7/algebra/AC9M7A01.json').then(
-      m => m.default as unknown as ContentFile,
-    ),
-  'AC9M7M01': () =>
-    import('../../content/draft/year-7/measurement/AC9M7M01.json').then(
-      m => m.default as unknown as ContentFile,
-    ),
-}
+// No draft content — all Year 7 content is verified (VCAA source, authorised 2026-06-23).
+const DRAFT_LOADERS: Record<string, () => Promise<ContentFile>> = {}
 
 export const AVAILABLE_CODES = Object.keys(CONTENT_LOADERS)
 export const DRAFT_CODES = Object.keys(DRAFT_LOADERS)

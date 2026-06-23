@@ -1,0 +1,238 @@
+{
+  "code": "AC9M7P02",
+  "year": 7,
+  "strand": "Probability",
+  "substrand": "Chance Experiments",
+  "acara_description": "Conduct repeated chance experiments; compare predicted with observed results and explain the effect of sample size.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7P02-001",
+      "type": "multiple_choice",
+      "stem": "You flip a fair coin 100 times. Would you expect exactly 50 heads?",
+      "options": [
+        "Yes, always",
+        "No — but approximately 50 is likely",
+        "Yes, if the coin is fair",
+        "No — you always get more tails"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "No — but approximately 50 is likely"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Probability predicts the long-run pattern, not the exact count each time.",
+          "With 100 flips, results will be close to 50 but rarely exactly 50.",
+          "Random variation means results differ each time."
+        ]
+      },
+      "worked_solution": "The probability of 0.5 means approximately 50 heads in 100 flips, but exact results vary."
+    },
+    {
+      "id": "AC9M7P02-002",
+      "type": "multiple_choice",
+      "stem": "As the number of trials in an experiment increases, the experimental probability tends to:",
+      "options": [
+        "Increase forever",
+        "Decrease forever",
+        "Get further from the theoretical probability",
+        "Get closer to the theoretical probability"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Get closer to the theoretical probability"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "This is called the Law of Large Numbers.",
+          "More trials → experimental probability converges on theoretical.",
+          "A small number of trials can have large variation."
+        ]
+      },
+      "worked_solution": "Law of Large Numbers: as trials increase, experimental probability approaches theoretical probability."
+    },
+    {
+      "id": "AC9M7P02-003",
+      "type": "numeric",
+      "stem": "A die is rolled 60 times. How many times would you expect to roll a number greater than 4?",
+      "answer": {
+        "type": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Numbers greater than 4 on a die: 5 and 6.",
+          "P(>4) = \\(\\frac{2}{6}=\\frac{1}{3}\\).",
+          "Expected = \\(\\frac{1}{3}\\times60=20\\)."
+        ]
+      },
+      "worked_solution": "P(>4) = \\(\\frac{2}{6}\\). Expected = \\(\\frac{1}{3}\\times60=20\\)."
+    },
+    {
+      "id": "AC9M7P02-004",
+      "type": "numeric",
+      "stem": "Flip a fair coin 200 times. How many heads would you expect?",
+      "answer": {
+        "type": "numeric",
+        "value": 100,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "P(head) = \\(\\frac{1}{2}\\).",
+          "Expected heads = \\(\\frac{1}{2}\\times200\\).",
+          "\\(\\frac{200}{2}=100\\)."
+        ]
+      },
+      "worked_solution": "Expected heads = \\(\\frac{1}{2}\\times200=100\\)."
+    },
+    {
+      "id": "AC9M7P02-005",
+      "type": "multiple_choice",
+      "stem": "You roll a die 20 times and get no 6s. What is the probability of getting a 6 on your next roll?",
+      "options": [
+        "0 (already used up the 6s)",
+        "\\(\\frac{1}{6}\\) (each roll is independent)",
+        "\\(\\frac{1}{5}\\) (more likely now)",
+        "\\(\\frac{6}{20}\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(\\frac{1}{6}\\) (each roll is independent)"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Each die roll is a separate event — past rolls do not affect future rolls.",
+          "P(6) is always \\(\\frac{1}{6}\\) on a fair die.",
+          "The die has no memory."
+        ]
+      },
+      "worked_solution": "Each roll is independent. P(6) = \\(\\frac{1}{6}\\) regardless of previous results."
+    },
+    {
+      "id": "AC9M7P02-006",
+      "type": "multiple_choice",
+      "stem": "In 50 trials you observe 18 successes. What is the experimental probability of success?",
+      "options": [
+        "\\(\\frac{18}{50}\\)",
+        "\\(\\frac{32}{50}\\)",
+        "\\(\\frac{50}{18}\\)",
+        "\\(\\frac{18}{32}\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(\\frac{18}{50}\\)"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Experimental probability = favourable outcomes ÷ total trials.",
+          "\\(\\frac{18}{50}\\).",
+          "Simplify if needed: \\(\\frac{9}{25}=0.36\\)."
+        ]
+      },
+      "worked_solution": "P(success) = \\(\\frac{18}{50}=\\frac{9}{25}=0.36\\)."
+    },
+    {
+      "id": "AC9M7P02-007",
+      "type": "multiple_choice",
+      "stem": "Which experiment gives the most reliable probability estimate?",
+      "options": [
+        "10 trials",
+        "50 trials",
+        "100 trials",
+        "1000 trials"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "1000 trials"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "More trials means less random variation.",
+          "The experimental probability gets closer to theoretical with more trials.",
+          "1000 trials gives the most reliable estimate."
+        ]
+      },
+      "worked_solution": "More trials → Law of Large Numbers → experimental probability closer to theoretical."
+    },
+    {
+      "id": "AC9M7P02-008",
+      "type": "numeric",
+      "stem": "A spinner has 4 equal sections. In 40 spins, how many times would you expect it to land on one particular section?",
+      "answer": {
+        "type": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "P(one section) = \\(\\frac{1}{4}\\).",
+          "Expected = \\(\\frac{1}{4}\\times40\\).",
+          "\\(\\frac{40}{4}=10\\)."
+        ]
+      },
+      "worked_solution": "Expected = \\(\\frac{1}{4}\\times40=10\\) times."
+    },
+    {
+      "id": "AC9M7P02-009",
+      "type": "multiple_choice",
+      "stem": "You observe 65 heads in 100 coin flips. What is the most reasonable conclusion?",
+      "options": [
+        "The coin must be biased",
+        "The coin is definitely fair",
+        "More trials are needed to draw a reliable conclusion",
+        "It is impossible to get 65 heads from a fair coin"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "More trials are needed to draw a reliable conclusion"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "65 heads in 100 could happen by chance even with a fair coin.",
+          "The probability of this is not extremely low.",
+          "More trials would help determine if there is genuine bias."
+        ]
+      },
+      "worked_solution": "65/100 is somewhat unusual but not impossible for a fair coin. More trials are needed."
+    },
+    {
+      "id": "AC9M7P02-010",
+      "type": "multiple_choice",
+      "stem": "The difference between experimental and theoretical probability tends to...",
+      "options": [
+        "increase as more trials are conducted",
+        "stay constant",
+        "decrease as more trials are conducted",
+        "be exactly zero after 100 trials"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "decrease as more trials are conducted"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "The Law of Large Numbers explains this.",
+          "More trials → experimental probability converges on theoretical.",
+          "The gap decreases (doesn't necessarily reach zero)."
+        ]
+      },
+      "worked_solution": "More trials → experimental probability gets closer to theoretical probability (Law of Large Numbers)."
+    }
+  ]
+}

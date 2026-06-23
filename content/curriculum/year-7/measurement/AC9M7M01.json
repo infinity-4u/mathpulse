@@ -1,0 +1,208 @@
+{
+  "code": "AC9M7M01",
+  "year": 7,
+  "strand": "Measurement",
+  "substrand": "Area of 2D Shapes",
+  "acara_description": "Establish formulas for areas of rectangles, triangles and parallelograms, and use these in problem-solving.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7M01-001",
+      "type": "numeric",
+      "stem": "Find the area of a rectangle with length 8 cm and width 5 cm. (in cm\\(^2\\))",
+      "answer": {
+        "type": "numeric",
+        "value": 40,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Area of a rectangle = length \\(\\times\\) width.",
+          "\\(A=8\\times5\\).",
+          "\\(8\\times5=?\\)."
+        ]
+      },
+      "worked_solution": "\\(A=8\\times5=40\\) cm\\(^2\\)."
+    },
+    {
+      "id": "AC9M7M01-002",
+      "type": "numeric",
+      "stem": "Find the area of a rectangle with length 12 m and width 7 m. (in m\\(^2\\))",
+      "answer": {
+        "type": "numeric",
+        "value": 84,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "\\(A=l\\times w=12\\times7\\).",
+          "\\(12\\times7=?\\).",
+          "\\(A=84\\) m\\(^2\\)."
+        ]
+      },
+      "worked_solution": "\\(A=12\\times7=84\\) m\\(^2\\)."
+    },
+    {
+      "id": "AC9M7M01-003",
+      "type": "numeric",
+      "stem": "Find the area of a triangle with base 10 cm and height 6 cm. (in cm\\(^2\\))",
+      "answer": {
+        "type": "numeric",
+        "value": 30,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Area of triangle = \\(\\frac{1}{2}\\times\\text{base}\\times\\text{height}\\).",
+          "\\(A=\\frac{1}{2}\\times10\\times6\\).",
+          "\\(\\frac{1}{2}\\times60=?\\)."
+        ]
+      },
+      "worked_solution": "\\(A=\\frac{1}{2}\\times10\\times6=30\\) cm\\(^2\\)."
+    },
+    {
+      "id": "AC9M7M01-004",
+      "type": "numeric",
+      "stem": "Find the area of a triangle with base 8 m and perpendicular height 9 m. (in m\\(^2\\))",
+      "answer": {
+        "type": "numeric",
+        "value": 36,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "\\(A=\\frac{1}{2}\\times b\\times h\\).",
+          "\\(A=\\frac{1}{2}\\times8\\times9\\).",
+          "\\(\\frac{1}{2}\\times72=?\\)."
+        ]
+      },
+      "worked_solution": "\\(A=\\frac{1}{2}\\times8\\times9=36\\) m\\(^2\\)."
+    },
+    {
+      "id": "AC9M7M01-005",
+      "type": "numeric",
+      "stem": "Find the area of a parallelogram with base 7 cm and perpendicular height 4 cm. (in cm\\(^2\\))",
+      "answer": {
+        "type": "numeric",
+        "value": 28,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Area of parallelogram = base \\(\\times\\) perpendicular height.",
+          "\\(A=7\\times4\\).",
+          "\\(7\\times4=?\\)."
+        ]
+      },
+      "worked_solution": "\\(A=7\\times4=28\\) cm\\(^2\\)."
+    },
+    {
+      "id": "AC9M7M01-006",
+      "type": "numeric",
+      "stem": "Find the area of a square with side length 9 m. (in m\\(^2\\))",
+      "answer": {
+        "type": "numeric",
+        "value": 81,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "A square is a rectangle with equal sides.",
+          "\\(A=9\\times9=9^2\\).",
+          "\\(9^2=81\\)."
+        ]
+      },
+      "worked_solution": "\\(A=9^2=81\\) m\\(^2\\)."
+    },
+    {
+      "id": "AC9M7M01-007",
+      "type": "numeric",
+      "stem": "A rectangle has area 60 cm\\(^2\\) and width 5 cm. Find the length in cm.",
+      "answer": {
+        "type": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "\\(A=l\\times w\\;\\Rightarrow\\;l=A\\div w\\).",
+          "\\(l=60\\div5\\).",
+          "\\(60\\div5=?\\)."
+        ]
+      },
+      "worked_solution": "\\(l=60\\div5=12\\) cm."
+    },
+    {
+      "id": "AC9M7M01-008",
+      "type": "numeric",
+      "stem": "A triangle has area 24 cm\\(^2\\) and base 8 cm. Find the perpendicular height in cm.",
+      "answer": {
+        "type": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "\\(A=\\frac{1}{2}bh\\;\\Rightarrow\\;h=\\frac{2A}{b}\\).",
+          "\\(h=\\frac{2\\times24}{8}=\\frac{48}{8}\\).",
+          "\\(48\\div8=?\\)."
+        ]
+      },
+      "worked_solution": "\\(h=\\frac{2\\times24}{8}=6\\) cm."
+    },
+    {
+      "id": "AC9M7M01-009",
+      "type": "multiple_choice",
+      "stem": "Which formula gives the area of a parallelogram?",
+      "options": [
+        "\\(\\frac{1}{2}bh\\)",
+        "\\(bh\\)",
+        "\\(\\pi r^2\\)",
+        "\\(2(l+w)\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(bh\\)"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "A parallelogram's area formula uses its base and perpendicular height.",
+          "Unlike a triangle, there is no half.",
+          "Area = base \\(\\times\\) height = \\(bh\\)."
+        ]
+      },
+      "worked_solution": "Area of parallelogram = base \\(\\times\\) perpendicular height = \\(bh\\)."
+    },
+    {
+      "id": "AC9M7M01-010",
+      "type": "numeric",
+      "stem": "An L-shaped room is made from a large rectangle (10 m \\(\\times\\) 8 m) with a corner rectangle (4 m \\(\\times\\) 3 m) removed. Find the area of the room in m\\(^2\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 68,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Large rectangle area − small rectangle area.",
+          "Large: \\(10\\times8=80\\). Small: \\(4\\times3=12\\).",
+          "\\(80-12=?\\)."
+        ]
+      },
+      "worked_solution": "Area = \\(10\\times8 - 4\\times3 = 80-12=68\\) m\\(^2\\)."
+    }
+  ]
+}

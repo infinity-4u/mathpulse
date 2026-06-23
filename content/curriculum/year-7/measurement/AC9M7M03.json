@@ -1,0 +1,218 @@
+{
+  "code": "AC9M7M03",
+  "year": 7,
+  "strand": "Measurement",
+  "substrand": "Circles and Pi",
+  "acara_description": "Investigate the relationship between circumference and diameter of circles; use pi to solve problems.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7M03-001",
+      "type": "numeric",
+      "stem": "Find the diameter of a circle with radius 5 cm.",
+      "answer": {
+        "type": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Diameter = 2 × radius.",
+          "d = 2 × 5.",
+          "d = 10."
+        ]
+      },
+      "worked_solution": "d = 2r = 2 × 5 = 10 cm."
+    },
+    {
+      "id": "AC9M7M03-002",
+      "type": "numeric",
+      "stem": "Find the radius of a circle with diameter 14 cm.",
+      "answer": {
+        "type": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Radius = diameter ÷ 2.",
+          "r = 14 ÷ 2.",
+          "r = 7."
+        ]
+      },
+      "worked_solution": "r = d ÷ 2 = 14 ÷ 2 = 7 cm."
+    },
+    {
+      "id": "AC9M7M03-003",
+      "type": "multiple_choice",
+      "stem": "What is the approximate value of \\(\\pi\\)?",
+      "options": [
+        "2.14",
+        "3.14",
+        "3.41",
+        "31.4"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "3.14"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "\\(\\pi\\) is the ratio of a circle's circumference to its diameter.",
+          "\\(\\pi \\approx 3.14159\\ldots\\)",
+          "To 2 decimal places: \\(\\pi\\approx3.14\\)."
+        ]
+      },
+      "worked_solution": "\\(\\pi\\approx3.14\\) (irrational number approximately equal to 3.14159...)."
+    },
+    {
+      "id": "AC9M7M03-004",
+      "type": "numeric",
+      "stem": "Find the circumference of a circle with diameter 7 cm. Use \\(\\pi\\approx\\frac{22}{7}\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 22,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "\\(C=\\pi d\\).",
+          "\\(C=\\frac{22}{7}\\times7\\).",
+          "\\(\\frac{22}{7}\\times7=22\\)."
+        ]
+      },
+      "worked_solution": "\\(C=\\pi d=\\frac{22}{7}\\times7=22\\) cm."
+    },
+    {
+      "id": "AC9M7M03-005",
+      "type": "numeric",
+      "stem": "Find the circumference of a circle with radius 7 cm. Use \\(\\pi\\approx\\frac{22}{7}\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 44,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "\\(C=2\\pi r\\).",
+          "\\(C=2\\times\\frac{22}{7}\\times7\\).",
+          "\\(2\\times22=44\\)."
+        ]
+      },
+      "worked_solution": "\\(C=2\\pi r=2\\times\\frac{22}{7}\\times7=44\\) cm."
+    },
+    {
+      "id": "AC9M7M03-006",
+      "type": "numeric",
+      "stem": "Find the diameter of a circle with circumference 44 cm. Use \\(\\pi\\approx\\frac{22}{7}\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 14,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "\\(C=\\pi d\\;\\Rightarrow\\;d=\\frac{C}{\\pi}\\).",
+          "\\(d=\\frac{44}{\\frac{22}{7}}=44\\times\\frac{7}{22}\\).",
+          "\\(44\\times\\frac{7}{22}=\\frac{308}{22}=14\\)."
+        ]
+      },
+      "worked_solution": "\\(d=\\frac{44}{\\frac{22}{7}}=44\\times\\frac{7}{22}=14\\) cm."
+    },
+    {
+      "id": "AC9M7M03-007",
+      "type": "numeric",
+      "stem": "Find the area of a circle with radius 7 cm. Use \\(\\pi\\approx\\frac{22}{7}\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 154,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "\\(A=\\pi r^2\\).",
+          "\\(A=\\frac{22}{7}\\times7^2=\\frac{22}{7}\\times49\\).",
+          "\\(\\frac{22\\times49}{7}=22\\times7=154\\)."
+        ]
+      },
+      "worked_solution": "\\(A=\\frac{22}{7}\\times49=22\\times7=154\\) cm\\(^2\\)."
+    },
+    {
+      "id": "AC9M7M03-008",
+      "type": "multiple_choice",
+      "stem": "If the radius of a circle doubles, what happens to the circumference?",
+      "options": [
+        "It stays the same",
+        "It doubles",
+        "It quadruples",
+        "It is halved"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "It doubles"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "\\(C=2\\pi r\\). Replace \\(r\\) with \\(2r\\).",
+          "New \\(C=2\\pi(2r)=4\\pi r\\).",
+          "This is 2 times the original circumference."
+        ]
+      },
+      "worked_solution": "\\(C=2\\pi r\\). If \\(r\\to2r\\): new \\(C=2\\pi(2r)=4\\pi r=2\\times(2\\pi r)\\). Circumference doubles."
+    },
+    {
+      "id": "AC9M7M03-009",
+      "type": "multiple_choice",
+      "stem": "What is the name for the distance from the centre of a circle to its edge?",
+      "options": [
+        "Diameter",
+        "Radius",
+        "Circumference",
+        "Arc"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Radius"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "The centre to the edge is half the full width.",
+          "It is called the radius.",
+          "Radius = half the diameter."
+        ]
+      },
+      "worked_solution": "The distance from the centre to the edge is the radius."
+    },
+    {
+      "id": "AC9M7M03-010",
+      "type": "numeric",
+      "stem": "A circular garden has radius 3.5 m. Find its circumference. Use \\(\\pi\\approx\\frac{22}{7}\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 22,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "\\(C=2\\pi r=2\\times\\frac{22}{7}\\times3.5\\).",
+          "\\(3.5=\\frac{7}{2}\\), so \\(2\\times\\frac{22}{7}\\times\\frac{7}{2}\\).",
+          "Simplify: \\(22\\)."
+        ]
+      },
+      "worked_solution": "\\(C=2\\times\\frac{22}{7}\\times3.5=2\\times\\frac{22}{7}\\times\\frac{7}{2}=22\\) m."
+    }
+  ]
+}

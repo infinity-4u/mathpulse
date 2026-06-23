@@ -1,0 +1,213 @@
+{
+  "code": "AC9M7M02",
+  "year": 7,
+  "strand": "Measurement",
+  "substrand": "Volume of Right Prisms",
+  "acara_description": "Develop and use formulas for volumes of rectangular and triangular right prisms in problem-solving.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7M02-001",
+      "type": "numeric",
+      "stem": "Find the volume of a rectangular prism with length 5 cm, width 4 cm and height 3 cm. (in cm\\(^3\\))",
+      "answer": {
+        "type": "numeric",
+        "value": 60,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "\\(V=l\\times w\\times h\\).",
+          "\\(V=5\\times4\\times3\\).",
+          "\\(5\\times4=20,\\;20\\times3=?\\)."
+        ]
+      },
+      "worked_solution": "\\(V=5\\times4\\times3=60\\) cm\\(^3\\)."
+    },
+    {
+      "id": "AC9M7M02-002",
+      "type": "numeric",
+      "stem": "Find the volume of a rectangular prism: length 8 m, width 6 m, height 2 m. (in m\\(^3\\))",
+      "answer": {
+        "type": "numeric",
+        "value": 96,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "\\(V=l\\times w\\times h=8\\times6\\times2\\).",
+          "\\(8\\times6=48\\).",
+          "\\(48\\times2=?\\)."
+        ]
+      },
+      "worked_solution": "\\(V=8\\times6\\times2=96\\) m\\(^3\\)."
+    },
+    {
+      "id": "AC9M7M02-003",
+      "type": "numeric",
+      "stem": "Find the volume of a cube with side length 4 cm. (in cm\\(^3\\))",
+      "answer": {
+        "type": "numeric",
+        "value": 64,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "A cube has \\(l=w=h\\).",
+          "\\(V=4\\times4\\times4=4^3\\).",
+          "\\(4^3=64\\)."
+        ]
+      },
+      "worked_solution": "\\(V=4^3=64\\) cm\\(^3\\)."
+    },
+    {
+      "id": "AC9M7M02-004",
+      "type": "numeric",
+      "stem": "Find the volume of a triangular prism with triangle base 3 cm, triangle height 4 cm and prism length 10 cm. (in cm\\(^3\\))",
+      "answer": {
+        "type": "numeric",
+        "value": 60,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Volume = area of triangular cross-section \\(\\times\\) length.",
+          "Triangle area \\(=\\frac{1}{2}\\times3\\times4=6\\) cm\\(^2\\).",
+          "\\(V=6\\times10=?\\)."
+        ]
+      },
+      "worked_solution": "\\(V=\\frac{1}{2}\\times3\\times4\\times10=6\\times10=60\\) cm\\(^3\\)."
+    },
+    {
+      "id": "AC9M7M02-005",
+      "type": "numeric",
+      "stem": "Find the volume of a triangular prism: triangle base 6 cm, triangle height 5 cm, prism length 8 cm. (in cm\\(^3\\))",
+      "answer": {
+        "type": "numeric",
+        "value": 120,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Triangle area \\(=\\frac{1}{2}\\times6\\times5\\).",
+          "\\(\\frac{1}{2}\\times30=15\\) cm\\(^2\\).",
+          "\\(V=15\\times8=?\\)."
+        ]
+      },
+      "worked_solution": "\\(V=\\frac{1}{2}\\times6\\times5\\times8=15\\times8=120\\) cm\\(^3\\)."
+    },
+    {
+      "id": "AC9M7M02-006",
+      "type": "numeric",
+      "stem": "A rectangular prism has volume 120 cm\\(^3\\), length 5 cm and width 4 cm. Find the height in cm.",
+      "answer": {
+        "type": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "\\(V=lwh\\;\\Rightarrow\\;h=\\frac{V}{lw}\\).",
+          "\\(h=\\frac{120}{5\\times4}=\\frac{120}{20}\\).",
+          "\\(120\\div20=?\\)."
+        ]
+      },
+      "worked_solution": "\\(h=120\\div20=6\\) cm."
+    },
+    {
+      "id": "AC9M7M02-007",
+      "type": "multiple_choice",
+      "stem": "Which formula gives the volume of a rectangular prism?",
+      "options": [
+        "\\(l+w+h\\)",
+        "\\(2(lw+wh+lh)\\)",
+        "\\(lwh\\)",
+        "\\(lw\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(lwh\\)"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Volume fills 3-dimensional space.",
+          "Multiply length, width and height together.",
+          "\\(V=lwh\\)."
+        ]
+      },
+      "worked_solution": "Volume of rectangular prism \\(=l\\times w\\times h\\)."
+    },
+    {
+      "id": "AC9M7M02-008",
+      "type": "multiple_choice",
+      "stem": "How many cm³ are in 1 m³?",
+      "options": [
+        "100",
+        "1000",
+        "10 000",
+        "1 000 000"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "1 000 000"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "1 m = 100 cm.",
+          "\\(1\\) m\\(^3=(100\\) cm\\()^3=100^3\\) cm\\(^3\\).",
+          "\\(100^3=1\\,000\\,000\\)."
+        ]
+      },
+      "worked_solution": "\\(1\\) m\\(^3=(100)^3\\) cm\\(^3=1\\,000\\,000\\) cm\\(^3\\)."
+    },
+    {
+      "id": "AC9M7M02-009",
+      "type": "numeric",
+      "stem": "A fish tank (rectangular prism) is 60 cm long, 30 cm wide and 40 cm tall. Find its volume in cm\\(^3\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 72000,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "\\(V=60\\times30\\times40\\).",
+          "\\(60\\times30=1800\\).",
+          "\\(1800\\times40=?\\)."
+        ]
+      },
+      "worked_solution": "\\(V=60\\times30\\times40=72\\,000\\) cm\\(^3\\)."
+    },
+    {
+      "id": "AC9M7M02-010",
+      "type": "numeric",
+      "stem": "A triangular prism has volume 90 cm\\(^3\\). The triangular base has base 6 cm and height 5 cm. Find the length of the prism in cm.",
+      "answer": {
+        "type": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Triangle area \\(=\\frac{1}{2}\\times6\\times5=15\\) cm\\(^2\\).",
+          "\\(V=\\text{area}\\times\\text{length}\\;\\Rightarrow\\;90=15\\times\\text{length}\\).",
+          "Length \\(=90\\div15=?\\)."
+        ]
+      },
+      "worked_solution": "Length \\(=90\\div15=6\\) cm."
+    }
+  ]
+}

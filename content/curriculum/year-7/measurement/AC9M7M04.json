@@ -1,0 +1,223 @@
+{
+  "code": "AC9M7M04",
+  "year": 7,
+  "strand": "Measurement",
+  "substrand": "Angles and Parallel Lines",
+  "acara_description": "Identify corresponding, alternate and co-interior angle relationships for parallel lines cut by a transversal; solve problems.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7M04-001",
+      "type": "multiple_choice",
+      "stem": "When two parallel lines are cut by a transversal, corresponding angles are:",
+      "options": [
+        "supplementary (add to 180°)",
+        "complementary (add to 90°)",
+        "equal",
+        "vertically opposite"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "equal"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Corresponding angles are on the same side of the transversal.",
+          "They form an F-shape (or backwards F).",
+          "Corresponding angles in parallel lines are always equal."
+        ]
+      },
+      "worked_solution": "Corresponding angles (F-angles) in parallel lines are equal."
+    },
+    {
+      "id": "AC9M7M04-002",
+      "type": "multiple_choice",
+      "stem": "Alternate angles in parallel lines are:",
+      "options": [
+        "supplementary",
+        "equal",
+        "twice each other",
+        "complementary"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "equal"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Alternate angles are on opposite sides of the transversal.",
+          "They form a Z-shape (or S-shape).",
+          "Alternate angles in parallel lines are always equal."
+        ]
+      },
+      "worked_solution": "Alternate angles (Z-angles) in parallel lines are equal."
+    },
+    {
+      "id": "AC9M7M04-003",
+      "type": "multiple_choice",
+      "stem": "Co-interior angles (same-side interior angles) in parallel lines add up to:",
+      "options": [
+        "90°",
+        "180°",
+        "270°",
+        "360°"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "180°"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Co-interior angles are between the parallel lines, on the same side of the transversal.",
+          "They form a C-shape (or U-shape).",
+          "Co-interior angles are supplementary."
+        ]
+      },
+      "worked_solution": "Co-interior angles (C-angles) in parallel lines add to 180°."
+    },
+    {
+      "id": "AC9M7M04-004",
+      "type": "numeric",
+      "stem": "Two parallel lines are cut by a transversal. One co-interior angle is 65°. Find the other co-interior angle in degrees.",
+      "answer": {
+        "type": "numeric",
+        "value": 115,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Co-interior angles add to 180°.",
+          "180° − 65° = ?",
+          "115°."
+        ]
+      },
+      "worked_solution": "Co-interior angles sum = 180°. Other angle = 180° − 65° = 115°."
+    },
+    {
+      "id": "AC9M7M04-005",
+      "type": "numeric",
+      "stem": "A corresponding angle is 72°. Find the corresponding angle on the parallel line.",
+      "answer": {
+        "type": "numeric",
+        "value": 72,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Corresponding angles in parallel lines are equal.",
+          "The angle equals 72°.",
+          "72°."
+        ]
+      },
+      "worked_solution": "Corresponding angles are equal. Answer: 72°."
+    },
+    {
+      "id": "AC9M7M04-006",
+      "type": "numeric",
+      "stem": "An alternate angle is 48°. Find the alternate angle on the other side of the transversal.",
+      "answer": {
+        "type": "numeric",
+        "value": 48,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Alternate angles in parallel lines are equal.",
+          "The angle equals 48°.",
+          "48°."
+        ]
+      },
+      "worked_solution": "Alternate angles are equal. Answer: 48°."
+    },
+    {
+      "id": "AC9M7M04-007",
+      "type": "numeric",
+      "stem": "Parallel lines cut by a transversal. One co-interior angle is 130°. Find the other co-interior angle in degrees.",
+      "answer": {
+        "type": "numeric",
+        "value": 50,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Co-interior angles add to 180°.",
+          "180° − 130° = ?",
+          "50°."
+        ]
+      },
+      "worked_solution": "180° − 130° = 50°."
+    },
+    {
+      "id": "AC9M7M04-008",
+      "type": "numeric",
+      "stem": "Two co-interior angles are x° and 2x°. Find x.",
+      "answer": {
+        "type": "numeric",
+        "value": 60,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Co-interior angles add to 180°.",
+          "\\(x+2x=180\\;\\Rightarrow\\;3x=180\\).",
+          "\\(x=60\\)."
+        ]
+      },
+      "worked_solution": "\\(x+2x=180\\;\\Rightarrow\\;3x=180\\;\\Rightarrow\\;x=60\\)."
+    },
+    {
+      "id": "AC9M7M04-009",
+      "type": "numeric",
+      "stem": "Corresponding angles are \\((2y+10)°\\) and \\(70°\\). Find \\(y\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 30,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Corresponding angles in parallel lines are equal.",
+          "\\(2y+10=70\\).",
+          "\\(2y=60\\;\\Rightarrow\\;y=30\\)."
+        ]
+      },
+      "worked_solution": "\\(2y+10=70\\;\\Rightarrow\\;2y=60\\;\\Rightarrow\\;y=30\\)."
+    },
+    {
+      "id": "AC9M7M04-010",
+      "type": "multiple_choice",
+      "stem": "Which two types of angles formed by parallel lines and a transversal are always equal to each other?",
+      "options": [
+        "Co-interior angles",
+        "Corresponding angles and alternate angles",
+        "Co-interior angles and corresponding angles",
+        "Adjacent angles"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Corresponding angles and alternate angles"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Recall the rules for each angle type.",
+          "Corresponding (F) and alternate (Z) angles are both equal.",
+          "Co-interior (C) angles are supplementary (add to 180°), not equal."
+        ]
+      },
+      "worked_solution": "Corresponding angles (equal) and alternate angles (equal) — both are equal. Co-interior angles add to 180°."
+    }
+  ]
+}

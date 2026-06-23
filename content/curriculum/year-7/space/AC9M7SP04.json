@@ -1,0 +1,253 @@
+{
+  "code": "AC9M7SP04",
+  "year": 7,
+  "strand": "Space",
+  "substrand": "Shape Classification Algorithms",
+  "acara_description": "Design algorithms involving sequences of decisions to sort and classify shapes; describe how the algorithms work.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7SP04-001",
+      "type": "multiple_choice",
+      "stem": "In a flowchart for classifying shapes, the first question is 'Does it have 4 sides?' A triangle would:",
+      "options": [
+        "Go to the 'Yes' branch",
+        "Go to the 'No' branch",
+        "Skip this step",
+        "Cannot be classified"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Go to the 'No' branch"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "A triangle has 3 sides, not 4.",
+          "'Does it have 4 sides?' → No (triangle has 3).",
+          "The triangle follows the 'No' path."
+        ]
+      },
+      "worked_solution": "A triangle has 3 sides, so it answers 'No' to 'Does it have 4 sides?'."
+    },
+    {
+      "id": "AC9M7SP04-002",
+      "type": "multiple_choice",
+      "stem": "An algorithm classifies shapes by number of sides. Which group would a hexagon fall into?",
+      "options": [
+        "3-sided group",
+        "4-sided group",
+        "5-sided group",
+        "6-sided group"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "6-sided group"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "A hexagon has 6 sides.",
+          "The algorithm groups by side count.",
+          "Hexagon → 6-sided group."
+        ]
+      },
+      "worked_solution": "Hexagon has 6 sides → 6-sided group."
+    },
+    {
+      "id": "AC9M7SP04-003",
+      "type": "multiple_choice",
+      "stem": "A decision tree asks: '4 sides?' → Yes → 'Are opposite sides parallel?' → Yes → 'Are all sides equal?' → Yes → 'Shape is?'",
+      "options": [
+        "Rectangle",
+        "Trapezium",
+        "Rhombus or square",
+        "Any quadrilateral"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Rhombus or square"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "4 sides, parallel opposite sides, all sides equal.",
+          "A rhombus has all sides equal with parallel sides.",
+          "A square is a special rhombus with right angles."
+        ]
+      },
+      "worked_solution": "4 sides + parallel + all equal → rhombus or square."
+    },
+    {
+      "id": "AC9M7SP04-004",
+      "type": "multiple_choice",
+      "stem": "To distinguish a square from a rectangle using an algorithm, which question works best?",
+      "options": [
+        "Do the diagonals bisect each other?",
+        "Are all angles 90°?",
+        "Are all sides equal?",
+        "Does it have 4 sides?"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Are all sides equal?"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Both squares and rectangles have 4 right angles.",
+          "The difference: a square has all 4 sides equal.",
+          "Asking 'are all sides equal?' separates them."
+        ]
+      },
+      "worked_solution": "'Are all sides equal?' → Yes → Square; No → Rectangle (but not square)."
+    },
+    {
+      "id": "AC9M7SP04-005",
+      "type": "multiple_choice",
+      "stem": "Which question best distinguishes isosceles from equilateral triangles?",
+      "options": [
+        "Do all angles sum to 180°?",
+        "Are all three sides equal?",
+        "Does it have at least 2 equal sides?",
+        "Is it a triangle?"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Are all three sides equal?"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Both equilateral and isosceles have at least 2 equal sides.",
+          "But an equilateral triangle has ALL 3 sides equal.",
+          "'Are all 3 sides equal?' → Yes → equilateral; No → isosceles (not equilateral)."
+        ]
+      },
+      "worked_solution": "'Are all three sides equal?' separates equilateral (Yes) from non-equilateral isosceles (No)."
+    },
+    {
+      "id": "AC9M7SP04-006",
+      "type": "multiple_choice",
+      "stem": "A flowchart sorts quadrilaterals: '2 pairs of parallel sides?' → Yes → 'All sides equal?' → Yes → 'All angles 90°?' → Yes → shape is?",
+      "options": [
+        "Parallelogram",
+        "Rhombus",
+        "Rectangle",
+        "Square"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Square"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "2 pairs of parallel sides → parallelogram family.",
+          "All sides equal → rhombus or square.",
+          "All angles 90° → must be a square."
+        ]
+      },
+      "worked_solution": "Parallelogram + all sides equal + all 90° = square."
+    },
+    {
+      "id": "AC9M7SP04-007",
+      "type": "multiple_choice",
+      "stem": "An algorithm classifies triangles. Step 1: 'Are all 3 sides equal?' If No, go to Step 2: 'Are exactly 2 sides equal?' If No, the shape is:",
+      "options": [
+        "Equilateral",
+        "Isosceles",
+        "Scalene",
+        "Not a triangle"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Scalene"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Not equilateral (no 3 equal), not isosceles (no 2 equal).",
+          "The only remaining type is scalene.",
+          "Scalene: no sides equal."
+        ]
+      },
+      "worked_solution": "Passing through both 'No' branches → scalene triangle (no equal sides)."
+    },
+    {
+      "id": "AC9M7SP04-008",
+      "type": "multiple_choice",
+      "stem": "A flowchart classifies polygons. Decision 1: 'Is it regular?' (all sides and angles equal). Decision 2: 'How many sides?' If regular and 6 sides, it is a:",
+      "options": [
+        "Regular pentagon",
+        "Regular hexagon",
+        "Regular octagon",
+        "Rhombus"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Regular hexagon"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Regular means all sides equal AND all angles equal.",
+          "6 sides = hexagon.",
+          "Regular + 6 sides = regular hexagon."
+        ]
+      },
+      "worked_solution": "Regular (all sides/angles equal) + 6 sides = regular hexagon."
+    },
+    {
+      "id": "AC9M7SP04-009",
+      "type": "multiple_choice",
+      "stem": "In a flow chart classifying quadrilaterals, which comes LAST (most specific)?",
+      "options": [
+        "Has 4 sides",
+        "Is a parallelogram",
+        "Is a rectangle",
+        "Is a square"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Is a square"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Start general, then get more specific.",
+          "A square is the most specific type: 4 sides → parallelogram → rectangle → square.",
+          "Square is the most restrictive category."
+        ]
+      },
+      "worked_solution": "The hierarchy: quadrilateral → parallelogram → rectangle → square."
+    },
+    {
+      "id": "AC9M7SP04-010",
+      "type": "multiple_choice",
+      "stem": "An algorithm uses decisions to sort shapes into triangles, quadrilaterals and 'other'. Which sequence of decisions is most efficient?",
+      "options": [
+        "Check if curved first, then count sides",
+        "Count sides immediately",
+        "Check if regular, then count sides",
+        "Check colour first, then count sides"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Count sides immediately"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Counting sides distinguishes triangles (3) and quadrilaterals (4) directly.",
+          "Checking for curves first is only useful if we have circles etc.",
+          "Counting sides is the most direct approach."
+        ]
+      },
+      "worked_solution": "Counting sides immediately gives the most efficient classification."
+    }
+  ]
+}

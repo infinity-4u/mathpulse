@@ -1,0 +1,208 @@
+{
+  "code": "AC9M7N10",
+  "year": 7,
+  "strand": "Number",
+  "substrand": "Financial Maths",
+  "acara_description": "Use mathematical modelling to solve practical problems involving rational numbers and percentages, including financial contexts.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7N10-001",
+      "type": "numeric",
+      "stem": "A book costs $80 excluding GST. GST is 10%. What is the total price in dollars?",
+      "answer": {
+        "type": "numeric",
+        "value": 88,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "GST = 10% of the price.",
+          "10% of $80 = $8.",
+          "Total = $80 + $8 = ?"
+        ]
+      },
+      "worked_solution": "GST = 10% × $80 = $8. Total = $80 + $8 = $88."
+    },
+    {
+      "id": "AC9M7N10-002",
+      "type": "numeric",
+      "stem": "A toy is bought for $60 and sold for $75. What is the profit in dollars?",
+      "answer": {
+        "type": "numeric",
+        "value": 15,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Profit = selling price − cost price.",
+          "75 − 60 = ?",
+          "$75 − $60 = $15."
+        ]
+      },
+      "worked_solution": "Profit = $75 − $60 = $15."
+    },
+    {
+      "id": "AC9M7N10-003",
+      "type": "numeric",
+      "stem": "A toy is bought for $60 and sold for $75. What is the profit as a percentage of the cost price?",
+      "answer": {
+        "type": "numeric",
+        "value": 25,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Profit % = \\(\\frac{\\text{profit}}{\\text{cost}}\\times100\\).",
+          "\\(\\frac{15}{60}\\times100\\).",
+          "\\(\\frac{1}{4}\\times100=?\\)."
+        ]
+      },
+      "worked_solution": "Profit% = \\(\\frac{15}{60}\\times100=25\\%\\)."
+    },
+    {
+      "id": "AC9M7N10-004",
+      "type": "numeric",
+      "stem": "An item costs $50 and sells for $40. What is the loss in dollars?",
+      "answer": {
+        "type": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Loss = cost price − selling price (when you sell for less than you paid).",
+          "$50 − $40 = ?",
+          "Loss = $10."
+        ]
+      },
+      "worked_solution": "Loss = $50 − $40 = $10."
+    },
+    {
+      "id": "AC9M7N10-005",
+      "type": "numeric",
+      "stem": "A bike was $200. It is discounted by 20%. What is the sale price in dollars?",
+      "answer": {
+        "type": "numeric",
+        "value": 160,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Find 20% of $200 and subtract.",
+          "20% of $200 = $40.",
+          "$200 − $40 = ?"
+        ]
+      },
+      "worked_solution": "Discount = 20% × $200 = $40. Sale price = $200 − $40 = $160."
+    },
+    {
+      "id": "AC9M7N10-006",
+      "type": "numeric",
+      "stem": "Calculate the simple interest on $500 at 4% per year for 2 years.",
+      "answer": {
+        "type": "numeric",
+        "value": 40,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Simple Interest = Principal × Rate × Time.",
+          "\\(I = 500\\times0.04\\times2\\).",
+          "\\(500\\times0.04=20,\\;20\\times2=?\\)."
+        ]
+      },
+      "worked_solution": "\\(I = 500\\times0.04\\times2 = \\$40\\)."
+    },
+    {
+      "id": "AC9M7N10-007",
+      "type": "numeric",
+      "stem": "A worker earns $200 per week and spends 45% on rent. How many dollars is the rent?",
+      "answer": {
+        "type": "numeric",
+        "value": 90,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "45% of $200.",
+          "10% = $20, so 40% = $80 and 5% = $10.",
+          "45% = $80 + $10 = ?"
+        ]
+      },
+      "worked_solution": "45% of $200 = 45 × $2 = $90."
+    },
+    {
+      "id": "AC9M7N10-008",
+      "type": "numeric",
+      "stem": "An item is marked up 25% from its cost of $120. What is the selling price in dollars?",
+      "answer": {
+        "type": "numeric",
+        "value": 150,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "25% of $120 = mark-up amount.",
+          "25% of $120 = $30.",
+          "Selling price = $120 + $30 = ?"
+        ]
+      },
+      "worked_solution": "Mark-up = 25% × $120 = $30. Selling price = $120 + $30 = $150."
+    },
+    {
+      "id": "AC9M7N10-009",
+      "type": "multiple_choice",
+      "stem": "Which is the better value: 400 g for $3.20 or 500 g for $4.20?",
+      "options": [
+        "400 g for $3.20",
+        "500 g for $4.20",
+        "They are equal",
+        "Cannot determine"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "400 g for $3.20"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Find the unit price (cost per gram) for each.",
+          "$3.20 ÷ 400 = $0.008/g and $4.20 ÷ 500 = $0.0084/g.",
+          "Lower unit price = better value."
+        ]
+      },
+      "worked_solution": "$3.20 ÷ 400 = $0.008/g vs $4.20 ÷ 500 = $0.0084/g. The 400 g pack is cheaper per gram."
+    },
+    {
+      "id": "AC9M7N10-010",
+      "type": "numeric",
+      "stem": "Calculate the simple interest on $1000 at 6% per year for 3 years.",
+      "answer": {
+        "type": "numeric",
+        "value": 180,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "\\(I = P\\times r\\times t\\).",
+          "\\(I = 1000\\times0.06\\times3\\).",
+          "\\(1000\\times0.06=60,\\;60\\times3=?\\)."
+        ]
+      },
+      "worked_solution": "\\(I = \\$180\\)."
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "code": "AC9M7A06",
+  "year": 7,
+  "strand": "Algebra",
+  "substrand": "Varying Formulas",
+  "acara_description": "Manipulate formulas to solve for different variables; describe and predict the effect of changing variable values.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7A06-001",
+      "type": "multiple_choice",
+      "stem": "In \\(C=5n\\), if \\(n\\) increases by 1, how does \\(C\\) change?",
+      "options": [
+        "C increases by 1",
+        "C increases by 5",
+        "C doubles",
+        "C stays the same"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "C increases by 5"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Each time \\(n\\) goes up by 1, \\(C=5n\\) increases by 5×1.",
+          "New \\(C=5(n+1)=5n+5\\).",
+          "Change in \\(C = 5\\)."
+        ]
+      },
+      "worked_solution": "\\(C=5n\\). Increasing \\(n\\) by 1 gives \\(C=5(n+1)=5n+5\\), an increase of 5."
+    },
+    {
+      "id": "AC9M7A06-002",
+      "type": "multiple_choice",
+      "stem": "In \\(s=\\frac{d}{t}\\), if \\(d\\) doubles and \\(t\\) stays the same, what happens to \\(s\\)?",
+      "options": [
+        "s is halved",
+        "s stays the same",
+        "s doubles",
+        "s quadruples"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "s doubles"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Replace \\(d\\) with \\(2d\\) in the formula.",
+          "New \\(s=\\frac{2d}{t}=2\\times\\frac{d}{t}\\).",
+          "This is twice the original \\(s\\)."
+        ]
+      },
+      "worked_solution": "\\(s=\\frac{d}{t}\\). Double \\(d\\): new \\(s=\\frac{2d}{t}=2s\\). So \\(s\\) doubles."
+    },
+    {
+      "id": "AC9M7A06-003",
+      "type": "numeric",
+      "stem": "Rearrange \\(P=2l+2w\\) to find \\(l\\) when \\(P=24\\) and \\(w=4\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Start: \\(P=2l+2w\\). Substitute values.",
+          "\\(24=2l+2(4)=2l+8\\).",
+          "\\(2l=16\\;\\Rightarrow\\;l=?\\)."
+        ]
+      },
+      "worked_solution": "\\(24=2l+8\\;\\Rightarrow\\;2l=16\\;\\Rightarrow\\;l=8\\)."
+    },
+    {
+      "id": "AC9M7A06-004",
+      "type": "numeric",
+      "stem": "Using \\(v=u+at\\), find \\(v\\) when \\(u=0,\\;a=3,\\;t=4\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Substitute \\(u=0,\\;a=3,\\;t=4\\).",
+          "\\(v=0+3\\times4\\).",
+          "\\(v=12\\)."
+        ]
+      },
+      "worked_solution": "\\(v=u+at=0+3\\times4=12\\)."
+    },
+    {
+      "id": "AC9M7A06-005",
+      "type": "numeric",
+      "stem": "Using \\(P=4s\\), find \\(s\\) when \\(P=36\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 9,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Rearrange: \\(s=P\\div4\\).",
+          "\\(s=36\\div4\\).",
+          "\\(s=9\\)."
+        ]
+      },
+      "worked_solution": "\\(P=4s\\;\\Rightarrow\\;s=36\\div4=9\\)."
+    },
+    {
+      "id": "AC9M7A06-006",
+      "type": "multiple_choice",
+      "stem": "In \\(A=\\pi r^2\\), if the radius doubles, how does the area change?",
+      "options": [
+        "Area doubles",
+        "Area triples",
+        "Area becomes 4 times larger",
+        "Area is halved"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Area becomes 4 times larger"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Replace \\(r\\) with \\(2r\\).",
+          "New \\(A=\\pi(2r)^2=\\pi\\times4r^2=4\\pi r^2\\).",
+          "This is 4 times the original area."
+        ]
+      },
+      "worked_solution": "\\(A=\\pi r^2\\). Doubling \\(r\\): new \\(A=\\pi(2r)^2=4\\pi r^2\\). Area becomes 4 times larger."
+    },
+    {
+      "id": "AC9M7A06-007",
+      "type": "numeric",
+      "stem": "A cost formula is \\(C=100+15d\\) (where \\(d\\) = days). Find \\(C\\) when \\(d=5\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 175,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Substitute \\(d=5\\).",
+          "\\(C=100+15\\times5\\).",
+          "\\(100+75=?\\)."
+        ]
+      },
+      "worked_solution": "\\(C=100+15(5)=100+75=175\\)."
+    },
+    {
+      "id": "AC9M7A06-008",
+      "type": "numeric",
+      "stem": "Using \\(F=\\frac{9C}{5}+32\\), find \\(F\\) when \\(C=0\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 32,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Substitute \\(C=0\\).",
+          "\\(F=\\frac{9\\times0}{5}+32=0+32\\).",
+          "\\(F=32\\)."
+        ]
+      },
+      "worked_solution": "\\(F=\\frac{9(0)}{5}+32=32\\)°F. (This is the freezing point of water.)"
+    },
+    {
+      "id": "AC9M7A06-009",
+      "type": "numeric",
+      "stem": "Using \\(y=2x-3\\), find \\(x\\) when \\(y=7\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Substitute \\(y=7\\): \\(7=2x-3\\).",
+          "Add 3: \\(10=2x\\).",
+          "\\(x=5\\). Check: \\(2(5)-3=7\\). ✓"
+        ]
+      },
+      "worked_solution": "\\(7=2x-3\\;\\Rightarrow\\;10=2x\\;\\Rightarrow\\;x=5\\)."
+    },
+    {
+      "id": "AC9M7A06-010",
+      "type": "numeric",
+      "stem": "A mobile plan costs \\(\\$20\\) per month plus \\(\\$0.10\\) per text. Write a formula and find the cost for 60 texts.",
+      "answer": {
+        "type": "numeric",
+        "value": 26,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Let \\(n\\) = number of texts. Formula: \\(C=20+0.1n\\).",
+          "Substitute \\(n=60\\).",
+          "\\(C=20+0.1\\times60=20+6\\)."
+        ]
+      },
+      "worked_solution": "\\(C=20+0.1(60)=20+6=\\$26\\)."
+    }
+  ]
+}

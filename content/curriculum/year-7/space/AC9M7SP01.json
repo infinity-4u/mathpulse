@@ -1,0 +1,248 @@
+{
+  "code": "AC9M7SP01",
+  "year": 7,
+  "strand": "Space",
+  "substrand": "3D Objects in 2D",
+  "acara_description": "Represent three-dimensional objects in 2 dimensions; discuss the advantages and disadvantages of different representations.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7SP01-001",
+      "type": "multiple_choice",
+      "stem": "How many faces does a cube have?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "6"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Count the flat surfaces: top, bottom, front, back, left, right.",
+          "A cube has 6 identical square faces.",
+          "6 faces."
+        ]
+      },
+      "worked_solution": "A cube has 6 square faces."
+    },
+    {
+      "id": "AC9M7SP01-002",
+      "type": "multiple_choice",
+      "stem": "How many faces does a triangular prism have?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "5"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Count: 2 triangular ends + 3 rectangular sides.",
+          "2 triangles + 3 rectangles = ?",
+          "5 faces."
+        ]
+      },
+      "worked_solution": "Triangular prism: 2 triangular faces + 3 rectangular faces = 5 faces."
+    },
+    {
+      "id": "AC9M7SP01-003",
+      "type": "multiple_choice",
+      "stem": "A cube's net is made up of:",
+      "options": [
+        "4 squares",
+        "5 squares",
+        "6 squares",
+        "8 squares"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "6 squares"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "A net folds up to form the solid.",
+          "A cube has 6 faces, so its net needs 6 squares.",
+          "6 squares."
+        ]
+      },
+      "worked_solution": "A cube has 6 faces. Its net has 6 squares."
+    },
+    {
+      "id": "AC9M7SP01-004",
+      "type": "multiple_choice",
+      "stem": "What does the top view (bird's-eye view) of a cylinder look like?",
+      "options": [
+        "Rectangle",
+        "Triangle",
+        "Circle",
+        "Oval"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Circle"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Imagine looking straight down at a cylinder.",
+          "The circular top is what you see.",
+          "Circle."
+        ]
+      },
+      "worked_solution": "Viewed from above, a cylinder shows its circular cross-section."
+    },
+    {
+      "id": "AC9M7SP01-005",
+      "type": "multiple_choice",
+      "stem": "How many vertices (corners) does a rectangular prism have?",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "12"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "8"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "A rectangular prism is like a box.",
+          "Count the corners: there are 4 on top and 4 on the bottom.",
+          "4 + 4 = 8 vertices."
+        ]
+      },
+      "worked_solution": "A rectangular prism has 8 vertices (corners)."
+    },
+    {
+      "id": "AC9M7SP01-006",
+      "type": "numeric",
+      "stem": "How many edges does a triangular prism have?",
+      "answer": {
+        "type": "numeric",
+        "value": 9,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Count edges on each triangle (3 each) and edges joining them (3).",
+          "Triangle 1: 3 edges. Triangle 2: 3 edges. Connecting edges: 3.",
+          "3 + 3 + 3 = 9."
+        ]
+      },
+      "worked_solution": "A triangular prism has 9 edges: 3 on each triangular face + 3 along the length."
+    },
+    {
+      "id": "AC9M7SP01-007",
+      "type": "multiple_choice",
+      "stem": "The front view of a square pyramid looks like:",
+      "options": [
+        "A square",
+        "A triangle",
+        "A pentagon",
+        "A rectangle"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "A triangle"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Imagine looking at a pyramid straight from the front.",
+          "You see the triangular face facing you.",
+          "Triangle."
+        ]
+      },
+      "worked_solution": "The front view of a pyramid is a triangle."
+    },
+    {
+      "id": "AC9M7SP01-008",
+      "type": "multiple_choice",
+      "stem": "Which of the following can be the net of a cube?",
+      "options": [
+        "Any arrangement of 6 squares",
+        "Only a cross-shaped arrangement",
+        "Some arrangements of 6 squares, but not all",
+        "Any shape made of 6 squares"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Some arrangements of 6 squares, but not all"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Not all arrangements of 6 squares fold into a cube.",
+          "Some configurations leave gaps or overlap when folded.",
+          "There are 11 valid nets of a cube."
+        ]
+      },
+      "worked_solution": "Of all possible arrangements of 6 squares, only 11 fold into a valid cube."
+    },
+    {
+      "id": "AC9M7SP01-009",
+      "type": "multiple_choice",
+      "stem": "An isometric drawing is used to:",
+      "options": [
+        "Draw the exact dimensions of a 2D shape",
+        "Show a 3D object on a triangular grid",
+        "Draw only the top view of a 3D shape",
+        "Show a cross-section through a solid"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Show a 3D object on a triangular grid"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Isometric means equal measures.",
+          "It uses a triangular dot grid to make 3D shapes look realistic.",
+          "Three axes are shown at equal angles."
+        ]
+      },
+      "worked_solution": "Isometric drawings use a triangular grid to represent 3D objects in 2D."
+    },
+    {
+      "id": "AC9M7SP01-010",
+      "type": "multiple_choice",
+      "stem": "How many faces does a square pyramid have?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "5"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Count: 1 square base + triangular sides.",
+          "A square base has 4 edges, so there are 4 triangular faces.",
+          "1 + 4 = 5 faces."
+        ]
+      },
+      "worked_solution": "Square pyramid: 1 square base + 4 triangular faces = 5 faces."
+    }
+  ]
+}

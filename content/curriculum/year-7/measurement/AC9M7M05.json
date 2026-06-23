@@ -1,0 +1,203 @@
+{
+  "code": "AC9M7M05",
+  "year": 7,
+  "strand": "Measurement",
+  "substrand": "Angle Sums",
+  "acara_description": "Demonstrate that the interior angle sum of a triangle is 180°; apply this to other polygons.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7M05-001",
+      "type": "numeric",
+      "stem": "What is the sum of the interior angles in any triangle?",
+      "answer": {
+        "type": "numeric",
+        "value": 180,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "This is a fundamental theorem you should memorise.",
+          "The three interior angles of any triangle always add up to the same value.",
+          "180°."
+        ]
+      },
+      "worked_solution": "The interior angle sum of a triangle = 180°."
+    },
+    {
+      "id": "AC9M7M05-002",
+      "type": "numeric",
+      "stem": "A triangle has two angles of 60° and 70°. Find the third angle in degrees.",
+      "answer": {
+        "type": "numeric",
+        "value": 50,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "All three angles must add to 180°.",
+          "Third angle = 180° − 60° − 70°.",
+          "180° − 130° = 50°."
+        ]
+      },
+      "worked_solution": "Third angle = 180° − 60° − 70° = 50°."
+    },
+    {
+      "id": "AC9M7M05-003",
+      "type": "numeric",
+      "stem": "A triangle has angles of 45° and 90°. Find the third angle in degrees.",
+      "answer": {
+        "type": "numeric",
+        "value": 45,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Angles sum to 180°.",
+          "Third = 180° − 45° − 90°.",
+          "180° − 135° = 45°."
+        ]
+      },
+      "worked_solution": "Third angle = 180° − 45° − 90° = 45°. This is a right isosceles triangle."
+    },
+    {
+      "id": "AC9M7M05-004",
+      "type": "numeric",
+      "stem": "Each angle in an equilateral triangle is equal. Find each angle in degrees.",
+      "answer": {
+        "type": "numeric",
+        "value": 60,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "An equilateral triangle has 3 equal angles.",
+          "All 3 angles sum to 180°.",
+          "Each angle = 180° ÷ 3."
+        ]
+      },
+      "worked_solution": "Each angle = 180° ÷ 3 = 60°."
+    },
+    {
+      "id": "AC9M7M05-005",
+      "type": "numeric",
+      "stem": "An isosceles triangle has two equal angles of 55° each. Find the third angle in degrees.",
+      "answer": {
+        "type": "numeric",
+        "value": 70,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "All angles sum to 180°.",
+          "Sum of two equal angles = 55° + 55° = 110°.",
+          "Third angle = 180° − 110°."
+        ]
+      },
+      "worked_solution": "Third angle = 180° − 110° = 70°."
+    },
+    {
+      "id": "AC9M7M05-006",
+      "type": "numeric",
+      "stem": "An isosceles triangle has a third (different) angle of 40°. Find each of the two equal angles.",
+      "answer": {
+        "type": "numeric",
+        "value": 70,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Let the two equal angles each be x.",
+          "x + x + 40 = 180 → 2x = 140.",
+          "x = 70."
+        ]
+      },
+      "worked_solution": "2x + 40 = 180 → 2x = 140 → x = 70°."
+    },
+    {
+      "id": "AC9M7M05-007",
+      "type": "numeric",
+      "stem": "What is the sum of the interior angles of a quadrilateral?",
+      "answer": {
+        "type": "numeric",
+        "value": 360,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "A quadrilateral can be split into 2 triangles.",
+          "Each triangle has an angle sum of 180°.",
+          "2 × 180° = 360°."
+        ]
+      },
+      "worked_solution": "A quadrilateral = 2 triangles. Angle sum = 2 × 180° = 360°."
+    },
+    {
+      "id": "AC9M7M05-008",
+      "type": "numeric",
+      "stem": "A quadrilateral has three angles of 80°, 90° and 110°. Find the fourth angle in degrees.",
+      "answer": {
+        "type": "numeric",
+        "value": 80,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "All four angles sum to 360°.",
+          "Sum of three angles = 80° + 90° + 110° = 280°.",
+          "Fourth angle = 360° − 280°."
+        ]
+      },
+      "worked_solution": "Fourth = 360° − 280° = 80°."
+    },
+    {
+      "id": "AC9M7M05-009",
+      "type": "numeric",
+      "stem": "What is the sum of the interior angles of a pentagon?",
+      "answer": {
+        "type": "numeric",
+        "value": 540,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "A polygon with n sides can be divided into (n − 2) triangles.",
+          "Pentagon: n = 5, triangles = 5 − 2 = 3.",
+          "Sum = 3 × 180° = 540°."
+        ]
+      },
+      "worked_solution": "Sum = (5−2)×180° = 3×180° = 540°."
+    },
+    {
+      "id": "AC9M7M05-010",
+      "type": "numeric",
+      "stem": "A triangle has angles x°, x° and 2x°. Find x.",
+      "answer": {
+        "type": "numeric",
+        "value": 45,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "All angles sum to 180°.",
+          "x + x + 2x = 180 → 4x = 180.",
+          "x = 45."
+        ]
+      },
+      "worked_solution": "4x = 180 → x = 45°."
+    }
+  ]
+}

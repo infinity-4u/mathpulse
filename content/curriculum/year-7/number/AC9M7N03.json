@@ -1,0 +1,233 @@
+{
+  "code": "AC9M7N03",
+  "year": 7,
+  "strand": "Number",
+  "substrand": "Equivalent Fractions",
+  "acara_description": "Find equivalent representations of fractions using related denominators and make connections between fractions and decimal notation.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7N03-001",
+      "type": "multiple_choice",
+      "stem": "Which fraction is equivalent to \\(\\frac{1}{2}\\)?",
+      "options": [
+        "\\(\\frac{2}{5}\\)",
+        "\\(\\frac{3}{6}\\)",
+        "\\(\\frac{4}{9}\\)",
+        "\\(\\frac{5}{9}\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(\\frac{3}{6}\\)"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Multiply numerator and denominator by the same number.",
+          "\\(\\frac{1}{2}=\\frac{1\\times3}{2\\times3}=\\frac{?}{6}\\).",
+          "\\(\\frac{1\\times3}{2\\times3}=\\frac{3}{6}\\)."
+        ]
+      },
+      "worked_solution": "\\(\\frac{1}{2}=\\frac{3}{6}\\) because \\(1\\times3=3\\) and \\(2\\times3=6\\)."
+    },
+    {
+      "id": "AC9M7N03-002",
+      "type": "multiple_choice",
+      "stem": "Write \\(\\frac{6}{8}\\) in simplest form.",
+      "options": [
+        "\\(\\frac{2}{3}\\)",
+        "\\(\\frac{3}{4}\\)",
+        "\\(\\frac{4}{6}\\)",
+        "\\(\\frac{1}{2}\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(\\frac{3}{4}\\)"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Find the GCD of 6 and 8.",
+          "\\(\\gcd(6,8)=2\\). Divide top and bottom by 2.",
+          "\\(\\frac{6\\div2}{8\\div2}=\\frac{?}{4}\\)."
+        ]
+      },
+      "worked_solution": "\\(\\frac{6}{8}=\\frac{3}{4}\\)."
+    },
+    {
+      "id": "AC9M7N03-003",
+      "type": "numeric",
+      "stem": "Find the missing numerator: \\(\\frac{1}{4}=\\frac{?}{12}\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "What do you multiply 4 by to get 12?",
+          "\\(4\\times3=12\\), so multiply the numerator by 3 too.",
+          "\\(1\\times3=?\\)."
+        ]
+      },
+      "worked_solution": "\\(\\frac{1}{4}=\\frac{1\\times3}{4\\times3}=\\frac{3}{12}\\). Missing number: 3."
+    },
+    {
+      "id": "AC9M7N03-004",
+      "type": "numeric",
+      "stem": "Find the missing denominator: \\(\\frac{3}{5}=\\frac{15}{?}\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 25,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "What do you multiply 3 by to get 15?",
+          "\\(3\\times5=15\\), so multiply the denominator by 5 too.",
+          "\\(5\\times5=?\\)."
+        ]
+      },
+      "worked_solution": "\\(\\frac{3}{5}=\\frac{3\\times5}{5\\times5}=\\frac{15}{25}\\). Missing number: 25."
+    },
+    {
+      "id": "AC9M7N03-005",
+      "type": "multiple_choice",
+      "stem": "Write \\(\\frac{15}{25}\\) in simplest form.",
+      "options": [
+        "\\(\\frac{2}{5}\\)",
+        "\\(\\frac{3}{5}\\)",
+        "\\(\\frac{4}{5}\\)",
+        "\\(\\frac{3}{4}\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(\\frac{3}{5}\\)"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "\\(\\gcd(15,25)=5\\).",
+          "Divide top and bottom by 5.",
+          "\\(\\frac{15\\div5}{25\\div5}=\\frac{?}{5}\\)."
+        ]
+      },
+      "worked_solution": "\\(\\frac{15}{25}=\\frac{3}{5}\\)."
+    },
+    {
+      "id": "AC9M7N03-006",
+      "type": "numeric",
+      "stem": "Find the missing numerator: \\(\\frac{3}{4}=\\frac{?}{20}\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 15,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "\\(4\\times?=20\\).",
+          "\\(4\\times5=20\\), so multiply the numerator by 5.",
+          "\\(3\\times5=?\\)."
+        ]
+      },
+      "worked_solution": "\\(\\frac{3}{4}=\\frac{15}{20}\\). Missing number: 15."
+    },
+    {
+      "id": "AC9M7N03-007",
+      "type": "multiple_choice",
+      "stem": "Which fraction is equivalent to \\(\\frac{2}{3}\\)?",
+      "options": [
+        "\\(\\frac{4}{9}\\)",
+        "\\(\\frac{6}{9}\\)",
+        "\\(\\frac{5}{7}\\)",
+        "\\(\\frac{3}{5}\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(\\frac{6}{9}\\)"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Multiply \\(\\frac{2}{3}\\) by \\(\\frac{3}{3}\\).",
+          "\\(\\frac{2\\times3}{3\\times3}=\\frac{?}{9}\\).",
+          "\\(\\frac{6}{9}\\). Check: \\(6\\div3=2\\) and \\(9\\div3=3\\). ✓"
+        ]
+      },
+      "worked_solution": "\\(\\frac{2}{3}=\\frac{6}{9}\\) since \\(2\\times3=6\\) and \\(3\\times3=9\\)."
+    },
+    {
+      "id": "AC9M7N03-008",
+      "type": "multiple_choice",
+      "stem": "Which fraction is equivalent to 0.6?",
+      "options": [
+        "\\(\\frac{3}{4}\\)",
+        "\\(\\frac{2}{3}\\)",
+        "\\(\\frac{3}{5}\\)",
+        "\\(\\frac{5}{9}\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(\\frac{3}{5}\\)"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "\\(0.6=\\frac{6}{10}\\). Simplify this fraction.",
+          "\\(\\gcd(6,10)=2\\). Divide top and bottom by 2.",
+          "\\(\\frac{6\\div2}{10\\div2}=\\frac{?}{5}\\)."
+        ]
+      },
+      "worked_solution": "\\(0.6=\\frac{6}{10}=\\frac{3}{5}\\)."
+    },
+    {
+      "id": "AC9M7N03-009",
+      "type": "numeric",
+      "stem": "Convert \\(\\frac{3}{4}\\) to an equivalent fraction with denominator 100. Enter the numerator.",
+      "answer": {
+        "type": "numeric",
+        "value": 75,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "\\(4\\times?=100\\).",
+          "\\(4\\times25=100\\), so multiply numerator by 25.",
+          "\\(3\\times25=?\\)."
+        ]
+      },
+      "worked_solution": "\\(\\frac{3}{4}=\\frac{75}{100}\\). This also means \\(3/4=75\\%\\)."
+    },
+    {
+      "id": "AC9M7N03-010",
+      "type": "multiple_choice",
+      "stem": "Order from smallest to largest: \\(\\frac{1}{2},\\;\\frac{2}{5},\\;\\frac{3}{10}\\).",
+      "options": [
+        "\\(\\frac{3}{10},\\;\\frac{1}{2},\\;\\frac{2}{5}\\)",
+        "\\(\\frac{3}{10},\\;\\frac{2}{5},\\;\\frac{1}{2}\\)",
+        "\\(\\frac{1}{2},\\;\\frac{2}{5},\\;\\frac{3}{10}\\)",
+        "\\(\\frac{2}{5},\\;\\frac{3}{10},\\;\\frac{1}{2}\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(\\frac{3}{10},\\;\\frac{2}{5},\\;\\frac{1}{2}\\)"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Convert all fractions to tenths.",
+          "\\(\\frac{1}{2}=\\frac{5}{10},\\;\\frac{2}{5}=\\frac{4}{10},\\;\\frac{3}{10}=\\frac{3}{10}\\).",
+          "Order by numerators: 3, 4, 5."
+        ]
+      },
+      "worked_solution": "\\(\\frac{3}{10}<\\frac{2}{5}<\\frac{1}{2}\\)."
+    }
+  ]
+}

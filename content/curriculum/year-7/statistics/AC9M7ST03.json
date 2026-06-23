@@ -1,0 +1,253 @@
+{
+  "code": "AC9M7ST03",
+  "year": 7,
+  "strand": "Statistics",
+  "substrand": "Statistical Investigations",
+  "acara_description": "Plan and conduct investigations involving discrete and continuous numerical data; analyse and report findings.",
+  "verified": true,
+  "schema_version": 2,
+  "authored_by": "vcaa-elaboration",
+  "verified_by": "VCAA-VC2M-2024",
+  "questions": [
+    {
+      "id": "AC9M7ST03-001",
+      "type": "multiple_choice",
+      "stem": "Which best describes PRIMARY data?",
+      "options": [
+        "Data from a textbook",
+        "Data you collect yourself",
+        "Data from the internet",
+        "Data published by the government"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Data you collect yourself"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Primary = first-hand.",
+          "You collect it directly through surveys, experiments, or observation.",
+          "Secondary data is collected by others."
+        ]
+      },
+      "worked_solution": "Primary data is data you collect yourself through surveys, experiments or observation."
+    },
+    {
+      "id": "AC9M7ST03-002",
+      "type": "multiple_choice",
+      "stem": "Which best describes SECONDARY data?",
+      "options": [
+        "Data from your own experiment",
+        "Data collected by conducting a survey",
+        "Data already collected by someone else",
+        "Data you observe directly"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Data already collected by someone else"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Secondary = second-hand.",
+          "You obtain it from books, databases, websites or other sources.",
+          "Secondary data exists before your investigation."
+        ]
+      },
+      "worked_solution": "Secondary data: already collected by others — you analyse it for your purpose."
+    },
+    {
+      "id": "AC9M7ST03-003",
+      "type": "multiple_choice",
+      "stem": "Which of the following is a CONTINUOUS variable?",
+      "options": [
+        "Number of pets",
+        "Height of students",
+        "Number of siblings",
+        "Shoe size"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Height of students"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Continuous variables can take any value within a range.",
+          "Height can be measured to any precision: 162.3 cm, 162.31 cm, etc.",
+          "Number of pets can only be whole numbers (discrete)."
+        ]
+      },
+      "worked_solution": "Height is continuous — it can take any value within a range, not just whole numbers."
+    },
+    {
+      "id": "AC9M7ST03-004",
+      "type": "multiple_choice",
+      "stem": "Which of the following is a DISCRETE variable?",
+      "options": [
+        "Temperature",
+        "Time",
+        "Number of students in a class",
+        "Mass of a rock"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Number of students in a class"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Discrete variables can only take specific, separate values.",
+          "You can have 25 or 26 students, but not 25.5 students.",
+          "Temperature and mass are continuous."
+        ]
+      },
+      "worked_solution": "Number of students is discrete — only whole number values are possible."
+    },
+    {
+      "id": "AC9M7ST03-005",
+      "type": "multiple_choice",
+      "stem": "Which is the most appropriate display for the heights (in cm) of 30 students?",
+      "options": [
+        "Pie chart",
+        "Dot plot",
+        "Stem-and-leaf plot",
+        "Bar chart for categories"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Stem-and-leaf plot"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Heights are numerical and continuous. Stem-and-leaf works well for ~30 data points.",
+          "Dot plots are good but can be crowded with 30 values.",
+          "Pie charts are for parts of a whole; bar charts are for categories."
+        ]
+      },
+      "worked_solution": "Stem-and-leaf plot suits 30 numerical values and retains each data point."
+    },
+    {
+      "id": "AC9M7ST03-006",
+      "type": "multiple_choice",
+      "stem": "A census surveys:",
+      "options": [
+        "A sample of the population",
+        "The entire population",
+        "Only random participants",
+        "Only adults"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "The entire population"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "A census collects data from every member of the group of interest.",
+          "For example, the Australian census asks every household in Australia.",
+          "A sample survey only asks a subset."
+        ]
+      },
+      "worked_solution": "A census collects data from the entire population, not just a sample."
+    },
+    {
+      "id": "AC9M7ST03-007",
+      "type": "multiple_choice",
+      "stem": "Which sampling method gives every person an equal chance of being selected?",
+      "options": [
+        "Convenience sampling",
+        "Voluntary sampling",
+        "Simple random sampling",
+        "Systematic sampling"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Simple random sampling"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "In simple random sampling, names or numbers are selected randomly.",
+          "For example, putting all names in a hat and drawing.",
+          "Every person has the same chance of being picked."
+        ]
+      },
+      "worked_solution": "Simple random sampling: each member of the population has an equal chance of being selected."
+    },
+    {
+      "id": "AC9M7ST03-008",
+      "type": "multiple_choice",
+      "stem": "A student wants to investigate 'How many hours per week do Year 7 students spend on social media?'. What type of data is this?",
+      "options": [
+        "Categorical",
+        "Continuous numerical",
+        "Discrete numerical",
+        "Boolean"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Discrete numerical"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Time in whole hours: 0, 1, 2, 3, ... — countable.",
+          "If measured in exact fractions of hours it could be continuous, but 'hours' typically means discrete.",
+          "Discrete numerical."
+        ]
+      },
+      "worked_solution": "Hours per week (counted in whole hours) is discrete numerical data."
+    },
+    {
+      "id": "AC9M7ST03-009",
+      "type": "multiple_choice",
+      "stem": "A student takes a sample of 10 students from a school of 500. What fraction of the school is sampled?",
+      "options": [
+        "\\(\\frac{1}{50}\\)",
+        "\\(\\frac{1}{500}\\)",
+        "\\(\\frac{1}{5}\\)",
+        "\\(\\frac{10}{500}=\\frac{1}{50}\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(\\frac{10}{500}=\\frac{1}{50}\\)"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Fraction = \\(\\frac{\\text{sample size}}{\\text{population size}}\\).",
+          "\\(\\frac{10}{500}=\\frac{1}{50}\\).",
+          "\\(\\frac{1}{50}\\)."
+        ]
+      },
+      "worked_solution": "Fraction sampled = \\(\\frac{10}{500}=\\frac{1}{50}\\)."
+    },
+    {
+      "id": "AC9M7ST03-010",
+      "type": "multiple_choice",
+      "stem": "An investigation conclusion states: 'Year 7 students who play sport get higher grades.' What is a limitation of this claim?",
+      "options": [
+        "The sample must be wrong",
+        "Correlation does not imply causation",
+        "Statistics are always unreliable",
+        "The grades cannot be measured"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "Correlation does not imply causation"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "A relationship between two variables doesn't mean one causes the other.",
+          "There may be a third variable (e.g., general health) affecting both.",
+          "Correlation ≠ causation."
+        ]
+      },
+      "worked_solution": "Even if sport and grades are related, sport doesn't necessarily cause higher grades — correlation ≠ causation."
+    }
+  ]
+}

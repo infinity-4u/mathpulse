@@ -1,0 +1,195 @@
+{
+  "code": "AC9M7M01",
+  "year": 7,
+  "strand": "Measurement and Geometry",
+  "substrand": "Measurement",
+  "acara_description": "Solve problems involving the perimeter and area of rectangles, squares and triangles using formulas.",
+  "verified": false,
+  "schema_version": 2,
+  "questions": [
+    {
+      "id": "AC9M7M01-001",
+      "type": "numeric",
+      "stem": "A rectangle has length 8 cm and width 3 cm. What is its perimeter in cm?",
+      "answer": {
+        "type": "numeric",
+        "value": 22,
+        "tolerance": 0,
+        "units": "cm"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Perimeter is the total distance around the outside of the shape. A rectangle has 4 sides.",
+          "A rectangle has two lengths and two widths. Add all four sides: \\(8 + 3 + 8 + 3\\).",
+          "\\(8 + 3 + 8 + 3 = 22\\). Or use the formula: \\(P = 2l + 2w = 2(8) + 2(3) = 16 + 6 = 22\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "24" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "You calculated \\(8 \\times 3 = 24\\), which is the AREA (surface inside the rectangle). Perimeter is the distance around the outside: \\(8 + 3 + 8 + 3 = 22\\) cm."
+        },
+        {
+          "id": "CE002",
+          "type": "procedural",
+          "detect": { "rule": "answer_equals_half_value" },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "A rectangle has 4 sides, not 2. Include both lengths AND both widths: \\(P = 2 \\times 8 + 2 \\times 3 = 22\\) cm."
+        }
+      ],
+      "worked_solution": "Perimeter = sum of all sides.\n\nA rectangle has two lengths and two widths:\n\\(P = 2l + 2w = 2 \\times 8 + 2 \\times 3 = 16 + 6 = 22\\) cm\n\nAnswer: **22 cm**"
+    },
+    {
+      "id": "AC9M7M01-002",
+      "type": "numeric",
+      "stem": "A square has side length 6 m. What is its area in m²?",
+      "answer": {
+        "type": "numeric",
+        "value": 36,
+        "tolerance": 0,
+        "units": "m²"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Area of a square = side × side. All four sides of a square are equal.",
+          "Area = \\(6 \\times 6\\). This can also be written as \\(6^2\\).",
+          "\\(6 \\times 6 = 36\\). The units for area are always squared (m²)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "24" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "\\(4 \\times 6 = 24\\) gives the perimeter of the square (distance around). Area = side × side = \\(6 \\times 6 = 36\\) m²."
+        },
+        {
+          "id": "CE002",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "12" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Area = side × side, not side × 2. \\(6 \\times 6 = 36\\) m², not \\(6 \\times 2 = 12\\)."
+        }
+      ],
+      "worked_solution": "Area of a square = \\(\\text{side} \\times \\text{side} = s^2\\)\n\n\\(A = 6^2 = 6 \\times 6 = 36\\) m²\n\nAnswer: **36 m²**"
+    },
+    {
+      "id": "AC9M7M01-003",
+      "type": "multiple_choice",
+      "stem": "What is the formula for the area of a triangle with base \\(b\\) and height \\(h\\)?",
+      "options": [
+        "\\(b \\times h\\)",
+        "\\(\\dfrac{1}{2} \\times b \\times h\\)",
+        "\\(2b + 2h\\)",
+        "\\(b + h + b\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(\\dfrac{1}{2} \\times b \\times h\\)"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "A triangle takes up exactly half the area of a rectangle with the same base and height.",
+          "If a rectangle has area \\(b \\times h\\), then a triangle with the same base and height has area \\(\\dfrac{1}{2} \\times b \\times h\\).",
+          "Triangle area = \\(\\dfrac{1}{2}bh\\). The factor of \\(\\dfrac{1}{2}\\) is because a triangle is half a rectangle."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "\\(b \\times h\\)" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "\\(b \\times h\\) gives the area of a RECTANGLE, not a triangle. A triangle is half a rectangle with the same base and height, so the formula is \\(\\dfrac{1}{2} \\times b \\times h\\)."
+        },
+        {
+          "id": "CE002",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "\\(2b + 2h\\)" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "\\(2b + 2h\\) is the perimeter formula for a rectangle. For triangle AREA, use: \\(A = \\dfrac{1}{2} \\times b \\times h\\)."
+        }
+      ],
+      "worked_solution": "A triangle fits exactly inside a rectangle with the same base and height, taking up half the space:\n\n\\[A_{\\triangle} = \\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2}bh\\]\n\nAnswer: \\(\\mathbf{\\dfrac{1}{2} \\times b \\times h}\\)"
+    },
+    {
+      "id": "AC9M7M01-004",
+      "type": "numeric",
+      "stem": "A triangle has base 10 cm and perpendicular height 4 cm. What is its area in cm²?",
+      "answer": {
+        "type": "numeric",
+        "value": 20,
+        "tolerance": 0,
+        "units": "cm²"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Use the formula: Area of triangle = \\(\\dfrac{1}{2} \\times \\text{base} \\times \\text{height}\\).",
+          "Substitute: \\(A = \\dfrac{1}{2} \\times 10 \\times 4\\). Work out \\(10 \\times 4\\) first, then halve it.",
+          "\\(10 \\times 4 = 40\\), then \\(40 \\div 2 = 20\\). Area = 20 cm²."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_equals_2x_value" },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Don't forget to halve! \\(10 \\times 4 = 40\\) is the area of a rectangle. The triangle's area is half that: \\(40 \\div 2 = 20\\) cm²."
+        },
+        {
+          "id": "CE002",
+          "type": "procedural",
+          "detect": { "rule": "answer_matches", "params": { "value": "14" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Use the formula: \\(A = \\dfrac{1}{2} \\times b \\times h = \\dfrac{1}{2} \\times 10 \\times 4 = 20\\) cm². Don't add the dimensions."
+        }
+      ],
+      "worked_solution": "\\[A = \\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 10 \\times 4\\]\n\n\\[= \\frac{40}{2} = 20 \\text{ cm}^2\\]\n\nAnswer: **20 cm²**"
+    },
+    {
+      "id": "AC9M7M01-005",
+      "type": "numeric",
+      "stem": "A rectangular room is 5 m long and 4 m wide. How much carpet (in m²) is needed to cover the floor?",
+      "answer": {
+        "type": "numeric",
+        "value": 20,
+        "tolerance": 0,
+        "units": "m²"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Carpet covers the floor surface — that is the AREA of the room, not its perimeter.",
+          "Area of a rectangle = length × width. Substitute the values: \\(5 \\times 4\\).",
+          "\\(5 \\times 4 = 20\\). You need 20 m² of carpet."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "18" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "You calculated the perimeter (\\(2 \\times 5 + 2 \\times 4 = 18\\) m), which is the distance around the edges. Carpet covers the floor SURFACE — that is area: \\(5 \\times 4 = 20\\) m²."
+        },
+        {
+          "id": "CE002",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "9" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "\\(5 + 4 = 9\\) adds the two dimensions — that gives the semi-perimeter, not the area. To cover the floor, multiply: \\(5 \\times 4 = 20\\) m²."
+        }
+      ],
+      "worked_solution": "Carpet covers the floor, so we need the AREA.\n\n\\(A = \\text{length} \\times \\text{width} = 5 \\times 4 = 20\\) m²\n\nAnswer: **20 m²**"
+    }
+  ]
+}

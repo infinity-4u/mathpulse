@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import 'katex/dist/katex.min.css'
+import { StudentSessionProvider } from '@/contexts/StudentSessionContext'
 
 export const metadata: Metadata = {
   title: 'Australian Maths App',
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en-AU">
       <body>
-        {children}
+        <StudentSessionProvider>
+          {children}
+        </StudentSessionProvider>
       </body>
     </html>
   )

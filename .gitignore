@@ -29,6 +29,9 @@ Thumbs.db
 .idea/
 *.swp
 
+# MCP config — may contain personal access tokens; never commit
+.mcp.json
+
 # Test output
 coverage/
 .nyc_output/
@@ -38,3 +41,6 @@ coverage/
 logs/
 from_claude.zip
 from_claude_unpacked/
+
+# Deploy script contains server credentials — never commit
+deploy.sh

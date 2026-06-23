@@ -1,0 +1,184 @@
+{
+  "code": "AC9M7N02",
+  "year": 7,
+  "strand": "Number and Algebra",
+  "substrand": "Number",
+  "acara_description": "Represent integers on a number line; compare, order, add and subtract integers.",
+  "verified": false,
+  "schema_version": 2,
+  "questions": [
+    {
+      "id": "AC9M7N02-001",
+      "type": "multiple_choice",
+      "stem": "Which integer is greater: \\(-3\\) or \\(-7\\)?",
+      "options": ["-3", "-7", "They are equal", "Cannot be determined"],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "-3"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Draw a number line. Numbers to the right are always greater.",
+          "Place -7 and -3 on the number line. Which one is further to the right?",
+          "-3 is to the right of -7 on the number line. So -3 is the greater integer."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "-7" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "With negative numbers, the one closer to zero is greater. -3 is closer to zero than -7, so -3 > -7. Think of it as temperature: -3°C is warmer than -7°C."
+        }
+      ],
+      "worked_solution": "On a number line, we place integers in order from left (smallest) to right (largest):\n\n\\(-7 \\quad -6 \\quad -5 \\quad -4 \\quad -3 \\quad -2 \\quad -1 \\quad 0\\)\n\nSince -3 is to the **right** of -7, we have \\(-3 > -7\\).\n\nAnswer: **-3**"
+    },
+    {
+      "id": "AC9M7N02-002",
+      "type": "numeric",
+      "stem": "What is \\(-5 + 8\\)?",
+      "answer": {
+        "type": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Start at -5 on the number line. Adding 8 means moving 8 steps to the right.",
+          "From -5, move right: -5, -4, -3, -2, -1, 0, 1, 2, 3. How many steps to reach 0? Then how many more?",
+          "From -5, moving 5 steps right reaches 0. Then 3 more steps reaches 3. Total: -5 + 8 = 3."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "-13" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "When adding a positive to a negative, you move RIGHT on the number line — the result gets larger. -5 + 8 means start at -5 and move 8 steps right, not 8 steps left."
+        },
+        {
+          "id": "CE002",
+          "type": "conceptual",
+          "detect": { "rule": "sign_error" },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "The answer is positive, not negative. Starting at -5 and adding 8 takes you past zero into positive territory: -5 + 8 = 3."
+        }
+      ],
+      "worked_solution": "\\(-5 + 8\\)\n\nStart at -5. Adding 8 means moving 8 steps to the right:\n\n\\(-5 \\xrightarrow{+5} 0 \\xrightarrow{+3} 3\\)\n\nAlternatively: \\(8 - 5 = 3\\) (since \\(|8| > |-5|\\), the result is positive).\n\nAnswer: **3**"
+    },
+    {
+      "id": "AC9M7N02-003",
+      "type": "multiple_choice",
+      "stem": "A temperature drops from \\(2°\\text{C}\\) to \\(-5°\\text{C}\\). By how many degrees did it drop?",
+      "options": ["3°", "5°", "7°", "9°"],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "7°"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "The drop in temperature = starting temperature − final temperature.",
+          "Calculate: \\(2 - (-5)\\). Subtracting a negative is the same as adding a positive.",
+          "\\(2 - (-5) = 2 + 5 = 7\\). The temperature dropped by 7 degrees."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "5°" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "The temperature started at 2°C (above zero), not at 0°C. The full drop is from 2 down to -5, which is 2 + 5 = 7 degrees — not just 5."
+        },
+        {
+          "id": "CE002",
+          "type": "conceptual",
+          "detect": { "rule": "off_by_one" },
+          "repair_path": ["contextual_hint", "check_arithmetic"],
+          "contextual_hint": "Count carefully: from 2 down to 0 is 2 degrees, then from 0 down to -5 is another 5 degrees. Total drop: 2 + 5 = 7 degrees."
+        }
+      ],
+      "worked_solution": "Temperature drop = starting temp − final temp\n\n\\(= 2 - (-5) = 2 + 5 = 7\\)\n\nSubtracting a negative number is the same as adding its positive value.\n\nThe temperature dropped by **7 degrees**."
+    },
+    {
+      "id": "AC9M7N02-004",
+      "type": "numeric",
+      "stem": "What is \\(-3 - 4\\)?",
+      "answer": {
+        "type": "numeric",
+        "value": -7,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Start at -3 on the number line. Subtracting 4 means moving 4 steps to the LEFT.",
+          "From -3, move left 4 steps: -3, -4, -5, -6, -7.",
+          "-3 - 4 = -7. Moving further left from a negative makes the number more negative."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "sign_error" },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "The answer should be negative. Starting at -3 and subtracting 4 more moves you further left (more negative): -3 - 4 = -7, not +7."
+        },
+        {
+          "id": "CE002",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "-1" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Don't subtract the smaller from the larger and keep the sign. -3 - 4 means start at -3 and move 4 more in the negative direction: -3 - 4 = -7."
+        }
+      ],
+      "worked_solution": "\\(-3 - 4\\)\n\nSubtracting 4 means moving 4 steps to the LEFT on the number line:\n\n\\(-3 \\xrightarrow{-4} -7\\)\n\nOr think of it as: \\(-(3 + 4) = -7\\)\n\nAnswer: **-7**"
+    },
+    {
+      "id": "AC9M7N02-005",
+      "type": "multiple_choice",
+      "stem": "Which list shows these integers in order from **smallest to largest**: \\(-1,\\ 4,\\ -6,\\ 0,\\ 2\\)?",
+      "options": [
+        "-6, -1, 0, 2, 4",
+        "-1, -6, 0, 2, 4",
+        "4, 2, 0, -1, -6",
+        "-6, -1, 4, 0, 2"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "-6, -1, 0, 2, 4"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Plot all five integers on a number line. The order from left to right is smallest to largest.",
+          "Among the negatives: which is smaller, -6 or -1? Remember, further from zero on the negative side means smaller.",
+          "-6 is smaller than -1 (further left on the number line). Full order: -6, -1, 0, 2, 4."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "-1, -6, 0, 2, 4" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Among negative numbers, the one with the larger absolute value is SMALLER. -6 has a larger absolute value than -1, so -6 < -1. The correct order is -6, -1, 0, 2, 4."
+        },
+        {
+          "id": "CE002",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "4, 2, 0, -1, -6" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "That is the order from largest to smallest — but the question asks for smallest to largest. Reverse your order: -6, -1, 0, 2, 4."
+        }
+      ],
+      "worked_solution": "Place the integers on a number line:\n\n\\(-6 \\quad -1 \\quad 0 \\quad 2 \\quad 4\\)\n\nReading left to right gives smallest to largest.\n\nKey point: -6 < -1 because -6 is further to the left (more negative).\n\nAnswer: **-6, -1, 0, 2, 4**"
+    }
+  ]
+}

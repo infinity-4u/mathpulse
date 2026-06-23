@@ -53,8 +53,8 @@ describe('no-tracker tripwire', () => {
     expect(found, `Banned tracker packages found: ${found.join(', ')}`).toHaveLength(0)
   })
 
-  it('next.config.ts does not load external tracking scripts', () => {
-    const config = readFileSync(resolve(ROOT, 'next.config.ts'), 'utf-8')
+  it('next.config.mjs does not load external tracking scripts', () => {
+    const config = readFileSync(resolve(ROOT, 'next.config.mjs'), 'utf-8')
     const trackingPatterns = [
       'googletagmanager',
       'google-analytics',
@@ -64,6 +64,6 @@ describe('no-tracker tripwire', () => {
       'fbevents',
     ]
     const found = trackingPatterns.filter(p => config.toLowerCase().includes(p))
-    expect(found, `Tracking script references found in next.config.ts: ${found.join(', ')}`).toHaveLength(0)
+    expect(found, `Tracking script references found in next.config.mjs: ${found.join(', ')}`).toHaveLength(0)
   })
 })

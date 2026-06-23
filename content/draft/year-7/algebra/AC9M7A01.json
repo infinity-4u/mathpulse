@@ -1,0 +1,186 @@
+{
+  "code": "AC9M7A01",
+  "year": 7,
+  "strand": "Number and Algebra",
+  "substrand": "Algebra",
+  "acara_description": "Recognise and use variables, evaluate algebraic expressions by substituting values, and write expressions for word problems.",
+  "verified": false,
+  "schema_version": 2,
+  "questions": [
+    {
+      "id": "AC9M7A01-001",
+      "type": "multiple_choice",
+      "stem": "If \\(x = 5\\), what is the value of \\(2x + 1\\)?",
+      "options": ["7", "11", "51", "3"],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "11"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Replace \\(x\\) with 5 in the expression \\(2x + 1\\). This is called substitution.",
+          "\\(2x\\) means \\(2 \\times x\\). When \\(x = 5\\): \\(2 \\times 5 = ?\\). Then add 1.",
+          "\\(2 \\times 5 = 10\\), then \\(10 + 1 = 11\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "51" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "\\(2x\\) means \\(2 \\times x\\), not the digit 2 placed next to x. When \\(x = 5\\): \\(2x = 2 \\times 5 = 10\\), then \\(10 + 1 = 11\\)."
+        },
+        {
+          "id": "CE002",
+          "type": "procedural",
+          "detect": { "rule": "answer_matches", "params": { "value": "7" } },
+          "repair_path": ["contextual_hint", "check_arithmetic"],
+          "contextual_hint": "Careful with the multiplication: \\(2 \\times 5 = 10\\), not 6. Then \\(10 + 1 = 11\\)."
+        }
+      ],
+      "worked_solution": "Substitute \\(x = 5\\) into \\(2x + 1\\):\n\n\\(2x + 1 = 2 \\times 5 + 1\\)\n\nUsing order of operations (multiplication first):\n\\(= 10 + 1 = 11\\)\n\nAnswer: **11**"
+    },
+    {
+      "id": "AC9M7A01-002",
+      "type": "numeric",
+      "stem": "If \\(a = 3\\), what is the value of \\(4a - 2\\)?",
+      "answer": {
+        "type": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Substitute \\(a = 3\\) into \\(4a - 2\\). The expression \\(4a\\) means \\(4 \\times a\\).",
+          "Step 1: Calculate \\(4a = 4 \\times 3\\). Step 2: Then subtract 2.",
+          "\\(4 \\times 3 = 12\\), then \\(12 - 2 = 10\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "procedural",
+          "detect": { "rule": "answer_matches", "params": { "value": "12" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "You correctly found \\(4 \\times 3 = 12\\), but don't forget to subtract 2. \\(4a - 2 = 12 - 2 = 10\\)."
+        },
+        {
+          "id": "CE002",
+          "type": "procedural",
+          "detect": { "rule": "answer_matches", "params": { "value": "5" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Use order of operations: multiplication before subtraction. Calculate \\(4 \\times a\\) FIRST, then subtract 2. Not \\((4-2) \\times a\\) or \\(4 + a - 2\\)."
+        }
+      ],
+      "worked_solution": "Substitute \\(a = 3\\) into \\(4a - 2\\):\n\n\\(4a - 2 = 4 \\times 3 - 2\\)\n\nMultiplication first (order of operations):\n\\(= 12 - 2 = 10\\)\n\nAnswer: **10**"
+    },
+    {
+      "id": "AC9M7A01-003",
+      "type": "multiple_choice",
+      "stem": "Which expression represents \"6 more than a number \\(p\\)\"?",
+      "options": ["6p", "p - 6", "p + 6", "6 - p"],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "p + 6"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "\"More than\" means addition. You start with the number \\(p\\) and add 6 to it.",
+          "If \\(p\\) were, say, 10, then \"6 more than 10\" would be \\(10 + 6 = 16\\). Replace 10 with \\(p\\).",
+          "\"6 more than \\(p\\)\" translates to \\(p + 6\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "6 - p" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "\"6 more than p\" means start with p and add 6: \\(p + 6\\). The expression \\(6 - p\\) means \"p less than 6\", which is a different operation."
+        },
+        {
+          "id": "CE002",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "6p" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "\"6 more\" means addition (+), not multiplication. \\(6p\\) means \\(6 \\times p\\). The correct expression is \\(p + 6\\)."
+        }
+      ],
+      "worked_solution": "\"More than\" always signals addition.\n\n\"6 more than p\" = \\(p + 6\\)\n\nTest with a number: if \\(p = 10\\), then 6 more than 10 is \\(10 + 6 = 16\\). \\(\\checkmark\\)\n\nAnswer: **\\(p + 6\\)**"
+    },
+    {
+      "id": "AC9M7A01-004",
+      "type": "numeric",
+      "stem": "If \\(m = 7\\) and \\(n = 3\\), what is the value of \\(2m - n\\)?",
+      "answer": {
+        "type": "numeric",
+        "value": 11,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Substitute both values first: replace \\(m\\) with 7 and \\(n\\) with 3.",
+          "\\(2m - n = 2 \\times 7 - 3\\). Remember to multiply before subtracting (order of operations).",
+          "\\(2 \\times 7 = 14\\), then \\(14 - 3 = 11\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "procedural",
+          "detect": { "rule": "answer_matches", "params": { "value": "8" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Don't subtract \\(n\\) from \\(m\\) before multiplying. Substitute first: \\(2m - n = 2 \\times 7 - 3\\). Then multiply: \\(14 - 3 = 11\\)."
+        },
+        {
+          "id": "CE002",
+          "type": "procedural",
+          "detect": { "rule": "answer_matches", "params": { "value": "17" } },
+          "repair_path": ["contextual_hint", "check_arithmetic"],
+          "contextual_hint": "Watch the sign: \\(2m - n\\) means subtract \\(n\\), not add it. \\(2 \\times 7 - 3 = 14 - 3 = 11\\)."
+        }
+      ],
+      "worked_solution": "Substitute \\(m = 7\\) and \\(n = 3\\):\n\n\\(2m - n = 2 \\times 7 - 3\\)\n\nOrder of operations — multiplication first:\n\\(= 14 - 3 = 11\\)\n\nAnswer: **11**"
+    },
+    {
+      "id": "AC9M7A01-005",
+      "type": "multiple_choice",
+      "stem": "Which expression is equivalent to \\(k + k + k + k\\)?",
+      "options": ["\\(k^4\\)", "\\(4k\\)", "\\(k + 4\\)", "\\(4 + k\\)"],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(4k\\)"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Repeated addition of the same value can be written as multiplication. How many times is \\(k\\) added?",
+          "\\(k\\) is added 4 times. Repeated addition means multiplication: \\(k + k + k + k = 4 \\times k\\).",
+          "\\(4 \\times k\\) is written as \\(4k\\) in algebra (no multiplication sign needed)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "\\(k^4\\)" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "\\(k^4\\) means \\(k \\times k \\times k \\times k\\) (repeated multiplication). But \\(k + k + k + k\\) is repeated ADDITION, which equals \\(4k\\) (4 multiplied by k)."
+        },
+        {
+          "id": "CE002",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "\\(k + 4\\)" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "\\(k + 4\\) means the number k with 4 added to it — that's different. \\(k + k + k + k\\) is k added four times, which equals \\(4k\\) (4 times k)."
+        }
+      ],
+      "worked_solution": "Repeated addition of the same term is written as multiplication:\n\n\\(k + k + k + k = 4 \\times k = 4k\\)\n\nCompare:\n- \\(4k = k + k + k + k\\) (adding \\(k\\) four times)\n- \\(k^4 = k \\times k \\times k \\times k\\) (multiplying \\(k\\) four times — different!)\n\nAnswer: **\\(4k\\)**"
+    }
+  ]
+}

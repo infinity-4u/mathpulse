@@ -1,0 +1,179 @@
+{
+  "code": "AC9M7N03",
+  "year": 7,
+  "strand": "Number and Algebra",
+  "substrand": "Number",
+  "acara_description": "Compare fractions using equivalence; add and subtract fractions; convert between fractions and decimals.",
+  "verified": false,
+  "schema_version": 2,
+  "questions": [
+    {
+      "id": "AC9M7N03-001",
+      "type": "multiple_choice",
+      "stem": "Which fraction is equivalent to \\(\\dfrac{3}{4}\\)?",
+      "options": ["\\(\\dfrac{6}{7}\\)", "\\(\\dfrac{9}{12}\\)", "\\(\\dfrac{12}{15}\\)", "\\(\\dfrac{4}{5}\\)"],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(\\dfrac{9}{12}\\)"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "To make an equivalent fraction, multiply both the numerator and denominator by the same number.",
+          "Try multiplying the numerator and denominator of \\(\\dfrac{3}{4}\\) by 3: what do you get?",
+          "\\(\\dfrac{3 \\times 3}{4 \\times 3} = \\dfrac{9}{12}\\). This is equivalent to \\(\\dfrac{3}{4}\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "\\(\\dfrac{6}{7}\\)" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "To create an equivalent fraction, you must multiply (or divide) BOTH the numerator and denominator by the same number. In \\(\\dfrac{6}{7}\\), numerator 3 was multiplied by 2 but denominator 4 became 7 — those use different multipliers."
+        },
+        {
+          "id": "CE002",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "\\(\\dfrac{12}{15}\\)" } },
+          "repair_path": ["contextual_hint", "check_arithmetic"],
+          "contextual_hint": "Check: \\(\\dfrac{12}{15}\\) simplifies to \\(\\dfrac{4}{5}\\), not \\(\\dfrac{3}{4}\\). You need to multiply 3 and 4 by the same number."
+        }
+      ],
+      "worked_solution": "Equivalent fractions are created by multiplying numerator and denominator by the same non-zero number.\n\n\\(\\dfrac{3}{4} = \\dfrac{3 \\times 3}{4 \\times 3} = \\dfrac{9}{12}\\)\n\nCheck: \\(\\dfrac{9}{12} \\div \\dfrac{3}{3} = \\dfrac{3}{4}\\) ✓\n\nAnswer: \\(\\mathbf{\\dfrac{9}{12}}\\)"
+    },
+    {
+      "id": "AC9M7N03-002",
+      "type": "numeric",
+      "stem": "What is \\(0.3 + 0.4\\)?",
+      "answer": {
+        "type": "numeric",
+        "value": 0.7,
+        "tolerance": 0.001
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Line up the decimal points and add the digits in each column.",
+          "Tenths column: 3 tenths + 4 tenths = ? tenths.",
+          "3 tenths + 4 tenths = 7 tenths = 0.7. The decimal point stays in the same position."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "careless",
+          "detect": { "rule": "answer_matches", "params": { "value": "7" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Don't forget the decimal point. The 0 before the decimal shows these are values less than 1. 0.3 + 0.4 = 0.7, not 7."
+        },
+        {
+          "id": "CE002",
+          "type": "procedural",
+          "detect": { "rule": "near_numeric", "params": { "value": 0.07, "tolerance_factor": 0.1 } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Align the decimal points carefully. Both 0.3 and 0.4 have one decimal place, so add: 0.3 + 0.4 = 0.7, not 0.07."
+        }
+      ],
+      "worked_solution": "\\(0.3 + 0.4\\)\n\nAlign decimal points:\n\\[\\begin{array}{r} 0.3 \\\\ +\\ 0.4 \\\\ \\hline 0.7 \\end{array}\\]\n\nTenths: \\(3 + 4 = 7\\)\n\nAnswer: **0.7**"
+    },
+    {
+      "id": "AC9M7N03-003",
+      "type": "numeric",
+      "stem": "Convert \\(\\dfrac{1}{4}\\) to a decimal.",
+      "answer": {
+        "type": "numeric",
+        "value": 0.25,
+        "tolerance": 0.001
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "A fraction means division. \\(\\dfrac{1}{4}\\) means 1 divided by 4.",
+          "Calculate \\(1 \\div 4\\). How many times does 4 go into 1.00?",
+          "\\(4 \\times 0.25 = 1\\). So \\(1 \\div 4 = 0.25\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "0.14" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Don't convert each digit separately. \\(\\dfrac{1}{4}\\) means 1 DIVIDED BY 4, not 0.1 and 0.4 placed together. Calculate \\(1 \\div 4 = 0.25\\)."
+        },
+        {
+          "id": "CE002",
+          "type": "conceptual",
+          "detect": { "rule": "near_numeric", "params": { "value": 4, "tolerance_factor": 0.01 } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "\\(\\dfrac{1}{4}\\) means 1 divided by 4, not 4 divided by 1. The numerator (top) gets divided by the denominator (bottom): \\(1 \\div 4 = 0.25\\)."
+        }
+      ],
+      "worked_solution": "\\(\\dfrac{1}{4}\\) means \\(1 \\div 4\\).\n\nUsing long division or known facts:\n\\(4 \\times 0.25 = 1\\) ✓\n\nAlternatively: \\(\\dfrac{1}{4} = \\dfrac{25}{100} = 0.25\\)\n\nAnswer: **0.25**"
+    },
+    {
+      "id": "AC9M7N03-004",
+      "type": "multiple_choice",
+      "stem": "Which fraction is larger: \\(\\dfrac{5}{6}\\) or \\(\\dfrac{3}{4}\\)?",
+      "options": ["\\(\\dfrac{5}{6}\\)", "\\(\\dfrac{3}{4}\\)", "They are equal", "Cannot be determined"],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(\\dfrac{5}{6}\\)"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "To compare fractions, convert them to the same denominator (LCD).",
+          "The LCD of 6 and 4 is 12. Convert both: \\(\\dfrac{5}{6} = \\dfrac{?}{12}\\) and \\(\\dfrac{3}{4} = \\dfrac{?}{12}\\).",
+          "\\(\\dfrac{5}{6} = \\dfrac{10}{12}\\) and \\(\\dfrac{3}{4} = \\dfrac{9}{12}\\). Since \\(10 > 9\\), we have \\(\\dfrac{5}{6} > \\dfrac{3}{4}\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "\\(\\dfrac{3}{4}\\)" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "A larger denominator does NOT mean a smaller fraction when numerators also differ. Compare by finding a common denominator: \\(\\dfrac{5}{6} = \\dfrac{10}{12}\\) and \\(\\dfrac{3}{4} = \\dfrac{9}{12}\\). So \\(\\dfrac{5}{6}\\) is larger."
+        }
+      ],
+      "worked_solution": "Find the lowest common denominator (LCD) of 6 and 4:\n\\(\\text{LCD} = 12\\)\n\nConvert:\n\\(\\dfrac{5}{6} = \\dfrac{5 \\times 2}{6 \\times 2} = \\dfrac{10}{12}\\)\n\n\\(\\dfrac{3}{4} = \\dfrac{3 \\times 3}{4 \\times 3} = \\dfrac{9}{12}\\)\n\nSince \\(\\dfrac{10}{12} > \\dfrac{9}{12}\\), we have \\(\\dfrac{5}{6} > \\dfrac{3}{4}\\).\n\nAnswer: \\(\\mathbf{\\dfrac{5}{6}}\\)"
+    },
+    {
+      "id": "AC9M7N03-005",
+      "type": "numeric",
+      "stem": "What is \\(\\dfrac{1}{2}\\) of 84?",
+      "answer": {
+        "type": "numeric",
+        "value": 42,
+        "tolerance": 0
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "\"A fraction of a number\" means multiply. \\(\\dfrac{1}{2}\\) of 84 means \\(\\dfrac{1}{2} \\times 84\\).",
+          "Multiplying by \\(\\dfrac{1}{2}\\) is the same as dividing by 2. What is \\(84 \\div 2\\)?",
+          "\\(84 \\div 2 = 42\\). So \\(\\dfrac{1}{2}\\) of 84 is 42."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_equals_2x_value" },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Finding \\(\\dfrac{1}{2}\\) of something means dividing by 2, not multiplying by 2. \\(\\dfrac{1}{2}\\) of 84 = \\(84 \\div 2 = 42\\)."
+        },
+        {
+          "id": "CE002",
+          "type": "careless",
+          "detect": { "rule": "answer_matches", "params": { "value": "82" } },
+          "repair_path": ["contextual_hint", "check_arithmetic"],
+          "contextual_hint": "\\(\\dfrac{1}{2}\\) of 84 means \\(84 \\div 2\\), not \\(84 - 2\\). Dividing 84 by 2 gives 42."
+        }
+      ],
+      "worked_solution": "\\(\\dfrac{1}{2}\\) of \\(84 = \\dfrac{1}{2} \\times 84 = \\dfrac{84}{2} = 42\\)\n\nDivide 84 by 2:\n\\(84 \\div 2 = 42\\)\n\nAnswer: **42**"
+    }
+  ]
+}

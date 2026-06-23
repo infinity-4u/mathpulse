@@ -1,0 +1,851 @@
+{
+  "code": "AC9M7N07",
+  "year": 7,
+  "strand": "Number and Algebra",
+  "substrand": "Number",
+  "acara_description": "Add and subtract fractions with related denominators, including using equivalent fractions to find a common denominator.",
+  "verified": false,
+  "schema_version": 2,
+  "questions": [
+    {
+      "id": "AC9M7N07-001",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": null,
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "fraction_input",
+      "stem": "What is \\(\\dfrac{1}{4} + \\dfrac{1}{4}\\)? Write your answer in simplest form.",
+      "answer": {
+        "type": "fraction",
+        "numerator": 1,
+        "denominator": 2,
+        "equivalent_forms": ["2/4", "0.5", "50%"]
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "When the denominators are the same, add the numerators and keep the denominator: \\(\\frac{1}{4} + \\frac{1}{4} = \\frac{1+1}{4}\\).",
+          "\\(\\frac{1+1}{4} = \\frac{2}{4}\\). Now simplify: both 2 and 4 are divisible by 2.",
+          "\\(\\frac{2}{4} = \\frac{2 \\div 2}{4 \\div 2} = \\frac{1}{2}\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "added_numerators_denominators" },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "You added both the numerators and the denominators — but fractions don't work that way. When denominators are the same, only add the numerators and keep the denominator unchanged."
+        },
+        {
+          "id": "CE002",
+          "type": "procedural",
+          "detect": { "rule": "did_not_simplify" },
+          "repair_path": ["contextual_hint"],
+          "contextual_hint": "\\(\\frac{2}{4}\\) is correct, but it can be simplified further. Divide both numerator and denominator by their highest common factor (2) to get \\(\\frac{1}{2}\\)."
+        }
+      ],
+      "worked_solution": "Both fractions have the same denominator (4), so add the numerators:\n\n\\[\\frac{1}{4} + \\frac{1}{4} = \\frac{1 + 1}{4} = \\frac{2}{4}\\]\n\nSimplify by dividing numerator and denominator by 2:\n\n\\[\\frac{2}{4} = \\frac{1}{2}\\]"
+    },
+    {
+      "id": "AC9M7N07-002",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "fraction_input",
+      "stem": "Calculate \\(\\dfrac{2}{5} + \\dfrac{1}{5}\\).",
+      "answer": {
+        "type": "fraction",
+        "numerator": 3,
+        "denominator": 5
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "The denominators are already the same (both 5), so add only the numerators.",
+          "\\(\\frac{2}{5} + \\frac{1}{5} = \\frac{2 + 1}{5} = \\frac{?}{5}\\).",
+          "\\(2 + 1 = 3\\), so the answer is \\(\\frac{3}{5}\\). This is already in simplest form."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "added_numerators_denominators" },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Adding both numerators AND denominators gives \\(\\frac{3}{10}\\), but this is wrong. When denominators are the same, keep the denominator and only add the numerators."
+        }
+      ],
+      "worked_solution": "The denominators are equal (both 5), so add the numerators directly:\n\n\\[\\frac{2}{5} + \\frac{1}{5} = \\frac{2 + 1}{5} = \\frac{3}{5}\\]\n\n\\(\\frac{3}{5}\\) is already in simplest form (3 and 5 share no common factors)."
+    },
+    {
+      "id": "AC9M7N07-003",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "fraction_input",
+      "stem": "What is \\(\\dfrac{3}{6} - \\dfrac{1}{6}\\)? Write your answer in simplest form.",
+      "answer": {
+        "type": "fraction",
+        "numerator": 1,
+        "denominator": 3,
+        "equivalent_forms": ["2/6"]
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "The denominators are the same (6), so subtract the numerators: \\(\\frac{3}{6} - \\frac{1}{6} = \\frac{3 - 1}{6}\\).",
+          "\\(3 - 1 = 2\\), giving \\(\\frac{2}{6}\\). Can this be simplified?",
+          "Both 2 and 6 are divisible by 2: \\(\\frac{2 \\div 2}{6 \\div 2} = \\frac{1}{3}\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "procedural",
+          "detect": { "rule": "did_not_simplify" },
+          "repair_path": ["contextual_hint"],
+          "contextual_hint": "\\(\\frac{2}{6}\\) is correct arithmetic, but it simplifies further. Both 2 and 6 share a factor of 2, so divide both: \\(\\frac{2}{6} = \\frac{1}{3}\\)."
+        },
+        {
+          "id": "CE002",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "2/0" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Never subtract the denominators. When denominators are the same, subtract numerators only: \\(\\frac{3-1}{6}\\), not \\(\\frac{3-1}{6-6}\\)."
+        }
+      ],
+      "worked_solution": "The denominators are equal (both 6), so subtract numerators:\n\n\\[\\frac{3}{6} - \\frac{1}{6} = \\frac{3 - 1}{6} = \\frac{2}{6}\\]\n\nSimplify (÷ 2 top and bottom):\n\n\\[\\frac{2}{6} = \\frac{1}{3}\\]"
+    },
+    {
+      "id": "AC9M7N07-004",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "multiple_choice",
+      "stem": "What is \\(\\dfrac{1}{2} + \\dfrac{1}{4}\\)?",
+      "options": ["2/6", "1/3", "3/4", "3/8"],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "3/4"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "The denominators are different (2 and 4), but 4 is a multiple of 2. Convert \\(\\frac{1}{2}\\) to an equivalent fraction with denominator 4.",
+          "\\(\\frac{1}{2} = \\frac{1 \\times 2}{2 \\times 2} = \\frac{2}{4}\\). Now both fractions have denominator 4.",
+          "\\(\\frac{2}{4} + \\frac{1}{4} = \\frac{3}{4}\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "2/6" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "\\(\\frac{2}{6}\\) comes from adding both numerators (1+1=2) and denominators (2+4=6) — that is not how fraction addition works. You need a common denominator first."
+        }
+      ],
+      "worked_solution": "4 is a multiple of 2, so convert \\(\\frac{1}{2}\\) to denominator 4:\n\n\\[\\frac{1}{2} = \\frac{2}{4}\\]\n\nNow add:\n\n\\[\\frac{2}{4} + \\frac{1}{4} = \\frac{3}{4}\\]"
+    },
+    {
+      "id": "AC9M7N07-005",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "fraction_input",
+      "stem": "Calculate \\(\\dfrac{1}{3} + \\dfrac{1}{6}\\). Write your answer in simplest form.",
+      "answer": {
+        "type": "fraction",
+        "numerator": 1,
+        "denominator": 2,
+        "equivalent_forms": ["3/6", "0.5", "50%"]
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "6 is a multiple of 3. Convert \\(\\frac{1}{3}\\) to an equivalent fraction with denominator 6.",
+          "\\(\\frac{1}{3} = \\frac{1 \\times 2}{3 \\times 2} = \\frac{2}{6}\\). Now both fractions have denominator 6.",
+          "\\(\\frac{2}{6} + \\frac{1}{6} = \\frac{3}{6} = \\frac{1}{2}\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "added_numerators_denominators" },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Adding numerators and denominators directly gives \\(\\frac{2}{9}\\) — but this is a common mistake. You must find a common denominator first. Since 6 is a multiple of 3, convert \\(\\frac{1}{3}\\) to sixths."
+        }
+      ],
+      "worked_solution": "6 is a multiple of 3, so convert \\(\\frac{1}{3}\\) to denominator 6:\n\n\\[\\frac{1}{3} = \\frac{2}{6}\\]\n\nAdd:\n\n\\[\\frac{2}{6} + \\frac{1}{6} = \\frac{3}{6}\\]\n\nSimplify (÷ 3):\n\n\\[\\frac{3}{6} = \\frac{1}{2}\\]"
+    },
+    {
+      "id": "AC9M7N07-006",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "fraction_input",
+      "stem": "What is \\(\\dfrac{5}{8} - \\dfrac{1}{8}\\)? Write your answer in simplest form.",
+      "answer": {
+        "type": "fraction",
+        "numerator": 1,
+        "denominator": 2,
+        "equivalent_forms": ["4/8", "0.5", "50%"]
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "The denominators are the same (8), so subtract the numerators.",
+          "\\(\\frac{5}{8} - \\frac{1}{8} = \\frac{5 - 1}{8} = \\frac{4}{8}\\). Can you simplify this?",
+          "Both 4 and 8 are divisible by 4: \\(\\frac{4 \\div 4}{8 \\div 4} = \\frac{1}{2}\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "procedural",
+          "detect": { "rule": "did_not_simplify" },
+          "repair_path": ["contextual_hint"],
+          "contextual_hint": "\\(\\frac{4}{8}\\) is correct but not fully simplified. The highest common factor of 4 and 8 is 4, so divide both: \\(\\frac{4}{8} = \\frac{1}{2}\\)."
+        }
+      ],
+      "worked_solution": "Same denominators, so subtract numerators:\n\n\\[\\frac{5}{8} - \\frac{1}{8} = \\frac{5 - 1}{8} = \\frac{4}{8}\\]\n\nSimplify (÷ 4):\n\n\\[\\frac{4}{8} = \\frac{1}{2}\\]"
+    },
+    {
+      "id": "AC9M7N07-007",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "multiple_choice",
+      "stem": "What is \\(\\dfrac{7}{10} - \\dfrac{2}{10}\\) in simplest form?",
+      "options": ["9/10", "5/20", "1/2", "9/20"],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "1/2"
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "Both fractions have denominator 10. Subtract the numerators: \\(7 - 2 = ?\\).",
+          "\\(\\frac{7 - 2}{10} = \\frac{5}{10}\\). Now simplify — what is the highest common factor of 5 and 10?",
+          "HCF of 5 and 10 is 5. \\(\\frac{5 \\div 5}{10 \\div 5} = \\frac{1}{2}\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "9/10" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "\\(\\frac{9}{10}\\) comes from adding (7 + 2 = 9) instead of subtracting. The question asks for subtraction: \\(7 - 2 = 5\\)."
+        },
+        {
+          "id": "CE002",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "5/20" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "\\(\\frac{5}{20}\\) comes from subtracting the denominators (10 − 10 = 0... or doubling). Never change the denominator when they are already the same. The denominator stays 10."
+        }
+      ],
+      "worked_solution": "Same denominators (10), so subtract numerators:\n\n\\[\\frac{7}{10} - \\frac{2}{10} = \\frac{7 - 2}{10} = \\frac{5}{10}\\]\n\nSimplify (÷ 5):\n\n\\[\\frac{5}{10} = \\frac{1}{2}\\]"
+    },
+    {
+      "id": "AC9M7N07-008",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "fraction_input",
+      "stem": "Calculate \\(\\dfrac{1}{4} + \\dfrac{1}{2}\\). Write your answer in simplest form.",
+      "answer": {
+        "type": "fraction",
+        "numerator": 3,
+        "denominator": 4,
+        "equivalent_forms": ["0.75", "75%"]
+      },
+      "difficulty": 1,
+      "hints": {
+        "default": [
+          "The denominators are different (4 and 2), but 4 is a multiple of 2. Convert \\(\\frac{1}{2}\\) to quarters.",
+          "\\(\\frac{1}{2} = \\frac{2}{4}\\). Now both fractions have denominator 4.",
+          "\\(\\frac{1}{4} + \\frac{2}{4} = \\frac{3}{4}\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "added_numerators_denominators" },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Adding numerators (1+1=2) and denominators (4+2=6) gives \\(\\frac{2}{6}\\) — but that is not how fraction addition works. Convert to the same denominator first."
+        }
+      ],
+      "worked_solution": "4 is a multiple of 2, so convert \\(\\frac{1}{2}\\) to fourths:\n\n\\[\\frac{1}{2} = \\frac{2}{4}\\]\n\nAdd:\n\n\\[\\frac{1}{4} + \\frac{2}{4} = \\frac{3}{4}\\]\n\n\\(\\frac{3}{4}\\) is already in simplest form."
+    },
+    {
+      "id": "AC9M7N07-009",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "fraction_input",
+      "stem": "Calculate \\(\\dfrac{2}{3} + \\dfrac{1}{6}\\).",
+      "answer": {
+        "type": "fraction",
+        "numerator": 5,
+        "denominator": 6
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "6 is a multiple of 3. Convert \\(\\frac{2}{3}\\) to an equivalent fraction with denominator 6.",
+          "\\(\\frac{2}{3} = \\frac{2 \\times 2}{3 \\times 2} = \\frac{4}{6}\\). Now both fractions share denominator 6.",
+          "\\(\\frac{4}{6} + \\frac{1}{6} = \\frac{5}{6}\\). This is already in simplest form."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "added_numerators_denominators" },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Adding \\(\\frac{2}{3} + \\frac{1}{6}\\) as \\(\\frac{3}{9}\\) means you added both top and bottom numbers. You need a common denominator first: 6 is a multiple of 3, so convert \\(\\frac{2}{3}\\) to sixths."
+        },
+        {
+          "id": "CE002",
+          "type": "procedural",
+          "detect": { "rule": "answer_matches", "params": { "value": "3/6" } },
+          "repair_path": ["contextual_hint", "check_arithmetic"],
+          "contextual_hint": "Check your conversion: \\(\\frac{2}{3}\\) converted to sixths is \\(\\frac{4}{6}\\), not \\(\\frac{2}{6}\\). Multiply the numerator by the same number you multiplied the denominator by."
+        }
+      ],
+      "worked_solution": "6 is a multiple of 3, so convert \\(\\frac{2}{3}\\) to sixths:\n\n\\[\\frac{2}{3} = \\frac{2 \\times 2}{3 \\times 2} = \\frac{4}{6}\\]\n\nAdd:\n\n\\[\\frac{4}{6} + \\frac{1}{6} = \\frac{5}{6}\\]\n\n5 and 6 share no common factors, so \\(\\frac{5}{6}\\) is in simplest form."
+    },
+    {
+      "id": "AC9M7N07-010",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "fraction_input",
+      "stem": "What is \\(\\dfrac{5}{6} - \\dfrac{1}{3}\\)? Write your answer in simplest form.",
+      "answer": {
+        "type": "fraction",
+        "numerator": 1,
+        "denominator": 2,
+        "equivalent_forms": ["3/6", "0.5", "50%"]
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "6 is a multiple of 3. Convert \\(\\frac{1}{3}\\) to sixths before subtracting.",
+          "\\(\\frac{1}{3} = \\frac{2}{6}\\). So the calculation becomes \\(\\frac{5}{6} - \\frac{2}{6}\\).",
+          "\\(\\frac{5}{6} - \\frac{2}{6} = \\frac{3}{6} = \\frac{1}{2}\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "procedural",
+          "detect": { "rule": "answer_matches", "params": { "value": "4/6" } },
+          "repair_path": ["contextual_hint", "check_arithmetic"],
+          "contextual_hint": "It looks like you subtracted \\(\\frac{1}{6}\\) instead of \\(\\frac{1}{3}\\). Remember: \\(\\frac{1}{3} = \\frac{2}{6}\\), so subtract 2 from the numerator, not 1."
+        },
+        {
+          "id": "CE002",
+          "type": "procedural",
+          "detect": { "rule": "did_not_simplify" },
+          "repair_path": ["contextual_hint"],
+          "contextual_hint": "\\(\\frac{3}{6}\\) is correct, but it simplifies. Divide both numerator and denominator by 3: \\(\\frac{3}{6} = \\frac{1}{2}\\)."
+        }
+      ],
+      "worked_solution": "6 is a multiple of 3, so convert \\(\\frac{1}{3}\\) to sixths:\n\n\\[\\frac{1}{3} = \\frac{2}{6}\\]\n\nSubtract:\n\n\\[\\frac{5}{6} - \\frac{2}{6} = \\frac{3}{6}\\]\n\nSimplify (÷ 3):\n\n\\[\\frac{3}{6} = \\frac{1}{2}\\]"
+    },
+    {
+      "id": "AC9M7N07-011",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "fraction_input",
+      "stem": "Calculate \\(\\dfrac{3}{4} - \\dfrac{3}{8}\\).",
+      "answer": {
+        "type": "fraction",
+        "numerator": 3,
+        "denominator": 8
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "8 is a multiple of 4. Convert \\(\\frac{3}{4}\\) to eighths.",
+          "\\(\\frac{3}{4} = \\frac{3 \\times 2}{4 \\times 2} = \\frac{6}{8}\\). Now subtract: \\(\\frac{6}{8} - \\frac{3}{8}\\).",
+          "\\(\\frac{6}{8} - \\frac{3}{8} = \\frac{3}{8}\\). Check: 3 and 8 share no common factors, so this is in simplest form."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "procedural",
+          "detect": { "rule": "answer_matches", "params": { "value": "0/4" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "It looks like you subtracted numerators without converting to a common denominator. Convert \\(\\frac{3}{4}\\) to eighths first: \\(\\frac{3}{4} = \\frac{6}{8}\\)."
+        },
+        {
+          "id": "CE002",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "0/8" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "It looks like you converted \\(\\frac{3}{4}\\) to \\(\\frac{3}{8}\\) without adjusting the numerator. When you multiply the denominator by 2, you must also multiply the numerator by 2: \\(\\frac{3}{4} = \\frac{6}{8}\\)."
+        }
+      ],
+      "worked_solution": "8 is a multiple of 4, so convert \\(\\frac{3}{4}\\) to eighths:\n\n\\[\\frac{3}{4} = \\frac{3 \\times 2}{4 \\times 2} = \\frac{6}{8}\\]\n\nSubtract:\n\n\\[\\frac{6}{8} - \\frac{3}{8} = \\frac{3}{8}\\]\n\n3 and 8 share no common factors, so \\(\\frac{3}{8}\\) is in simplest form."
+    },
+    {
+      "id": "AC9M7N07-012",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "fraction_input",
+      "stem": "What is \\(\\dfrac{1}{2} + \\dfrac{3}{8}\\)?",
+      "answer": {
+        "type": "fraction",
+        "numerator": 7,
+        "denominator": 8,
+        "equivalent_forms": ["0.875"]
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "8 is a multiple of 2. Convert \\(\\frac{1}{2}\\) to eighths.",
+          "\\(\\frac{1}{2} = \\frac{4}{8}\\). Now both fractions have denominator 8.",
+          "\\(\\frac{4}{8} + \\frac{3}{8} = \\frac{7}{8}\\). Check: 7 and 8 share no factors, so this is in simplest form."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "procedural",
+          "detect": { "rule": "answer_matches", "params": { "value": "4/8" } },
+          "repair_path": ["contextual_hint", "check_arithmetic"],
+          "contextual_hint": "It looks like you forgot to add the \\(\\frac{3}{8}\\). After converting \\(\\frac{1}{2} = \\frac{4}{8}\\), you still need to add \\(\\frac{3}{8}\\): \\(\\frac{4}{8} + \\frac{3}{8} = ?\\)."
+        }
+      ],
+      "worked_solution": "8 is a multiple of 2, so convert \\(\\frac{1}{2}\\) to eighths:\n\n\\[\\frac{1}{2} = \\frac{1 \\times 4}{2 \\times 4} = \\frac{4}{8}\\]\n\nAdd:\n\n\\[\\frac{4}{8} + \\frac{3}{8} = \\frac{7}{8}\\]\n\n7 and 8 share no common factors, so \\(\\frac{7}{8}\\) is in simplest form."
+    },
+    {
+      "id": "AC9M7N07-013",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "fraction_input",
+      "stem": "A recipe calls for \\(\\dfrac{1}{3}\\) of a cup of oil. You accidentally add \\(\\dfrac{1}{6}\\) of a cup extra. How much oil is in the bowl in total? Write your answer in simplest form.",
+      "answer": {
+        "type": "fraction",
+        "numerator": 1,
+        "denominator": 2,
+        "equivalent_forms": ["3/6", "0.5"]
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "You need to add \\(\\frac{1}{3} + \\frac{1}{6}\\). The denominators are related: 6 is a multiple of 3.",
+          "Convert \\(\\frac{1}{3}\\) to sixths: \\(\\frac{1}{3} = \\frac{2}{6}\\). Now both fractions have denominator 6.",
+          "\\(\\frac{2}{6} + \\frac{1}{6} = \\frac{3}{6} = \\frac{1}{2}\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "added_numerators_denominators" },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Adding \\(\\frac{1}{3} + \\frac{1}{6}\\) as \\(\\frac{2}{9}\\) means you added both numerators and denominators. First convert \\(\\frac{1}{3}\\) to sixths, then add."
+        }
+      ],
+      "worked_solution": "Total oil = \\(\\frac{1}{3} + \\frac{1}{6}\\)\n\nConvert \\(\\frac{1}{3}\\) to sixths:\n\n\\[\\frac{1}{3} = \\frac{2}{6}\\]\n\nAdd:\n\n\\[\\frac{2}{6} + \\frac{1}{6} = \\frac{3}{6} = \\frac{1}{2}\\]\n\nThere is \\(\\frac{1}{2}\\) of a cup of oil in the bowl."
+    },
+    {
+      "id": "AC9M7N07-014",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "fraction_input",
+      "stem": "Calculate \\(\\dfrac{1}{2} - \\dfrac{1}{6}\\). Write your answer in simplest form.",
+      "answer": {
+        "type": "fraction",
+        "numerator": 1,
+        "denominator": 3,
+        "equivalent_forms": ["2/6"]
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "6 is a multiple of 2. Convert \\(\\frac{1}{2}\\) to sixths.",
+          "\\(\\frac{1}{2} = \\frac{3}{6}\\). The calculation becomes \\(\\frac{3}{6} - \\frac{1}{6}\\).",
+          "\\(\\frac{3}{6} - \\frac{1}{6} = \\frac{2}{6} = \\frac{1}{3}\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "procedural",
+          "detect": { "rule": "answer_matches", "params": { "value": "0/4" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Check your conversion of \\(\\frac{1}{2}\\) to sixths. Multiply numerator AND denominator by 3: \\(\\frac{1 \\times 3}{2 \\times 3} = \\frac{3}{6}\\)."
+        },
+        {
+          "id": "CE002",
+          "type": "procedural",
+          "detect": { "rule": "did_not_simplify" },
+          "repair_path": ["contextual_hint"],
+          "contextual_hint": "\\(\\frac{2}{6}\\) is correct but not fully simplified. Divide both by 2: \\(\\frac{2}{6} = \\frac{1}{3}\\)."
+        }
+      ],
+      "worked_solution": "6 is a multiple of 2, so convert \\(\\frac{1}{2}\\) to sixths:\n\n\\[\\frac{1}{2} = \\frac{1 \\times 3}{2 \\times 3} = \\frac{3}{6}\\]\n\nSubtract:\n\n\\[\\frac{3}{6} - \\frac{1}{6} = \\frac{2}{6}\\]\n\nSimplify (÷ 2):\n\n\\[\\frac{2}{6} = \\frac{1}{3}\\]"
+    },
+    {
+      "id": "AC9M7N07-015",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "multiple_choice",
+      "stem": "What is \\(\\dfrac{3}{5} + \\dfrac{1}{10}\\)?",
+      "options": ["4/15", "7/10", "4/10", "7/15"],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "7/10"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "10 is a multiple of 5. Convert \\(\\frac{3}{5}\\) to tenths.",
+          "\\(\\frac{3}{5} = \\frac{6}{10}\\). Now both fractions have denominator 10.",
+          "\\(\\frac{6}{10} + \\frac{1}{10} = \\frac{7}{10}\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "4/15" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "\\(\\frac{4}{15}\\) comes from adding both numerators (3+1=4) and denominators (5+10=15). You need to convert to a common denominator first — 10 is a multiple of 5."
+        },
+        {
+          "id": "CE002",
+          "type": "procedural",
+          "detect": { "rule": "answer_matches", "params": { "value": "4/10" } },
+          "repair_path": ["contextual_hint", "check_arithmetic"],
+          "contextual_hint": "When you convert \\(\\frac{3}{5}\\) to tenths, multiply the numerator by 2 as well: \\(\\frac{3 \\times 2}{5 \\times 2} = \\frac{6}{10}\\), not \\(\\frac{3}{10}\\). Then \\(\\frac{6}{10} + \\frac{1}{10} = \\frac{7}{10}\\)."
+        }
+      ],
+      "worked_solution": "10 is a multiple of 5, so convert \\(\\frac{3}{5}\\) to tenths:\n\n\\[\\frac{3}{5} = \\frac{3 \\times 2}{5 \\times 2} = \\frac{6}{10}\\]\n\nAdd:\n\n\\[\\frac{6}{10} + \\frac{1}{10} = \\frac{7}{10}\\]\n\n7 and 10 share no common factors, so \\(\\frac{7}{10}\\) is in simplest form."
+    },
+    {
+      "id": "AC9M7N07-016",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "fraction_input",
+      "stem": "A plank is \\(\\dfrac{7}{8}\\) of a metre long. A carpenter cuts off \\(\\dfrac{1}{4}\\) of a metre. How long is the remaining piece?",
+      "answer": {
+        "type": "fraction",
+        "numerator": 5,
+        "denominator": 8
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "You need to calculate \\(\\frac{7}{8} - \\frac{1}{4}\\). The denominators are related: 8 is a multiple of 4.",
+          "Convert \\(\\frac{1}{4}\\) to eighths: \\(\\frac{1}{4} = \\frac{2}{8}\\).",
+          "\\(\\frac{7}{8} - \\frac{2}{8} = \\frac{5}{8}\\). Check: 5 and 8 share no factors."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "procedural",
+          "detect": { "rule": "answer_matches", "params": { "value": "6/8" } },
+          "repair_path": ["contextual_hint", "check_arithmetic"],
+          "contextual_hint": "It looks like you subtracted \\(\\frac{1}{8}\\) instead of \\(\\frac{1}{4}\\). Remember \\(\\frac{1}{4} = \\frac{2}{8}\\), so you subtract 2 from the numerator: \\(7 - 2 = 5\\)."
+        }
+      ],
+      "worked_solution": "Remaining length = \\(\\frac{7}{8} - \\frac{1}{4}\\)\n\nConvert \\(\\frac{1}{4}\\) to eighths:\n\n\\[\\frac{1}{4} = \\frac{2}{8}\\]\n\nSubtract:\n\n\\[\\frac{7}{8} - \\frac{2}{8} = \\frac{5}{8}\\]\n\nThe remaining piece is \\(\\frac{5}{8}\\) of a metre."
+    },
+    {
+      "id": "AC9M7N07-017",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "fraction_input",
+      "stem": "Calculate \\(\\dfrac{5}{6} + \\dfrac{2}{3}\\). Write your answer as a fraction in simplest form. (Your answer will be greater than 1.)",
+      "answer": {
+        "type": "fraction",
+        "numerator": 3,
+        "denominator": 2,
+        "equivalent_forms": ["9/6", "1.5"]
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "6 is a multiple of 3. Convert \\(\\frac{2}{3}\\) to sixths: \\(\\frac{2}{3} = \\frac{4}{6}\\).",
+          "\\(\\frac{5}{6} + \\frac{4}{6} = \\frac{9}{6}\\). This is an improper fraction (numerator > denominator). Simplify it.",
+          "\\(\\frac{9}{6}\\) — both 9 and 6 are divisible by 3: \\(\\frac{9 \\div 3}{6 \\div 3} = \\frac{3}{2}\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "procedural",
+          "detect": { "rule": "answer_matches", "params": { "value": "9/6" } },
+          "repair_path": ["contextual_hint"],
+          "contextual_hint": "\\(\\frac{9}{6}\\) is correct arithmetic but not fully simplified. Both 9 and 6 are divisible by 3: \\(\\frac{9}{6} = \\frac{3}{2}\\)."
+        },
+        {
+          "id": "CE002",
+          "type": "conceptual",
+          "detect": { "rule": "added_numerators_denominators" },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Adding both numerators and denominators directly gives \\(\\frac{7}{9}\\) — but that is not fraction addition. Convert \\(\\frac{2}{3}\\) to sixths first, then add."
+        }
+      ],
+      "worked_solution": "6 is a multiple of 3, so convert \\(\\frac{2}{3}\\) to sixths:\n\n\\[\\frac{2}{3} = \\frac{2 \\times 2}{3 \\times 2} = \\frac{4}{6}\\]\n\nAdd:\n\n\\[\\frac{5}{6} + \\frac{4}{6} = \\frac{9}{6}\\]\n\nSimplify the improper fraction (÷ 3):\n\n\\[\\frac{9}{6} = \\frac{3}{2}\\]"
+    },
+    {
+      "id": "AC9M7N07-018",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "fraction_input",
+      "stem": "Calculate \\(\\dfrac{5}{9} + \\dfrac{1}{3} + \\dfrac{1}{9}\\). Give your answer in simplest form.",
+      "answer": {
+        "type": "numeric",
+        "value": 1,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "9 is a multiple of 3. Convert \\(\\frac{1}{3}\\) to ninths before adding all three fractions.",
+          "\\(\\frac{1}{3} = \\frac{3}{9}\\). Now all three fractions have denominator 9: \\(\\frac{5}{9} + \\frac{3}{9} + \\frac{1}{9}\\).",
+          "\\(\\frac{5 + 3 + 1}{9} = \\frac{9}{9} = 1\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "procedural",
+          "detect": { "rule": "answer_matches", "params": { "value": "7/9" } },
+          "repair_path": ["contextual_hint", "check_arithmetic"],
+          "contextual_hint": "It looks like you added only two of the three fractions. Make sure you convert \\(\\frac{1}{3}\\) to ninths and then add all three: \\(\\frac{5}{9} + \\frac{3}{9} + \\frac{1}{9}\\)."
+        },
+        {
+          "id": "CE002",
+          "type": "procedural",
+          "detect": { "rule": "answer_matches", "params": { "value": "6/9" } },
+          "repair_path": ["contextual_hint", "check_arithmetic"],
+          "contextual_hint": "Check your conversion of \\(\\frac{1}{3}\\) to ninths. Multiply numerator AND denominator by 3: \\(\\frac{1 \\times 3}{3 \\times 3} = \\frac{3}{9}\\), not \\(\\frac{2}{9}\\)."
+        }
+      ],
+      "worked_solution": "Convert \\(\\frac{1}{3}\\) to ninths (9 is a multiple of 3):\n\n\\[\\frac{1}{3} = \\frac{3}{9}\\]\n\nAdd all three fractions:\n\n\\[\\frac{5}{9} + \\frac{3}{9} + \\frac{1}{9} = \\frac{5 + 3 + 1}{9} = \\frac{9}{9} = 1\\]"
+    },
+    {
+      "id": "AC9M7N07-019",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "fraction_input",
+      "stem": "A piece of timber is \\(\\dfrac{11}{12}\\) of a metre long. A carpenter cuts \\(\\dfrac{1}{4}\\) of a metre from it. How long is the remaining piece? Write your answer in simplest form.",
+      "answer": {
+        "type": "fraction",
+        "numerator": 2,
+        "denominator": 3,
+        "equivalent_forms": ["8/12"]
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "You need \\(\\frac{11}{12} - \\frac{1}{4}\\). 12 is a multiple of 4, so convert \\(\\frac{1}{4}\\) to twelfths.",
+          "\\(\\frac{1}{4} = \\frac{3}{12}\\). The calculation becomes \\(\\frac{11}{12} - \\frac{3}{12}\\).",
+          "\\(\\frac{11}{12} - \\frac{3}{12} = \\frac{8}{12}\\). Simplify: the HCF of 8 and 12 is 4, so \\(\\frac{8}{12} = \\frac{2}{3}\\)."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "procedural",
+          "detect": { "rule": "answer_matches", "params": { "value": "10/12" } },
+          "repair_path": ["contextual_hint", "check_arithmetic"],
+          "contextual_hint": "It looks like you subtracted \\(\\frac{1}{12}\\) instead of \\(\\frac{1}{4}\\). Remember \\(\\frac{1}{4} = \\frac{3}{12}\\), so subtract 3 from the numerator: \\(11 - 3 = 8\\)."
+        },
+        {
+          "id": "CE002",
+          "type": "procedural",
+          "detect": { "rule": "did_not_simplify" },
+          "repair_path": ["contextual_hint"],
+          "contextual_hint": "\\(\\frac{8}{12}\\) is correct but can be simplified. The highest common factor of 8 and 12 is 4: \\(\\frac{8 \\div 4}{12 \\div 4} = \\frac{2}{3}\\)."
+        }
+      ],
+      "worked_solution": "12 is a multiple of 4, so convert \\(\\frac{1}{4}\\) to twelfths:\n\n\\[\\frac{1}{4} = \\frac{1 \\times 3}{4 \\times 3} = \\frac{3}{12}\\]\n\nSubtract:\n\n\\[\\frac{11}{12} - \\frac{3}{12} = \\frac{8}{12}\\]\n\nSimplify (HCF of 8 and 12 is 4):\n\n\\[\\frac{8}{12} = \\frac{8 \\div 4}{12 \\div 4} = \\frac{2}{3}\\]\n\nThe remaining piece is \\(\\frac{2}{3}\\) of a metre."
+    },
+    {
+      "id": "AC9M7N07-020",
+      "verified": false,
+      "provenance": {
+        "authored_by": "ai-draft",
+        "model": "claude-sonnet-4-6",
+        "drafted_at": "2026-06-22T00:00:00Z",
+        "seed_question_id": "AC9M7N07-001",
+        "verified_by": null,
+        "verified_at": null
+      },
+      "type": "multiple_choice",
+      "stem": "Three of these four calculations contain an error. Which one is **correct**?",
+      "options": [
+        "\\(\\frac{1}{3} + \\frac{1}{6} = \\frac{2}{9}\\)",
+        "\\(\\frac{1}{4} + \\frac{1}{8} = \\frac{2}{12}\\)",
+        "\\(\\frac{1}{2} + \\frac{1}{4} = \\frac{3}{4}\\)",
+        "\\(\\frac{3}{5} + \\frac{1}{10} = \\frac{4}{15}\\)"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "\\(\\frac{1}{2} + \\frac{1}{4} = \\frac{3}{4}\\)"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "Check each option by converting to a common denominator. For option A: what is \\(\\frac{1}{3} + \\frac{1}{6}\\) when you convert \\(\\frac{1}{3}\\) to sixths?",
+          "Option A: \\(\\frac{1}{3} = \\frac{2}{6}\\), so \\(\\frac{2}{6} + \\frac{1}{6} = \\frac{3}{6} = \\frac{1}{2}\\) — not \\(\\frac{2}{9}\\). Try option C.",
+          "Option C: \\(\\frac{1}{2} = \\frac{2}{4}\\), so \\(\\frac{2}{4} + \\frac{1}{4} = \\frac{3}{4}\\). This matches the given answer. ✓"
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "\\(\\frac{1}{3} + \\frac{1}{6} = \\frac{2}{9}\\)" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Option A shows the classic mistake of adding both numerators (1+1=2) and denominators (3+6=9). The correct answer is \\(\\frac{1}{3} + \\frac{1}{6} = \\frac{2}{6} + \\frac{1}{6} = \\frac{1}{2}\\)."
+        },
+        {
+          "id": "CE002",
+          "type": "conceptual",
+          "detect": { "rule": "answer_matches", "params": { "value": "\\(\\frac{1}{4} + \\frac{1}{8} = \\frac{2}{12}\\)" } },
+          "repair_path": ["contextual_hint", "worked_example"],
+          "contextual_hint": "Option B also adds numerators and denominators: 1+1=2, 4+8=12. The correct calculation is \\(\\frac{1}{4} = \\frac{2}{8}\\), so \\(\\frac{2}{8} + \\frac{1}{8} = \\frac{3}{8}\\)."
+        }
+      ],
+      "worked_solution": "Check each option by finding a common denominator:\n\n**A:** \\(\\frac{1}{3} + \\frac{1}{6}\\): Convert \\(\\frac{1}{3} = \\frac{2}{6}\\). Answer = \\(\\frac{3}{6} = \\frac{1}{2}\\). Not \\(\\frac{2}{9}\\). ✗\n\n**B:** \\(\\frac{1}{4} + \\frac{1}{8}\\): Convert \\(\\frac{1}{4} = \\frac{2}{8}\\). Answer = \\(\\frac{3}{8}\\). Not \\(\\frac{2}{12}\\). ✗\n\n**C:** \\(\\frac{1}{2} + \\frac{1}{4}\\): Convert \\(\\frac{1}{2} = \\frac{2}{4}\\). Answer = \\(\\frac{3}{4}\\). ✓\n\n**D:** \\(\\frac{3}{5} + \\frac{1}{10}\\): Convert \\(\\frac{3}{5} = \\frac{6}{10}\\). Answer = \\(\\frac{7}{10}\\). Not \\(\\frac{4}{15}\\). ✗\n\nOnly option C is correct."
+    }
+  ]
+}

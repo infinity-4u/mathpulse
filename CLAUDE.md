@@ -44,6 +44,25 @@ Tests run on every change. TDD the security/privacy invariants and answer-checki
 CI tripwires (no-tracker, no-PII-field, RLS-on, AU-region, no-runtime-AI, content gate,
 hard-delete, a11y, scope) must pass to merge.
 
+## Session discipline
+
+**Subagents**
+Only spawn a subagent (Task tool) when the work is genuinely parallel or isolated.
+Do not use the Task tool for content validation — use `npm run validate-content` instead.
+Do not use the Task tool for RLS review within a normal implementation session.
+When a subagent is necessary, prefer claude-haiku-4-5 for validation and review tasks.
+
+**Context management**
+After completing a step group (e.g. Steps 1–4, or Steps 5–8), stop and wait for the
+human to run /compact before continuing. Do not proceed to the next step group until
+told to.
+
+**Brief discipline**
+When a brief says "as specified in docs/X.md", read that file directly.
+Do not ask the human to paste the spec content. The files are in the repo.
+When reporting back, list only files changed and decisions not covered by the brief.
+Do not summarise what you built step by step — the human can read the diff.
+
 ## Things to get right here (Claude tends to slip on these)
 
 - Don't add an analytics SDK "for insights" — server-side aggregates only.

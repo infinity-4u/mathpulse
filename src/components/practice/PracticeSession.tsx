@@ -37,7 +37,7 @@ interface PracticeSessionProps {
 }
 
 export function PracticeSession({ questions, substrandCode }: PracticeSessionProps) {
-  const { session } = useStudentSession()
+  const { session, setSession } = useStudentSession()
 
   // Session tracking
   const sessionIdRef = useRef<string | null>(null)
@@ -286,8 +286,17 @@ export function PracticeSession({ questions, substrandCode }: PracticeSessionPro
   if (!session) {
     return (
       <div style={{ textAlign: 'center', padding: space[16] }}>
-        <p style={{ color: color.textMuted }}>Session expired.</p>
-        <a href="/practice" style={{ color: color.primary }}>Enter your PIN to continue →</a>
+        <p style={{ color: color.textMuted, marginBottom: space[4] }}>Session expired.</p>
+        <a href="/practice" style={{ color: color.primary, display: 'block', marginBottom: space[4] }}>Enter your PIN to continue →</a>
+        <button
+          onClick={() => {
+            const now = Math.floor(Date.now() / 1000)
+            setSession({ token: 'demo', studentId: 'demo-student', classIds: [], expiresAt: now + 8 * 3600 })
+          }}
+          style={{ background: 'none', border: `1px solid ${color.border}`, borderRadius: '8px', padding: `${space[3]} ${space[5]}`, color: color.textMuted, fontSize: typography.fontSize.sm, cursor: 'pointer' }}
+        >
+          Continue as guest
+        </button>
       </div>
     )
   }

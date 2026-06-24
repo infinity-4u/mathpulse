@@ -123,6 +123,21 @@ function PinEntryForm({ onSuccess }: { onSuccess: (s: StudentSession) => void })
           {loading ? 'Checking…' : 'Start practising'}
         </button>
       </form>
+
+      <div style={{ marginTop: space[8], textAlign: 'center' }}>
+        <p style={{ ...bodyStyle, fontSize: typography.fontSize.sm, marginBottom: space[3] }}>
+          No PIN yet?
+        </p>
+        <button
+          onClick={() => {
+            const now = Math.floor(Date.now() / 1000)
+            onSuccess({ token: 'demo', studentId: 'demo-student', classIds: [], expiresAt: now + 8 * 3600 })
+          }}
+          style={{ background: 'none', border: `1px solid ${color.border}`, borderRadius: '8px', padding: `${space[3]} ${space[5]}`, color: color.textMuted, fontSize: typography.fontSize.sm, cursor: 'pointer' }}
+        >
+          Continue as guest (progress not saved)
+        </button>
+      </div>
     </div>
   )
 }

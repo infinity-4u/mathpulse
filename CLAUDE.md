@@ -37,12 +37,39 @@ Commands: `<dev>` / `<test>` / `<build>` / `<deploy>` — fill in as the repo ta
 - `content/curriculum/year-N/<strand>/AC9M*.json` — questions (static, version-controlled)
 - `src/` — the app; `src/theme/` — design tokens (synced from Claude Design)
 - `tests/` — with the tripwires (see PLAN.md) wired into CI
+- `design/agent/` — designer agent workflow, context brief, screen register
+- `design/screens/` — per-screen design specs (output from designer agent, input to implementation)
+- `design/components/` — shared component specs (output from designer agent)
 
 ## Testing expectation
 
 Tests run on every change. TDD the security/privacy invariants and answer-checking FIRST. The
 CI tripwires (no-tracker, no-PII-field, RLS-on, AU-region, no-runtime-AI, content gate,
 hard-delete, a11y, scope) must pass to merge.
+
+## Designer agent workflow
+
+**Before implementing any student-facing screen or shared component:**
+1. Read `design/agent/WORKFLOW.md` — it defines the full process.
+2. Attach `design/agent/CONTEXT-BRIEF.md` and (if relevant) `design/PHASE1-DESIGN-SPEC.md`
+   to the agent invocation in full — do not summarise them.
+3. Write a short screen-specific brief (route, user goal, state variants, constraints).
+4. Ask the agent for: layout spec, state inventory, token mapping, a11y checklist,
+   calm mode variant, copy decisions, open questions.
+5. Save the agent output to `design/screens/[screen-slug].md` before writing any code.
+6. Implement from the saved spec. Record any deviations back in the spec file.
+7. Update `design/agent/SCREEN-REGISTER.md` status when the screen moves through the pipeline.
+
+**When the resource package is provided by the human:**
+Read it fully before invoking the agent. The package may override or extend the workflow
+above. Follow its instructions where they are more specific. Do not discard CONTEXT-BRIEF.md
+constraints — they encode CONTRACT.md requirements that cannot be overridden by design.
+
+**Checks that always apply regardless of agent output:**
+- Colours must map to tokens in `src/theme/tokens.ts` — no hardcoded hex values outside tokens
+- Amber for wrong answers, red for technical errors only (CONTRACT.md invariant)
+- No third-party CDN fonts, no analytics pixels, no localStorage
+- Touch targets ≥ 44px, WCAG 2.1 AA contrast on every element
 
 ## Session discipline
 

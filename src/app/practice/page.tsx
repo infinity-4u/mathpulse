@@ -8,11 +8,8 @@
 
 import { useState, useCallback } from 'react'
 import { useStudentSession } from '@/contexts/StudentSessionContext'
+import { YEAR_7, strandColour } from '@/lib/curriculum'
 import { color, typography, space, touch } from '@/theme/tokens'
-
-const AVAILABLE_SUBSTRANDS = [
-  { code: 'AC9M7N01', label: 'Year 7 · Squares and square roots', year: 7 },
-]
 
 export default function PracticePage() {
   const { session, setSession } = useStudentSession()
@@ -162,16 +159,29 @@ function SubstrandPicker() {
         </p>
       )}
 
-      <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-        {AVAILABLE_SUBSTRANDS.map(s => (
-          <li key={s.code} style={{ marginBottom: space[3] }}>
+      {YEAR_7.strands.map(strand => (
+        <div key={strand.slug} style={{ marginBottom: space[8] }}>
+          <div style={{
+            fontSize: typography.fontSize.sm,
+            fontWeight: typography.fontWeight.bold,
+            color: strandColour(strand.slug),
+            textTransform: 'uppercase',
+            letterSpacing: '0.08em',
+            marginBottom: space[3],
+            paddingLeft: space[1],
+          }}>
+            {strand.label}
+          </div>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+        {strand.substrands.map(s => (
+          <li key={s.code} style={{ marginBottom: space[2] }}>
             <a
               href={`/practice/session/${s.code}`}
               style={{
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                padding: `${space[4]} ${space[5]}`,
+                padding: `${space[3]} ${space[5]}`,
                 background: color.surface,
                 border: `1px solid ${color.border}`,
                 borderRadius: '8px',
@@ -188,7 +198,9 @@ function SubstrandPicker() {
             </a>
           </li>
         ))}
-      </ul>
+          </ul>
+        </div>
+      ))}
 
       {session && (
         <p style={{ fontSize: typography.fontSize.sm, color: color.textMuted, marginTop: space[8], textAlign: 'center' }}>

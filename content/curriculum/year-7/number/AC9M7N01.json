@@ -11,7 +11,12 @@
       "id": "AC9M7N01-001",
       "type": "multiple_choice",
       "stem": "What is \\(\\sqrt{144}\\)?",
-      "options": ["10", "11", "12", "14"],
+      "options": [
+        "10",
+        "11",
+        "12",
+        "14"
+      ],
       "answer": {
         "type": "multiple_choice",
         "correct": "12"
@@ -28,15 +33,28 @@
         {
           "id": "CE001",
           "type": "conceptual",
-          "detect": { "rule": "answer_equals_half_value" },
-          "repair_path": ["contextual_hint", "worked_example"],
+          "detect": {
+            "rule": "answer_equals_half_value"
+          },
+          "repair_path": [
+            "contextual_hint",
+            "worked_example"
+          ],
           "contextual_hint": "Halving 144 gives 72 — but that is not a square root. A square root asks: which number times itself equals 144? Halving is a different operation."
         },
         {
           "id": "CE002",
           "type": "careless",
-          "detect": { "rule": "answer_matches", "params": { "value": "14" } },
-          "repair_path": ["contextual_hint", "check_arithmetic"],
+          "detect": {
+            "rule": "answer_matches",
+            "params": {
+              "value": "14"
+            }
+          },
+          "repair_path": [
+            "contextual_hint",
+            "check_arithmetic"
+          ],
           "contextual_hint": "Close! But check: does 14 × 14 = 144? Try the multiplication carefully."
         }
       ],
@@ -63,8 +81,13 @@
         {
           "id": "CE001",
           "type": "conceptual",
-          "detect": { "rule": "answer_equals_2x_value" },
-          "repair_path": ["contextual_hint", "worked_example"],
+          "detect": {
+            "rule": "answer_equals_2x_value"
+          },
+          "repair_path": [
+            "contextual_hint",
+            "worked_example"
+          ],
           "contextual_hint": "\\(9^2\\) does not mean 9 × 2. The small 2 (called an exponent) tells you to multiply 9 by itself: 9 × 9."
         }
       ],
@@ -74,7 +97,12 @@
       "id": "AC9M7N01-003",
       "type": "multiple_choice",
       "stem": "Which of the following is a perfect square?",
-      "options": ["50", "64", "72", "90"],
+      "options": [
+        "50",
+        "64",
+        "72",
+        "90"
+      ],
       "answer": {
         "type": "multiple_choice",
         "correct": "64"
@@ -91,8 +119,16 @@
         {
           "id": "CE001",
           "type": "conceptual",
-          "detect": { "rule": "answer_matches", "params": { "value": "50" } },
-          "repair_path": ["contextual_hint", "check_arithmetic"],
+          "detect": {
+            "rule": "answer_matches",
+            "params": {
+              "value": "50"
+            }
+          },
+          "repair_path": [
+            "contextual_hint",
+            "check_arithmetic"
+          ],
           "contextual_hint": "Check: is there a whole number whose square is 50? Try 7 × 7 = 49 and 8 × 8 = 64. Neither gives 50, so 50 is not a perfect square."
         }
       ],
@@ -120,15 +156,29 @@
         {
           "id": "CE001",
           "type": "conceptual",
-          "detect": { "rule": "answer_equals_half_value" },
-          "repair_path": ["contextual_hint", "worked_example"],
+          "detect": {
+            "rule": "answer_equals_half_value"
+          },
+          "repair_path": [
+            "contextual_hint",
+            "worked_example"
+          ],
           "contextual_hint": "Halving the area gives 112.5 — but that is not how you find a side length. For a square, side = √Area, not Area ÷ 2."
         },
         {
           "id": "CE002",
           "type": "conceptual",
-          "detect": { "rule": "near_numeric", "params": { "value": 56.25, "tolerance_factor": 0.02 } },
-          "repair_path": ["contextual_hint", "worked_example"],
+          "detect": {
+            "rule": "near_numeric",
+            "params": {
+              "value": 56.25,
+              "tolerance_factor": 0.02
+            }
+          },
+          "repair_path": [
+            "contextual_hint",
+            "worked_example"
+          ],
           "contextual_hint": "Dividing by 4 gives the perimeter relationship, not the side length. For a square, side = √Area."
         }
       ],
@@ -158,6 +208,174 @@
       },
       "common_errors": [],
       "worked_solution": "\\(\\sqrt{36}\\) means: find \\(x\\) where \\(x \\times x = 36\\).\n\n\\(6 \\times 6 = 36\\) ✓\n\nSo \\(\\sqrt{36} = 6\\).\n\nThe correct statement is: **\\(\\sqrt{36} = 6\\) because 6 × 6 = 36**.\n\nThe other options use incorrect methods (halving, or finding a different factor pair)."
+    },
+    {
+      "id": "AC9M7N01-006",
+      "type": "numeric",
+      "stem": "What is \\(\\sqrt{400}\\)?",
+      "answer": {
+        "type": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "Ask: which number multiplied by itself equals 400?",
+          "Think about multiples of 10. What is \\(20 \\times 20\\)?",
+          "\\(20 \\times 20 = 400\\), so \\(\\sqrt{400} = ?\\)"
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": {
+            "rule": "answer_equals_half_value"
+          },
+          "repair_path": [
+            "contextual_hint",
+            "worked_example"
+          ],
+          "contextual_hint": "Halving 400 gives 200 — that is not a square root. Square root asks: what times itself equals 400?"
+        }
+      ],
+      "worked_solution": "\\(\\sqrt{400} = 20\\) because \\(20 \\times 20 = 400\\)."
+    },
+    {
+      "id": "AC9M7N01-007",
+      "type": "numeric",
+      "stem": "Evaluate \\(13^2\\).",
+      "answer": {
+        "type": "numeric",
+        "value": 169,
+        "tolerance": 0
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "\\(13^2\\) means \\(13 \\times 13\\), not \\(13 \\times 2\\).",
+          "Use \\(13 \\times 13 = 13 \\times 10 + 13 \\times 3\\).",
+          "\\(130 + 39 = ?\\)"
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": {
+            "rule": "answer_equals_2x_value"
+          },
+          "repair_path": [
+            "contextual_hint",
+            "worked_example"
+          ],
+          "contextual_hint": "\\(13^2\\) means \\(13 \\times 13\\), not \\(13 \\times 2 = 26\\). The exponent 2 means multiply the base by itself."
+        }
+      ],
+      "worked_solution": "\\(13^2 = 13 \\times 13 = 130 + 39 = 169\\)."
+    },
+    {
+      "id": "AC9M7N01-008",
+      "type": "multiple_choice",
+      "stem": "Which pair of numbers are both perfect squares?",
+      "options": [
+        "16 and 20",
+        "25 and 36",
+        "40 and 49",
+        "18 and 81"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "25 and 36"
+      },
+      "difficulty": 2,
+      "hints": {
+        "default": [
+          "A perfect square equals n² for some whole number n. Check each pair.",
+          "Is 20 a perfect square? \\(\\sqrt{20}\\approx 4.47\\) — no. Try the next pair.",
+          "\\(5^2=25\\) and \\(6^2=36\\). Both are perfect squares."
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "conceptual",
+          "detect": {
+            "rule": "answer_matches",
+            "params": {
+              "value": "40 and 49"
+            }
+          },
+          "repair_path": [
+            "contextual_hint",
+            "check_arithmetic"
+          ],
+          "contextual_hint": "49 is a perfect square (\\(7^2=49\\)) but 40 is not — \\(\\sqrt{40}\\approx 6.32\\). Both numbers in the pair must be perfect squares."
+        }
+      ],
+      "worked_solution": "\\(5^2=25\\) ✓ and \\(6^2=36\\) ✓. The pair **25 and 36** are both perfect squares."
+    },
+    {
+      "id": "AC9M7N01-009",
+      "type": "numeric",
+      "stem": "A square tile has side length \\(\\sqrt{196}\\) cm. What is the area of the tile in cm²?",
+      "answer": {
+        "type": "numeric",
+        "value": 196,
+        "tolerance": 0
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "First find \\(\\sqrt{196}\\). Then recall: area of a square = side².",
+          "\\(\\sqrt{196}=14\\) because \\(14\\times14=196\\). So side = 14 cm.",
+          "Area \\(= 14^2 = ?\\)"
+        ]
+      },
+      "common_errors": [],
+      "worked_solution": "\\(\\sqrt{196}=14\\) cm. Area \\(= 14^2 = 196\\) cm².\\n\\nNote: \\(\\left(\\sqrt{n}\\right)^2 = n\\) — squaring undoes the square root."
+    },
+    {
+      "id": "AC9M7N01-010",
+      "type": "multiple_choice",
+      "stem": "If \\(n^2 = 289\\), what is \\(n\\)?",
+      "options": [
+        "15",
+        "16",
+        "17",
+        "18"
+      ],
+      "answer": {
+        "type": "multiple_choice",
+        "correct": "17"
+      },
+      "difficulty": 3,
+      "hints": {
+        "default": [
+          "\\(n^2=289\\) means \\(n=\\sqrt{289}\\). Which whole number squared gives 289?",
+          "Try \\(16^2=256\\) (too small) and \\(17^2=?\\)",
+          "\\(17\\times17=17\\times10+17\\times7=170+119=289\\). ✓"
+        ]
+      },
+      "common_errors": [
+        {
+          "id": "CE001",
+          "type": "careless",
+          "detect": {
+            "rule": "answer_matches",
+            "params": {
+              "value": "16"
+            }
+          },
+          "repair_path": [
+            "contextual_hint",
+            "check_arithmetic"
+          ],
+          "contextual_hint": "Check: \\(16\\times16=256\\neq289\\). Try 17 instead."
+        }
+      ],
+      "worked_solution": "\\(17^2 = 289\\), so \\(n = 17\\).\\n\\nCheck: \\(16^2=256\\) (too small), \\(18^2=324\\) (too big)."
     }
   ]
 }

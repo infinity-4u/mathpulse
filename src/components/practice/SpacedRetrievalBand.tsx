@@ -100,6 +100,12 @@ export function SpacedRetrievalBand({
     }
   }, [question, qState, answer])
 
+  const handleWorkedSolution = useCallback(() => {
+    if (!question) return
+    setWorkedSolutionHtml(question.workedSolutionHtml)
+    setRepairState(prev => ({ ...prev, workedSolutionUnlocked: true }))
+  }, [question])
+
   const handleHintRequest = useCallback(() => {
     if (!question) return
     const step = nextRepairStep(
@@ -128,13 +134,7 @@ export function SpacedRetrievalBand({
     } else {
       handleWorkedSolution()
     }
-  }, [question, repairState, handleWorkedSolution]) // eslint-disable-line react-hooks/exhaustive-deps
-
-  const handleWorkedSolution = useCallback(() => {
-    if (!question) return
-    setWorkedSolutionHtml(question.workedSolutionHtml)
-    setRepairState(prev => ({ ...prev, workedSolutionUnlocked: true }))
-  }, [question])
+  }, [question, repairState, handleWorkedSolution])
 
   const handleRetry = useCallback(() => { setQState('idle') }, [])
 

@@ -172,6 +172,16 @@ export function PracticeSession({ questions, substrandCode }: PracticeSessionPro
     setState('idle')
   }, [])
 
+  // ── Worked solution request ───────────────────────────────────────────────
+  const handleWorkedSolutionRequest = useCallback(() => {
+    if (!question) return
+    setWorkedSolution(question.workedSolutionHtml)
+    setRepairState(prev => ({ ...prev, workedSolutionUnlocked: true }))
+    setHintIdsShown(prev => [...prev, 'worked_example'])
+    // Student gave up — repair_success = false
+    setRepairSuccess(false)
+  }, [question])
+
   // ── Hint request — follows CE repair_path or default sequence ────────────
   const handleHintRequest = useCallback(() => {
     if (!question) return
@@ -209,17 +219,7 @@ export function PracticeSession({ questions, substrandCode }: PracticeSessionPro
       // repair_path exhausted or check_arithmetic/retry_variant — show worked solution
       handleWorkedSolutionRequest()
     }
-  }, [question, repairState, handleWorkedSolutionRequest]) // eslint-disable-line react-hooks/exhaustive-deps
-
-  // ── Worked solution request ───────────────────────────────────────────────
-  const handleWorkedSolutionRequest = useCallback(() => {
-    if (!question) return
-    setWorkedSolution(question.workedSolutionHtml)
-    setRepairState(prev => ({ ...prev, workedSolutionUnlocked: true }))
-    setHintIdsShown(prev => [...prev, 'worked_example'])
-    // Student gave up — repair_success = false
-    setRepairSuccess(false)
-  }, [question])
+  }, [question, repairState, handleWorkedSolutionRequest])
 
   // ── Advance to next question ──────────────────────────────────────────────
   const handleNext = useCallback(() => {

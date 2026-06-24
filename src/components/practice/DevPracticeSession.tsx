@@ -75,6 +75,12 @@ export function DevPracticeSession({ questions, substrandCode }: DevPracticeSess
 
   const handleRetry = useCallback(() => { setState('idle') }, [])
 
+  const handleWorkedSolution = useCallback(() => {
+    if (!question) return
+    setWorked(question.workedSolutionHtml)
+    setRepairState(prev => ({ ...prev, workedSolutionUnlocked: true }))
+  }, [question])
+
   const handleHintRequest = useCallback(() => {
     if (!question) return
     const step = nextRepairStep(
@@ -103,13 +109,7 @@ export function DevPracticeSession({ questions, substrandCode }: DevPracticeSess
     } else {
       handleWorkedSolution()
     }
-  }, [question, repairState, handleWorkedSolution]) // eslint-disable-line react-hooks/exhaustive-deps
-
-  const handleWorkedSolution = useCallback(() => {
-    if (!question) return
-    setWorked(question.workedSolutionHtml)
-    setRepairState(prev => ({ ...prev, workedSolutionUnlocked: true }))
-  }, [question])
+  }, [question, repairState, handleWorkedSolution])
 
   const handleNext = useCallback(() => {
     if (state === 'incorrect') setCC(0)

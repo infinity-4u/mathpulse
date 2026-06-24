@@ -201,11 +201,11 @@ function RolePath({ href, label, description, colour }: {
         borderRadius: '10px',
         padding: space[6],
       }}>
-        <div style={{ fontWeight: typography.fontWeight.bold, color, marginBottom: space[2] }}>{label}</div>
+        <div style={{ fontWeight: typography.fontWeight.bold, color: colour, marginBottom: space[2] }}>{label}</div>
         <p style={{ fontSize: typography.fontSize.sm, color: color.textMuted, margin: `0 0 ${space[4]}`, lineHeight: '1.5' }}>
           {description}
         </p>
-        <span style={{ fontSize: typography.fontSize.sm, fontWeight: typography.fontWeight.medium, color }}>
+        <span style={{ fontSize: typography.fontSize.sm, fontWeight: typography.fontWeight.medium, color: colour }}>
           Get started →
         </span>
       </div>

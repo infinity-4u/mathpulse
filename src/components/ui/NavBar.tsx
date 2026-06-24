@@ -39,7 +39,7 @@ export function NavBar() {
             AusMaths
           </span>
           <span style={{
-            fontSize: typography.fontSize.xs,
+            fontSize: typography.fontSize.sm,
             color: color.textMuted,
             fontWeight: typography.fontWeight.medium,
             background: '#F3F4F6',

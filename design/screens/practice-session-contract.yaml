@@ -1,0 +1,223 @@
+# Visual Contract — Practice Session
+# AusMaths · AC9M7N01 and all Year 7 substrand codes
+# Validate: python3 .claude/skills/math-app-ui-design/scripts/validate_visual_contract.py design/screens/practice-session-contract.yaml
+
+flow_name: "practice-session"
+acara_code: "AC9M7N01"        # representative; pattern applies to all 31 Year 7 substrand codes
+year_level: 7
+
+constraints:
+  year_levels: "7-10 ACARA only"
+  runtime_ai_in_student_path: "none"
+  gamification: "none"
+  content_source: "static verified JSON (content/curriculum/year-N/strand/AC9M*.json)"
+  repair_logic: "deterministic (src/lib/repair.ts — 12 rules, 4 primitives, no LLM)"
+  analytics: "none"
+  pii: "minimal — display name + year level only; no DOB, address, or government ID"
+
+screens:
+  - screen_name: "question"
+    user_role: "student"
+    learning_moment: "practice"
+    purpose: "Let a 12-year-old read one question and select or type an answer with confidence"
+    layout: >
+      Single column, max-width 640px, centred. Sticky header (NavBar) above.
+      Card (white surface, 12px radius, card shadow) contains:
+        progress counter + progress dots row (top)
+        question stem (KaTeX, ≥20px, loose line-height)
+        answer area: MC options stacked vertically OR numeric input
+        "Check answer" button full-width below
+    visible_copy:
+      - "Question N of M"
+      - "[question stem — KaTeX rendered, e.g. 'What is √144?']"
+      - "Check answer"
+    primary_action: "Check answer"
+    secondary_actions: []
+    components:
+      - "QuestionCard (src/components/practice/QuestionCard.tsx)"
+      - "MCOption (src/components/practice/MCOption.tsx)"
+      - "NumericInput (src/components/practice/NumericInput.tsx)"
+    data_needed:
+      - "question.stemHtml"
+      - "question.type (multiple_choice | numeric)"
+      - "question.options[] (pre-rendered KaTeX HTML)"
+      - "question.rawOptions[] (raw strings for answer comparison)"
+      - "questionNumber, total"
+    interaction_states:
+      default: "No answer selected. Check answer button disabled."
+      loading: "Not applicable — questions are pre-loaded."
+      success: "Answer selected or typed. Check answer enabled."
+      misconception: "Not applicable on this screen."
+      error: "Not applicable — content is static, no API call on this screen."
+      empty: "Not applicable — session always starts with ≥1 question."
+    accessibility:
+      contrast: "AA: 4.5:1 text, 3:1 UI/large"
+      target_size: "MCOption ≥44px height; Check answer button ≥44px height; progress dots are decorative (not interactive)"
+      keyboard: "Tab to each MC option (role=radio); Space/Enter to select; Tab to Check answer; Enter to submit"
+      screen_reader: "MCOption: role=radio, aria-checked; stem: KaTeX renders MathML; Check answer: disabled state announced"
+      non_colour_cues: "Selected MCOption: filled radio circle + primary border (not colour alone)"
+      reduced_motion: "No transitions on question load; MCOption selection: instant (no animation in calm mode)"
+    maths_rendering: "KaTeX (react-katex) — all stems and options. MathML output for screen readers."
+    constraint_checks:
+      runtime_ai_in_student_path: "none"
+      gamification: "none — no score shown on this screen"
+      analytics: "none"
+      pii: "minimal"
+    acceptance_criteria:
+      - "Question stem renders at ≥20px with loose line-height"
+      - "All MC options are ≥44px height with keyboard focus ring visible"
+      - "Check answer is disabled until an answer is selected/entered"
+      - "Progress dots are decorative only — no interactive affordance"
+      - "KaTeX in stems and options has accessible MathML output"
+
+  - screen_name: "correct"
+    user_role: "student"
+    learning_moment: "practice"
+    purpose: "Let the student know immediately and calmly that they got it right, and move on"
+    layout: >
+      QuestionCard persists above (answer locked, MC options read-only).
+      CorrectBand appears below: green-light background, 2px green border, 12px radius.
+      Left: competence-trajectory message. Right: primary action button.
+    visible_copy:
+      - "Correct — on to the next one."          # default
+      - "You got this one right first try."       # 2–3 consecutive
+      - "Your last N answers have all been correct."  # 4+ consecutive
+      - "You answered that one correctly after seeing a hint — that counts."  # used hints
+      - "That's the last question in this set."   # when isLast=true
+      - "Next question →"
+      - "See results"  # when isLast=true
+    primary_action: "Next question →"
+    secondary_actions: []
+    components:
+      - "CorrectBand (src/components/practice/CorrectBand.tsx)"
+    data_needed:
+      - "consecutiveCorrect (int)"
+      - "usedHints (bool)"
+      - "isLast (bool)"
+    interaction_states:
+      default: "Band appears with competence message and Next button"
+      success: "Not applicable — this screen IS the success state"
+      misconception: "Not applicable"
+      error: "Not applicable"
+      empty: "Not applicable"
+    accessibility:
+      contrast: "AA — green text on green-light bg; white text on green button"
+      target_size: "Next question button ≥44px"
+      keyboard: "Button has autoFocus on band appearance; Enter advances"
+      screen_reader: "role=status, aria-live=polite announces message immediately on appear"
+      non_colour_cues: "Competence message in text (not icon+colour only); green border reinforces state"
+      reduced_motion: "Band appears instantly (no slide-in); no background flash"
+    maths_rendering: "Not applicable on this screen"
+    constraint_checks:
+      runtime_ai_in_student_path: "none"
+      gamification: "none — no score, badge, or streak shown to student"
+      analytics: "none"
+      pii: "minimal"
+    acceptance_criteria:
+      - "Band uses color.successLight background and color.success border — no red on this screen"
+      - "Competence message varies by consecutiveCorrect and usedHints — never shows score"
+      - "Button is ≥44px and auto-focused"
+      - "role=status with aria-live=polite"
+
+  - screen_name: "repair"
+    user_role: "student"
+    learning_moment: "repair"
+    purpose: "Name the student's apparent strategy, not their ability — then give a targeted repair hint and offer retry"
+    layout: >
+      QuestionCard persists above (wrong answer visible, locked).
+      RepairBand appears below: amber-light background, 2px amber border, 12px radius.
+      Content: framing line (names the strategy without shame) + contextual hint (KaTeX).
+      Button row: "Try again" (secondary) + "Show next hint" OR "Show worked solution" (primary).
+      HintCards stack below RepairBand as hints are revealed.
+    visible_copy:
+      - "It looks like there's a concept here worth sitting with — this kind of confusion is very common."  # conceptual error
+      - "It looks like a step in the process caught you out — let's see what to focus on."  # procedural
+      - "Looks like a small slip — these are easy to catch once you know what to look for."  # careless
+      - "Have another look — let's work through this together."  # no CE match
+      - "Try again"
+      - "Show next hint"
+      - "Show worked solution"
+      - "Next question →"  # after worked solution shown
+    primary_action: "Try again"
+    secondary_actions:
+      - "Show next hint"
+      - "Show worked solution"
+    components:
+      - "RepairBand (src/components/practice/RepairBand.tsx)"
+      - "HintCard (src/components/practice/HintCard.tsx)"
+    data_needed:
+      - "matchedError (CommonError + contextualHintHtml | null)"
+      - "initialHintHtml (string | null)"
+      - "hintsExhausted (bool)"
+      - "attemptCount (int — worked solution unlocks at 3)"
+      - "workedSolutionShown (bool)"
+    interaction_states:
+      default: "Band shows framing line + contextual hint. Try again + Show next hint visible."
+      loading: "Not applicable"
+      success: "Not applicable"
+      misconception: "This IS the misconception state. Framing line names the error type without shame."
+      error: "Not applicable"
+      empty: "Fallback copy 'Have another look' if no CE match and no initial hint"
+    accessibility:
+      contrast: "AA — amber text on amber-light bg; white on amber button"
+      target_size: "All buttons ≥44px"
+      keyboard: "Tab through Try again → Show next hint → Show worked solution in order"
+      screen_reader: "role=status, aria-live=polite; HintCard role=note aria-label='Hint N'"
+      non_colour_cues: "Amber border + text label (not colour alone); HintCard has 'Hint N' text label"
+      reduced_motion: "Band appears instantly; hint cards appear instantly in calm mode"
+    maths_rendering: "KaTeX in contextual hint HTML and HintCard HTML — MathML output"
+    constraint_checks:
+      runtime_ai_in_student_path: "none — repair is deterministic rules from content JSON"
+      gamification: "none"
+      analytics: "none"
+      pii: "minimal"
+    acceptance_criteria:
+      - "Band uses color.repairLight background and color.repair border — NEVER color.error (red)"
+      - "Framing line names the error TYPE without saying 'wrong', 'incorrect', 'mistake', or 'failed'"
+      - "Worked solution unlocks after 3 wrong attempts OR hints exhausted"
+      - "All buttons ≥44px; role=status, aria-live=polite on band"
+
+  - screen_name: "worked-solution"
+    user_role: "student"
+    learning_moment: "repair"
+    purpose: "Show the student the correct method one step at a time so they can follow the logic"
+    layout: >
+      RepairBand above (buttons hidden once worked solution shown).
+      WorkedSolution card below: green-light background, left 4px green accent border.
+      'WORKED SOLUTION' label (small caps, green). Steps revealed one at a time.
+      'Next step →' button after each step (secondary, green border).
+      'Next question →' button (primary) when all steps visible.
+    visible_copy:
+      - "Worked solution"
+      - "Next step →"
+      - "Next question →"
+    primary_action: "Next question →"
+    secondary_actions:
+      - "Next step →"
+    components:
+      - "WorkedSolution (src/components/practice/WorkedSolution.tsx)"
+    data_needed:
+      - "solutionHtml (multi-step string, steps split on double newline)"
+    interaction_states:
+      default: "Step 1 visible. 'Next step →' shown."
+      success: "All steps visible. 'Next question →' shown."
+      misconception: "Not applicable"
+      error: "Not applicable"
+      empty: "Not applicable — worked solution always has ≥1 step"
+    accessibility:
+      contrast: "AA — green text on green-light bg; green border on secondary button"
+      target_size: "Both buttons ≥44px"
+      keyboard: "Tab to Next step → ; Enter reveals next step; Tab to Next question"
+      screen_reader: "role=note, aria-label='Worked solution'; Next step aria-label='Show step N of M'"
+      non_colour_cues: "Green left border + text label — not colour alone"
+      reduced_motion: "Steps appear instantly in calm mode (no slide-in)"
+    maths_rendering: "KaTeX in solution steps — MathML output"
+    constraint_checks:
+      runtime_ai_in_student_path: "none — worked solution is pre-authored in content JSON"
+      gamification: "none"
+      analytics: "none"
+      pii: "minimal"
+    acceptance_criteria:
+      - "Steps reveal one at a time — student controls the pace"
+      - "All buttons ≥44px; role=note, aria-label='Worked solution'"
+      - "Uses color.successLight background — never red or amber on this screen"

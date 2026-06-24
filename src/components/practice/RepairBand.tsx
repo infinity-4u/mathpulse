@@ -5,12 +5,13 @@
  * CONTRACT.md §4: uses color.repair (amber) NEVER color.error (red).
  * Never uses words like "wrong", "incorrect", "mistake", or "failed".
  *
- * Two modes:
- *   - CE matched: shows a conversational framing line + contextual hint from JSON
- *   - No CE match: shows default hint[0] directly with no framing
+ * Three modes:
+ *   1. CE matched: ⟳ glyph + framing line + contextual hint
+ *   2. No CE, has hint: default hint[0] inline (no glyph — hint is the lead)
+ *   3. No CE, no hint: ⟳ glyph + generic framing line
  */
 import { MathText } from '@/components/ui/MathText'
-import { color, typography, space } from '@/theme/tokens'
+import { color, typography, space, touch } from '@/theme/tokens'
 import type { CommonError } from '@/lib/repair'
 
 interface RepairBandProps {
@@ -64,26 +65,38 @@ export function RepairBand({
         marginTop:    space[4],
       }}
     >
-      {/* Two-mode content */}
-      {matchedError ? (
+      {/* Mode 1: CE matched — glyph + framing line + contextual hint */}
+      {matchedError && (
         <div style={{ marginBottom: space[4] }}>
-          <p style={{ fontWeight: typography.fontWeight.medium, color: color.repair, marginBottom: space[2], fontSize: typography.fontSize.base }}>
-            {framingLine(matchedError)}
-          </p>
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: space[3], marginBottom: space[2] }}>
+            <span aria-hidden="true" style={{ fontSize: '24px', color: color.repair, lineHeight: '1.3', flexShrink: 0 }}>⟳</span>
+            <p style={{ fontWeight: typography.fontWeight.medium, color: color.repair, margin: 0, fontSize: typography.fontSize.base }}>
+              {framingLine(matchedError)}
+            </p>
+          </div>
           <div style={{ color: color.text, lineHeight: typography.lineHeight.base }}>
             <MathText html={matchedError.contextualHintHtml} block />
           </div>
         </div>
-      ) : initialHintHtml ? (
+      )}
+
+      {/* Mode 2: No CE, default hint inline */}
+      {!matchedError && initialHintHtml && (
         <div style={{ marginBottom: space[4] }}>
           <div style={{ color: color.text, lineHeight: typography.lineHeight.base }}>
             <MathText html={initialHintHtml} block />
           </div>
         </div>
-      ) : (
-        <p style={{ fontWeight: typography.fontWeight.medium, color: color.repair, marginBottom: space[4], fontSize: typography.fontSize.base }}>
-          Have another look — let's work through this together.
-        </p>
+      )}
+
+      {/* Mode 3: No CE, no hint — glyph + generic framing */}
+      {!matchedError && !initialHintHtml && (
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: space[3], marginBottom: space[4] }}>
+          <span aria-hidden="true" style={{ fontSize: '24px', color: color.repair, lineHeight: '1.3', flexShrink: 0 }}>⟳</span>
+          <p style={{ fontWeight: typography.fontWeight.medium, color: color.repair, margin: 0, fontSize: typography.fontSize.base }}>
+            Have another look — let's work through this together.
+          </p>
+        </div>
       )}
 
       {/* Action buttons */}
@@ -95,7 +108,7 @@ export function RepairBand({
 
           {!workedSolutionReady && (
             <button onClick={onRequestHint} disabled={hintsExhausted} style={secondaryBtn}>
-              Show next hint
+              Show next hint →
             </button>
           )}
 
@@ -118,14 +131,14 @@ export function RepairBand({
 
 const primaryBtn: React.CSSProperties = {
   background:   color.repair,
-  color:        '#fff',
+  color:        color.surface,
   border:       'none',
   borderRadius: '6px',
   padding:      `${space[2]} ${space[5]}`,
   fontSize:     typography.fontSize.base,
   fontWeight:   typography.fontWeight.medium,
   cursor:       'pointer',
-  minHeight:    '40px',
+  minHeight:    touch.minSize,
 }
 
 const secondaryBtn: React.CSSProperties = {
@@ -137,5 +150,5 @@ const secondaryBtn: React.CSSProperties = {
   fontSize:     typography.fontSize.base,
   fontWeight:   typography.fontWeight.medium,
   cursor:       'pointer',
-  minHeight:    '40px',
+  minHeight:    touch.minSize,
 }

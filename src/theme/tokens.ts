@@ -27,12 +27,27 @@ export const color = {
   error:       '#B91C1C', // red — reserved for technical errors per spec.md
   errorLight:  '#FEE2E2',
 
+  // Selection / informational
+  primaryLight: '#EFF6FF', // light blue bg for selected state and info banners
+
   // Neutral
   text:        '#111827', // 19:1 on white ✓
   textMuted:   '#4B5563', // 5.9:1 on white ✓
   border:      '#D1D5DB',
+  borderStrong: '#6B7280', // meaningful borders — WCAG 1.4.11 ≥3:1 on white (4.6:1 ✓)
+  focusRing:   '#1B5E9B', // = primary; applied as CSS outline, survives forced-colours mode
   surface:     '#FFFFFF',
   background:  '#F9FAFB',
+
+  // Strand identity — eyebrow text on white, WCAG AA minimum
+  strand: {
+    number:      '#2563EB', // 5.17:1 ✓
+    algebra:     '#7C3AED', // 5.70:1 ✓
+    measurement: '#047857', // 5.9:1 ✓  (was #059669 — darkened to clear AA)
+    space:       '#C2410C', // 4.8:1 ✓  (was #D97706 — darkened to clear AA)
+    statistics:  '#DC2626', // 4.83:1 ✓
+    probability: '#0E7490', // 5.0:1 ✓  (was #0891B2 — darkened to clear AA)
+  },
 
   // Calm mode overrides (toggled by student — spec.md)
   calm: {
@@ -84,4 +99,9 @@ export const typography = {
 // Touch targets — minimum 44×44px per spec.md and CONTRACT.md
 export const touch = {
   minSize: '44px',
+} as const
+
+export const shadows = {
+  card:   '0 1px 3px rgba(0,0,0,0.1)',
+  raised: '0 4px 12px rgba(17,24,39,0.08)', // elevated QuestionCard above feedback bands
 } as const

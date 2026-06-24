@@ -40,6 +40,13 @@ Commands: `<dev>` / `<test>` / `<build>` / `<deploy>` — fill in as the repo ta
 - `design/agent/` — designer agent workflow, context brief, screen register
 - `design/screens/` — per-screen design specs (output from designer agent, input to implementation)
 - `design/components/` — shared component specs (output from designer agent)
+- `.claude/skills/math-app-ui-design/` — installed UI design skill (SKILL.md + references/ + scripts/ + assets/)
+  - `references/design-system.md` — **populated** with our real tokens, components, screens, constraints
+  - `references/PRODUCT_AND_VERIFICATION.md` — product model, V1 constraints, misconception-repair pattern, §H Definition of Done
+  - `scripts/check_contrast.py` — WCAG 2.2 contrast checker against our real palette
+  - `scripts/find_hardcoded_values.py` — finds hex values not routed through tokens.ts
+  - `scripts/check_copy_terms.py` — catches shame language and gamification copy in student-facing text
+  - `scripts/validate_visual_contract.py` — validates Visual Contract YAML specs
 
 ## Testing expectation
 
@@ -61,22 +68,23 @@ hard-delete, a11y, scope) must pass to merge.
 7. Update `design/agent/SCREEN-REGISTER.md` status when the screen moves through the pipeline.
 
 **The 5-step loop (full reference — you never need to remember this):**
-1. Here in chat: `/design-brief [screen]` → I generate `design/outbox/[screen]-brief.md`
-2. Open Claude Design → paste the brief file contents → add: *"Respond using ONLY the format in Section 7."*
+1. Here in chat: `/design-brief [screen]` → I generate `design/outbox/[screen]-brief.md` (runs contrast + hardcoded-values checks first)
+2. Open Claude Design → **Select AusMaths** from the design-system picker (bottom-left) → **Attach file** (`design/outbox/[screen]-brief.md`) → type in the box: *"You are a product designer for an Australian maths education app. Read the attached brief and respond using ONLY the output format in Section 7. Do not ask clarifying questions — note anything uncertain in OPEN QUESTIONS."* → optionally also **Grab web element** from the live URL for a visual reference → send
 3. Claude Design responds → you save that response as `design/inbox/[screen]-response.md`
-4. Back here in chat: `/design-apply [screen]` → I validate, update tokens, save specs, give checklist
+4. Back here in chat: `/design-apply [screen]` → I validate, run §H Definition of Done checks, update tokens, save specs, give checklist
 5. Say "implement now" → I build it
 
-**When the resource package is provided by the human:**
-Read it fully before invoking the agent. The package may override or extend the workflow
-above. Follow its instructions where they are more specific. Do not discard CONTEXT-BRIEF.md
-constraints — they encode CONTRACT.md requirements that cannot be overridden by design.
+**The skill is installed at `.claude/skills/math-app-ui-design/`.**
+Both `/design-brief` and `/design-apply` use it automatically.
+The key file to keep in sync: `design-system.md` must mirror `src/theme/tokens.ts`.
+**AusMaths design system** is synced to claude.ai/design (projectId: `91469e57-02a9-4c7f-af20-d75839c54649`). Re-run `/design-sync` after any change to `src/theme/tokens.ts` or a new component in `src/components/`.
 
-**Checks that always apply regardless of agent output:**
-- Colours must map to tokens in `src/theme/tokens.ts` — no hardcoded hex values outside tokens
-- Amber for wrong answers, red for technical errors only (CONTRACT.md invariant)
-- No third-party CDN fonts, no analytics pixels, no localStorage
-- Touch targets ≥ 44px, WCAG 2.1 AA contrast on every element
+**Checks that always apply regardless of agent output (§H Definition of Done):**
+- `check_contrast.py` must pass on all pairs (WCAG 2.2 AA)
+- `find_hardcoded_values.py` must report no hardcoded hex in changed files
+- `check_copy_terms.py` must report no shame/gamification language in student-facing copy
+- Touch targets ≥ 44px, colour-not-alone for correct/incorrect, maths accessible via KaTeX
+- Amber for wrong answers, red for technical errors only (CONTRACT.md invariant, never swap)
 
 ## Session discipline
 

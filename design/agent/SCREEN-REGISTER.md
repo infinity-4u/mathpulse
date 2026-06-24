@@ -11,10 +11,11 @@ Status values: `pending` → `briefed` → `spec-ready` → `implemented` → `r
 
 | Screen | Route | Status | Spec file | Notes |
 |---|---|---|---|---|
-| Practice session — question | `/practice/session/[code]` | `briefed` | design/outbox/practice-session-brief.md | Core loop; most student time here |
-| Practice session — correct state | `/practice/session/[code]` | `briefed` | design/outbox/practice-session-brief.md | State of above |
-| Practice session — repair state | `/practice/session/[code]` | `briefed` | design/outbox/practice-session-brief.md | Amber; no red |
-| Practice session — worked solution | `/practice/session/[code]` | `briefed` | design/outbox/practice-session-brief.md | State of above |
+| Practice session — question | `/practice/session/[code]` | `implemented` | design/screens/practice-session.md | Core loop; most student time here |
+| Practice session — correct state | `/practice/session/[code]` | `implemented` | design/screens/practice-session.md | State of above |
+| Practice session — repair state | `/practice/session/[code]` | `implemented` | design/screens/practice-session.md | Amber; no red |
+| Practice session — worked solution | `/practice/session/[code]` | `implemented` | design/screens/practice-session.md | State of above |
+| Practice session — Visual Contract | `/practice/session/[code]` | `briefed` | design/screens/practice-session-contract.yaml | All 4 states specced; validated ✓ |
 | Practice hub / substrand picker | `/practice` | `pending` | — | PIN entry + topic list |
 | Year 7 hub | `/year/7` | `pending` | — | 6 strand cards |
 | Strand page | `/year/7/[strand]` | `pending` | — | Topic list per strand |
@@ -46,13 +47,13 @@ Status values: `pending` → `briefed` → `spec-ready` → `implemented` → `r
 | Component | Status | Spec file | Used in |
 |---|---|---|---|
 | NavBar | `pending` | — | All screens |
-| QuestionCard | `pending` | — | Practice session |
-| MCOption button | `pending` | — | Practice session |
+| QuestionCard | `implemented` | design/components/QuestionCard.md | Practice session |
+| MCOption button | `implemented` | design/components/MCOption.md | Practice session |
 | NumericInput | `pending` | — | Practice session |
-| CorrectBand | `pending` | — | Practice session |
-| RepairBand | `pending` | — | Practice session |
-| HintCard | `pending` | — | Practice session |
-| WorkedSolution | `pending` | — | Practice session |
+| CorrectBand | `implemented` | design/components/CorrectBand.md | Practice session |
+| RepairBand | `implemented` | design/components/RepairBand.md | Practice session |
+| HintCard | `implemented` | design/components/HintCard.md | Practice session |
+| WorkedSolution | `implemented` | design/components/WorkedSolution.md | Practice session |
 | TopicChip | `pending` | — | Practice session, strand pages |
 | ProgressDots | `pending` | — | Practice session |
 | CalmToggle | `pending` | — | Practice session, global |

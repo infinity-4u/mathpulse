@@ -17,7 +17,7 @@ export function HintCard({ hintHtml, hintNumber }: HintCardProps) {
       role="note"
       aria-label={`Hint ${hintNumber}`}
       style={{
-        background:   '#FFF7ED',
+        background:   color.repairLight,
         border:       `1px solid ${color.repair}`,
         borderLeft:   `4px solid ${color.repair}`,
         borderRadius: '6px',
@@ -25,9 +25,32 @@ export function HintCard({ hintHtml, hintNumber }: HintCardProps) {
         marginTop:    space[3],
       }}
     >
-      <span style={{ fontSize: typography.fontSize.sm, fontWeight: typography.fontWeight.medium, color: color.repair, display: 'block', marginBottom: space[2] }}>
-        Hint {hintNumber}
-      </span>
+      {/* Header: numbered badge + label */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: space[2], marginBottom: space[2] }}>
+        <span
+          aria-hidden="true"
+          style={{
+            width:          '20px',
+            height:         '20px',
+            borderRadius:   '50%',
+            background:     color.surface,
+            border:         `1px solid ${color.repair}`,
+            color:          color.repair,
+            fontSize:       '11px',
+            fontWeight:     typography.fontWeight.bold,
+            display:        'flex',
+            alignItems:     'center',
+            justifyContent: 'center',
+            flexShrink:     0,
+          }}
+        >
+          {hintNumber}
+        </span>
+        <span style={{ fontSize: typography.fontSize.sm, fontWeight: typography.fontWeight.medium, color: color.repair }}>
+          Hint {hintNumber}
+        </span>
+      </div>
+
       <MathText html={hintHtml} block />
     </div>
   )

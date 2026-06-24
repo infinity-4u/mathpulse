@@ -3,11 +3,11 @@
 /**
  * Displays the worked solution one step at a time.
  * Steps are split on double newlines (\n\n) in the pre-rendered HTML.
- * Each step is revealed by a "Next step →" button appended below the previous.
+ * Each step is revealed by a "Next step →" button; focus moves to the new step.
  */
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { MathText } from '@/components/ui/MathText'
-import { color, typography, space } from '@/theme/tokens'
+import { color, typography, space, touch } from '@/theme/tokens'
 
 interface WorkedSolutionProps {
   solutionHtml: string
@@ -22,6 +22,17 @@ export function WorkedSolution({ solutionHtml, onNext }: WorkedSolutionProps) {
   const steps = splitSteps(solutionHtml)
   const [visibleCount, setVisibleCount] = useState(1)
 
+  const stepRefs = useRef<(HTMLDivElement | null)[]>([])
+  const isFirstRender = useRef(true)
+
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false
+      return
+    }
+    stepRefs.current[visibleCount - 1]?.focus()
+  }, [visibleCount])
+
   const allVisible = visibleCount >= steps.length
 
   return (
@@ -29,7 +40,7 @@ export function WorkedSolution({ solutionHtml, onNext }: WorkedSolutionProps) {
       role="note"
       aria-label="Worked solution"
       style={{
-        background:   '#F0FDF4',
+        background:   color.successLight,
         border:       `1px solid ${color.success}`,
         borderLeft:   `4px solid ${color.success}`,
         borderRadius: '6px',
@@ -52,12 +63,18 @@ export function WorkedSolution({ solutionHtml, onNext }: WorkedSolutionProps) {
         {steps.slice(0, visibleCount).map((step, i) => (
           <div
             key={i}
+            ref={el => { stepRefs.current[i] = el }}
+            tabIndex={-1}
             style={{
-              marginBottom: i < visibleCount - 1 ? space[3] : 0,
+              marginBottom:  i < visibleCount - 1 ? space[3] : 0,
               paddingBottom: i < visibleCount - 1 ? space[3] : 0,
-              borderBottom: i < visibleCount - 1 ? `1px solid ${color.border}` : 'none',
+              borderBottom:  i < visibleCount - 1 ? `1px solid ${color.border}` : 'none',
+              outline:       'none',
             }}
           >
+            <p style={{ fontSize: typography.fontSize.sm, color: color.textMuted, margin: `0 0 ${space[1]}` }}>
+              Step {i + 1}
+            </p>
             <MathText html={step} block />
           </div>
         ))}
@@ -77,7 +94,7 @@ export function WorkedSolution({ solutionHtml, onNext }: WorkedSolutionProps) {
             fontSize:     typography.fontSize.base,
             fontWeight:   typography.fontWeight.medium,
             cursor:       'pointer',
-            minHeight:    '40px',
+            minHeight:    touch.minSize,
           }}
         >
           Next step →
@@ -90,14 +107,14 @@ export function WorkedSolution({ solutionHtml, onNext }: WorkedSolutionProps) {
           style={{
             marginTop:    space[5],
             background:   color.primary,
-            color:        '#fff',
+            color:        color.surface,
             border:       'none',
             borderRadius: '6px',
             padding:      `${space[3]} ${space[6]}`,
             fontSize:     typography.fontSize.base,
             fontWeight:   typography.fontWeight.medium,
             cursor:       'pointer',
-            minHeight:    '44px',
+            minHeight:    touch.minSize,
           }}
         >
           Next question →

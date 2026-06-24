@@ -135,7 +135,7 @@ export function DevPracticeSession({ questions, substrandCode }: DevPracticeSess
           {correct}/{attempted} correct ({pct}%)
         </p>
         <p style={{ color: color.textMuted, marginBottom: space[8] }}>{substrandCode}</p>
-        <a href="/test" style={{ background: color.primary, color: '#fff', border: 'none', borderRadius: '8px', padding: `${space[3]} ${space[8]}`, fontSize: typography.fontSize.base, fontWeight: typography.fontWeight.medium, textDecoration: 'none', display: 'inline-block' }}>
+        <a href="/test" style={{ background: color.primary, color: color.surface, border: 'none', borderRadius: '8px', padding: `${space[3]} ${space[8]}`, fontSize: typography.fontSize.base, fontWeight: typography.fontWeight.medium, textDecoration: 'none', display: 'inline-block' }}>
           ← Back to topics
         </a>
       </div>
@@ -179,6 +179,12 @@ export function DevPracticeSession({ questions, substrandCode }: DevPracticeSess
         onAnswerChange={setAnswer}
         onSubmit={handleSubmit}
         submitDisabled={state !== 'idle'}
+        questionState={
+          state === 'correct' ? 'correct'
+          : state === 'incorrect' && workedSolutionHtml !== null ? 'worked-solution'
+          : state === 'incorrect' ? 'incorrect'
+          : 'idle'
+        }
       />
 
       {state === 'correct' && (

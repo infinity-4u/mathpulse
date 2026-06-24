@@ -186,16 +186,16 @@ export function SpacedRetrievalBand({
     <div style={{ maxWidth: '600px', margin: '0 auto', padding: `${space[6]} ${space[4]}` }}>
       {/* Framing banner */}
       <div style={{
-        background:   '#EFF6FF',
-        border:       `1px solid #BFDBFE`,
+        background:   color.primaryLight,
+        border:       `1px solid ${color.border}`,
         borderRadius: '8px',
         padding:      `${space[3]} ${space[4]}`,
         marginBottom: space[5],
       }}>
-        <p style={{ fontSize: typography.fontSize.sm, color: '#1E40AF', margin: 0 }}>
+        <p style={{ fontSize: typography.fontSize.sm, color: color.primaryDark, margin: 0 }}>
           Before continuing — here are two questions from a topic you found tricky recently.
         </p>
-        <p style={{ fontSize: typography.fontSize.sm, color: '#3B82F6', margin: `${space[1]} 0 0`, fontFamily: 'ui-monospace, monospace' }}>
+        <p style={{ fontSize: typography.fontSize.sm, color: color.primary, margin: `${space[1]} 0 0`, fontFamily: 'ui-monospace, monospace' }}>
           {substrandCode} · {qIndex + 1} of {questions.length}
         </p>
       </div>
@@ -208,6 +208,12 @@ export function SpacedRetrievalBand({
         onAnswerChange={setAnswer}
         onSubmit={handleSubmit}
         submitDisabled={qState !== 'idle'}
+        questionState={
+          qState === 'correct' ? 'correct'
+          : qState === 'incorrect' && workedSolutionHtml !== null ? 'worked-solution'
+          : qState === 'incorrect' ? 'incorrect'
+          : 'idle'
+        }
       />
 
       {qState === 'correct' && (

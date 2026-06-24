@@ -329,7 +329,7 @@ export function PracticeSession({ questions, substrandCode }: PracticeSessionPro
         <p style={{ color: color.textMuted, marginBottom: space[8] }}>{substrandCode}</p>
         <a
           href="/practice"
-          style={{ background: color.primary, color: '#fff', borderRadius: '8px', padding: `${space[3]} ${space[8]}`, fontSize: typography.fontSize.base, fontWeight: typography.fontWeight.medium, textDecoration: 'none', display: 'inline-block' }}
+          style={{ background: color.primary, color: color.surface, borderRadius: '8px', padding: `${space[3]} ${space[8]}`, fontSize: typography.fontSize.base, fontWeight: typography.fontWeight.medium, textDecoration: 'none', display: 'inline-block' }}
         >
           Practise again
         </a>
@@ -374,6 +374,12 @@ export function PracticeSession({ questions, substrandCode }: PracticeSessionPro
           onAnswerChange={setAnswer}
           onSubmit={handleSubmit}
           submitDisabled={state !== 'idle'}
+          questionState={
+            state === 'correct' ? 'correct'
+            : state === 'incorrect' && workedSolutionHtml !== null ? 'worked-solution'
+            : state === 'incorrect' ? 'incorrect'
+            : 'idle'
+          }
         />
       )}
 

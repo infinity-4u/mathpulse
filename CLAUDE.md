@@ -60,6 +60,13 @@ hard-delete, a11y, scope) must pass to merge.
 6. Implement from the saved spec. Record any deviations back in the spec file.
 7. Update `design/agent/SCREEN-REGISTER.md` status when the screen moves through the pipeline.
 
+**The 5-step loop (full reference — you never need to remember this):**
+1. Here in chat: `/design-brief [screen]` → I generate `design/outbox/[screen]-brief.md`
+2. Open Claude Design → paste the brief file contents → add: *"Respond using ONLY the format in Section 7."*
+3. Claude Design responds → you save that response as `design/inbox/[screen]-response.md`
+4. Back here in chat: `/design-apply [screen]` → I validate, update tokens, save specs, give checklist
+5. Say "implement now" → I build it
+
 **When the resource package is provided by the human:**
 Read it fully before invoking the agent. The package may override or extend the workflow
 above. Follow its instructions where they are more specific. Do not discard CONTEXT-BRIEF.md

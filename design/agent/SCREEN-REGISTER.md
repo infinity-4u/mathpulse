@@ -11,10 +11,10 @@ Status values: `pending` → `briefed` → `spec-ready` → `implemented` → `r
 
 | Screen | Route | Status | Spec file | Notes |
 |---|---|---|---|---|
-| Practice session — question | `/practice/session/[code]` | `pending` | — | Core loop; most student time here |
-| Practice session — correct state | `/practice/session/[code]` | `pending` | — | State of above |
-| Practice session — repair state | `/practice/session/[code]` | `pending` | — | Amber; no red |
-| Practice session — worked solution | `/practice/session/[code]` | `pending` | — | State of above |
+| Practice session — question | `/practice/session/[code]` | `briefed` | design/outbox/practice-session-brief.md | Core loop; most student time here |
+| Practice session — correct state | `/practice/session/[code]` | `briefed` | design/outbox/practice-session-brief.md | State of above |
+| Practice session — repair state | `/practice/session/[code]` | `briefed` | design/outbox/practice-session-brief.md | Amber; no red |
+| Practice session — worked solution | `/practice/session/[code]` | `briefed` | design/outbox/practice-session-brief.md | State of above |
 | Practice hub / substrand picker | `/practice` | `pending` | — | PIN entry + topic list |
 | Year 7 hub | `/year/7` | `pending` | — | 6 strand cards |
 | Strand page | `/year/7/[strand]` | `pending` | — | Topic list per strand |

@@ -7,6 +7,7 @@
  * Used by /test/session/[substrand] — never linked from student-facing routes.
  */
 import { useState, useCallback } from 'react'
+import Link from 'next/link'
 import { isCorrect } from '@/lib/answer'
 import { detectError, nextRepairStep, initialRepairState, type RepairState, type CommonError } from '@/lib/repair'
 import { QuestionCard } from './QuestionCard'
@@ -133,9 +134,9 @@ export function DevPracticeSession({ questions, substrandCode }: DevPracticeSess
           {correct}/{attempted} correct ({pct}%)
         </p>
         <p className="text-ink-muted mb-8">{substrandCode}</p>
-        <a href="/test" className="inline-block bg-primary text-white no-underline rounded-xl px-8 py-3 text-base font-semibold hover:bg-primary-dark transition-colors">
+        <Link href="/test" className="inline-block bg-primary text-white no-underline rounded-xl px-8 py-3 text-base font-semibold hover:bg-primary-dark transition-colors">
           ← Back to topics
-        </a>
+        </Link>
       </div>
     )
   }
@@ -161,7 +162,7 @@ export function DevPracticeSession({ questions, substrandCode }: DevPracticeSess
   return (
     <div className="max-w-[600px] mx-auto px-4 py-6">
       <div className="flex justify-between items-center mb-5">
-        <a href="/test" className="text-ink-muted text-sm no-underline hover:text-ink transition-colors">← Back</a>
+        <Link href="/test" className="text-ink-muted text-sm no-underline hover:text-ink transition-colors">← Back</Link>
         <span className="font-mono text-sm text-ink-muted">{substrandCode}</span>
       </div>
 

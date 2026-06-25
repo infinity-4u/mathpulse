@@ -7,6 +7,7 @@
 'use client'
 
 import { useState, useCallback } from 'react'
+import Link from 'next/link'
 import { useStudentSession } from '@/contexts/StudentSessionContext'
 import { YEAR_7, strandColour } from '@/lib/curriculum'
 import { color, typography, space, touch } from '@/theme/tokens'
@@ -175,7 +176,7 @@ function SubstrandPicker() {
           <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
         {strand.substrands.map(s => (
           <li key={s.code} style={{ marginBottom: space[2] }}>
-            <a
+            <Link
               href={`/practice/session/${s.code}`}
               style={{
                 display: 'flex',
@@ -195,7 +196,7 @@ function SubstrandPicker() {
                 <div style={{ fontSize: typography.fontSize.sm, color: color.textMuted, fontFamily: 'ui-monospace, monospace' }}>{s.code}</div>
               </div>
               <span style={{ color: color.textMuted }}>→</span>
-            </a>
+            </Link>
           </li>
         ))}
           </ul>

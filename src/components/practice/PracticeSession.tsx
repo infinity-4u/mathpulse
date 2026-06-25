@@ -16,6 +16,7 @@
  * CONTRACT.md: no LLM calls, no localStorage, no tracking SDKs, no PII in logs.
  */
 import { useState, useCallback, useEffect, useRef } from 'react'
+import Link from 'next/link'
 import { useStudentSession } from '@/contexts/StudentSessionContext'
 import { isCorrect } from '@/lib/answer'
 import { detectError, nextRepairStep, initialRepairState, type RepairState, type CommonError } from '@/lib/repair'
@@ -287,7 +288,7 @@ export function PracticeSession({ questions, substrandCode }: PracticeSessionPro
     return (
       <div className="text-center py-16 px-6">
         <p className="text-ink-muted mb-4">Session expired.</p>
-        <a href="/practice" className="text-primary block mb-4">Enter your PIN to continue →</a>
+        <Link href="/practice" className="text-primary block mb-4">Enter your PIN to continue →</Link>
         <button
           onClick={() => {
             const now = Math.floor(Date.now() / 1000)
@@ -325,12 +326,12 @@ export function PracticeSession({ questions, substrandCode }: PracticeSessionPro
           {correct}/{attempted} correct
         </p>
         <p className="text-ink-muted mb-8">{substrandCode}</p>
-        <a
+        <Link
           href="/practice"
           className="inline-block bg-primary text-white no-underline rounded-xl px-8 py-3 text-base font-semibold hover:bg-primary-dark transition-colors"
         >
           Practise again
-        </a>
+        </Link>
       </div>
     )
   }
@@ -355,7 +356,7 @@ export function PracticeSession({ questions, substrandCode }: PracticeSessionPro
   return (
     <div className="max-w-[600px] mx-auto px-4 py-6">
       <div className="flex justify-between items-center mb-5">
-        <a href="/practice" className="text-ink-muted text-sm no-underline hover:text-ink transition-colors">← Back</a>
+        <Link href="/practice" className="text-ink-muted text-sm no-underline hover:text-ink transition-colors">← Back</Link>
         <span className="font-mono text-sm text-ink-muted">{substrandCode}</span>
       </div>
 

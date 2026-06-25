@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import plugin from 'tailwindcss/plugin'
 
 // Token values mirrored from src/theme/tokens.ts — keep in sync when tokens change
 const config: Config = {
@@ -63,7 +64,12 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // calm: variant — active when <html data-calm> is set by CalmModeContext
+    plugin(({ addVariant }) => {
+      addVariant('calm', '[data-calm] &')
+    }),
+  ],
 }
 
 export default config

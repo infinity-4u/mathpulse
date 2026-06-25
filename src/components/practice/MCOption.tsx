@@ -20,8 +20,8 @@ interface MCOptionProps {
 
 // Full class strings written as literals so Tailwind JIT includes them
 const BTN: Record<string, string> = {
-  default:  'bg-surface border-edge-strong text-ink hover:bg-primary-light hover:border-primary cursor-pointer',
-  selected: 'bg-primary-light border-primary text-ink cursor-pointer',
+  default:  'bg-surface border-edge-strong text-ink hover:bg-primary-light hover:border-primary cursor-pointer calm:hover:bg-calm-primary/5 calm:hover:border-calm-primary',
+  selected: 'bg-primary-light border-primary text-ink cursor-pointer calm:bg-calm-primary/10 calm:border-calm-primary',
   correct:  'bg-success-light border-success text-ink cursor-default',
   repair:   'bg-repair-light border-repair text-ink cursor-default',
   locked:   'bg-surface border-edge text-ink-muted cursor-default pointer-events-none opacity-60',
@@ -29,7 +29,7 @@ const BTN: Record<string, string> = {
 
 const RADIO_BORDER: Record<string, string> = {
   default:  'border-edge-strong',
-  selected: 'border-primary bg-primary',
+  selected: 'border-primary bg-primary calm:border-calm-primary calm:bg-calm-primary',
   correct:  'border-success bg-success',
   repair:   'border-repair bg-repair',
   locked:   'border-edge',
@@ -49,8 +49,8 @@ export function MCOption({ optionHtml, rawValue, isSelected, onSelect, revealSta
       aria-checked={isSelected}
       onClick={!revealState ? () => onSelect(rawValue) : undefined}
       className={cn(
-        'flex items-center gap-4 w-full px-4 py-3 rounded-lg border-2 text-left min-h-touch text-base transition-all duration-150',
-        'focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 outline-none',
+        'flex items-center gap-4 w-full px-4 py-3 rounded-lg border-2 text-left min-h-touch text-base transition-all duration-150 calm:transition-none',
+        'focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 calm:focus-visible:ring-calm-primary outline-none',
         BTN[stateKey],
       )}
     >

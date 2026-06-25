@@ -30,6 +30,15 @@
   :focus:not(:focus-visible) {
     outline: none;
   }
+
+  /* Calm mode — warm canvas, muted-green focus rings */
+  [data-calm] body {
+    background-color: #F5F0E8;
+  }
+
+  [data-calm] :focus-visible {
+    outline-color: #2D5A3D;
+  }
 }
 
 @layer utilities {

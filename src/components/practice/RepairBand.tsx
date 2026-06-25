@@ -38,8 +38,8 @@ export function framingLine(error: CommonError): string {
   }
 }
 
-const primaryBtn = 'bg-repair text-white border-0 rounded-lg px-5 py-2.5 text-base font-semibold cursor-pointer min-h-touch hover:bg-repair/90 active:scale-[0.98] transition-all duration-150 focus-visible:ring-2 focus-visible:ring-repair focus-visible:ring-offset-1 outline-none'
-const secondaryBtn = 'bg-transparent text-repair border border-repair rounded-lg px-5 py-2.5 text-base font-semibold cursor-pointer min-h-touch hover:bg-repair-light active:scale-[0.98] transition-all duration-150 focus-visible:ring-2 focus-visible:ring-repair focus-visible:ring-offset-1 outline-none disabled:opacity-50 disabled:cursor-not-allowed'
+const primaryBtn = 'bg-repair text-white border-0 rounded-lg px-5 py-2.5 text-base font-semibold cursor-pointer min-h-touch hover:bg-repair/90 active:scale-[0.98] transition-all duration-150 calm:transition-none focus-visible:ring-2 focus-visible:ring-repair focus-visible:ring-offset-1 outline-none'
+const secondaryBtn = 'bg-transparent text-repair border border-repair rounded-lg px-5 py-2.5 text-base font-semibold cursor-pointer min-h-touch hover:bg-repair-light active:scale-[0.98] transition-all duration-150 calm:transition-none focus-visible:ring-2 focus-visible:ring-repair focus-visible:ring-offset-1 outline-none disabled:opacity-50 disabled:cursor-not-allowed'
 
 export function RepairBand({
   matchedError,

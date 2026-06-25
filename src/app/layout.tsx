@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import 'katex/dist/katex.min.css'
 import './globals.css'
 import { StudentSessionProvider } from '@/contexts/StudentSessionContext'
+import { CalmModeProvider } from '@/contexts/CalmModeContext'
 import { NavBar } from '@/components/ui/NavBar'
 
 // Self-hosted at build time via next/font — no runtime request to Google (privacy-safe)
@@ -22,10 +23,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-AU" className={inter.variable}>
       <body>
-        <StudentSessionProvider>
-          <NavBar />
-          {children}
-        </StudentSessionProvider>
+        <CalmModeProvider>
+          <StudentSessionProvider>
+            <NavBar />
+            {children}
+          </StudentSessionProvider>
+        </CalmModeProvider>
       </body>
     </html>
   )

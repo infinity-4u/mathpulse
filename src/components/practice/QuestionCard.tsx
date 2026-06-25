@@ -76,7 +76,7 @@ export function QuestionCard({
   }
 
   return (
-    <div className="bg-surface rounded-xl p-6 shadow-raised">
+    <div className="bg-surface rounded-xl p-6 shadow-raised calm:shadow-card">
       {/* Header — stacked left: strand eyebrow → counter → progress dots */}
       <div className="mb-6">
         {strand && (
@@ -92,7 +92,7 @@ export function QuestionCard({
               className={cn(
                 'w-2 h-2 rounded-full transition-colors duration-300',
                 i < questionNumber - 1 ? 'bg-success'
-                : i === questionNumber - 1 ? 'bg-primary'
+                : i === questionNumber - 1 ? 'bg-primary calm:bg-calm-primary'
                 : 'bg-edge'
               )}
             />
@@ -141,7 +141,7 @@ export function QuestionCard({
         <button
           onClick={onSubmit}
           disabled={submitDisabled || selectedAnswer.trim() === ''}
-          className="w-full bg-primary text-white border-0 rounded-xl py-4 text-base font-bold min-h-[48px] transition-all duration-150 outline-none enabled:cursor-pointer enabled:hover:bg-primary-dark enabled:active:scale-[0.98] enabled:focus-visible:ring-2 enabled:focus-visible:ring-primary enabled:focus-visible:ring-offset-2 disabled:opacity-40 disabled:cursor-not-allowed"
+          className="w-full bg-primary text-white border-0 rounded-xl py-4 text-base font-bold min-h-[48px] transition-all duration-150 calm:transition-none calm:bg-calm-primary outline-none enabled:cursor-pointer enabled:hover:bg-primary-dark calm:enabled:hover:bg-calm-primary/80 enabled:active:scale-[0.98] enabled:focus-visible:ring-2 enabled:focus-visible:ring-primary calm:enabled:focus-visible:ring-calm-primary enabled:focus-visible:ring-offset-2 disabled:opacity-40 disabled:cursor-not-allowed"
         >
           Check answer
         </button>

@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { YEAR_7 } from '@/lib/curriculum'
+import { CalmToggle } from '@/components/ui/CalmToggle'
 
 export function NavBar() {
   const pathname = usePathname()
@@ -34,7 +35,7 @@ export function NavBar() {
           ))}
         </div>
 
-        {/* Right links */}
+        {/* Right — links + calm toggle */}
         <div className="flex items-center gap-4">
           <Link href="/teacher/dashboard" className="text-sm font-medium text-ink-muted no-underline hover:text-ink transition-colors">
             Teachers
@@ -42,6 +43,7 @@ export function NavBar() {
           <Link href="/parent/dashboard" className="text-sm font-medium text-ink-muted no-underline hover:text-ink transition-colors">
             Parents
           </Link>
+          <CalmToggle />
         </div>
 
       </nav>

@@ -63,7 +63,7 @@ export function WorkedSolution({ solutionHtml, onNext }: WorkedSolutionProps) {
         <button
           onClick={() => setVisibleCount(c => c + 1)}
           aria-label={`Show step ${visibleCount + 1} of ${steps.length}`}
-          className="mt-4 bg-transparent text-success border border-success rounded-lg px-5 py-2.5 text-base font-semibold cursor-pointer min-h-touch hover:bg-success/10 active:scale-[0.98] transition-all duration-150 focus-visible:ring-2 focus-visible:ring-success focus-visible:ring-offset-1 outline-none"
+          className="mt-4 bg-transparent text-success border border-success rounded-lg px-5 py-2.5 text-base font-semibold cursor-pointer min-h-touch hover:bg-success/10 active:scale-[0.98] transition-all duration-150 calm:transition-none focus-visible:ring-2 focus-visible:ring-success focus-visible:ring-offset-1 outline-none"
         >
           Next step →
         </button>
@@ -72,7 +72,7 @@ export function WorkedSolution({ solutionHtml, onNext }: WorkedSolutionProps) {
       {allVisible && onNext && (
         <button
           onClick={onNext}
-          className="mt-5 bg-primary text-white border-0 rounded-lg px-6 py-3 text-base font-semibold cursor-pointer min-h-touch hover:bg-primary-dark active:scale-[0.98] transition-all duration-150 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 outline-none"
+          className="mt-5 bg-primary text-white border-0 rounded-lg px-6 py-3 text-base font-semibold cursor-pointer min-h-touch hover:bg-primary-dark calm:bg-calm-primary calm:hover:bg-calm-primary/80 active:scale-[0.98] transition-all duration-150 calm:transition-none focus-visible:ring-2 focus-visible:ring-primary calm:focus-visible:ring-calm-primary focus-visible:ring-offset-1 outline-none"
         >
           Next question →
         </button>

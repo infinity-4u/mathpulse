@@ -1,15 +1,14 @@
 /**
  * A single multiple-choice option button.
- * The displayed HTML is pre-rendered KaTeX; the raw value is used for answer comparison.
+ * HTML is pre-rendered KaTeX from the server; rawValue is used for answer comparison.
  *
- * revealState controls post-submit visual:
- *   'correct' — successLight bg, ✓ glyph (chosen option was right)
- *   'repair'  — repairLight bg, ⟳ glyph  (chosen option was wrong)
- *   'locked'  — textMuted, pointer-events:none (non-chosen when worked solution shown)
- *   undefined — default interactive state
+ * revealState post-submit:
+ *   'correct' — green bg, ✓ glyph   (student's correct choice)
+ *   'repair'  — amber bg, ⟳ glyph   (student's wrong choice)
+ *   'locked'  — muted, non-interactive (non-chosen when worked solution shown)
  */
+import { cn } from '@/lib/cn'
 import { MathText } from '@/components/ui/MathText'
-import { color, typography, space, touch } from '@/theme/tokens'
 
 interface MCOptionProps {
   optionHtml:   string
@@ -19,93 +18,58 @@ interface MCOptionProps {
   revealState?: 'correct' | 'repair' | 'locked'
 }
 
+// Full class strings written as literals so Tailwind JIT includes them
+const BTN: Record<string, string> = {
+  default:  'bg-surface border-edge-strong text-ink hover:bg-primary-light hover:border-primary cursor-pointer',
+  selected: 'bg-primary-light border-primary text-ink cursor-pointer',
+  correct:  'bg-success-light border-success text-ink cursor-default',
+  repair:   'bg-repair-light border-repair text-ink cursor-default',
+  locked:   'bg-surface border-edge text-ink-muted cursor-default pointer-events-none opacity-60',
+}
+
+const RADIO_BORDER: Record<string, string> = {
+  default:  'border-edge-strong',
+  selected: 'border-primary bg-primary',
+  correct:  'border-success bg-success',
+  repair:   'border-repair bg-repair',
+  locked:   'border-edge',
+}
+
 export function MCOption({ optionHtml, rawValue, isSelected, onSelect, revealState }: MCOptionProps) {
-  const isInteractive = !revealState
-
-  const bg = revealState === 'correct' ? color.successLight
-           : revealState === 'repair'  ? color.repairLight
-           : isSelected                ? color.primaryLight
-           :                            color.surface
-
-  const borderColor = revealState === 'correct' ? color.success
-                    : revealState === 'repair'  ? color.repair
-                    : revealState === 'locked'  ? color.border
-                    : isSelected                ? color.primary
-                    :                            color.borderStrong
-
-  const radioFill = revealState === 'correct' ? color.success
-                  : revealState === 'repair'  ? color.repair
-                  : isSelected                ? color.primary
-                  :                            undefined
-
-  const showInnerDot = !!radioFill
+  const stateKey = revealState ?? (isSelected ? 'selected' : 'default')
+  const filled   = stateKey === 'selected' || stateKey === 'correct' || stateKey === 'repair'
 
   const statusGlyph = revealState === 'correct' ? '✓' : revealState === 'repair' ? '⟳' : null
-  const statusColor = revealState === 'correct' ? color.success : color.repair
+  const glyphColor  = revealState === 'correct' ? 'text-success' : 'text-repair'
 
   return (
     <button
       type="button"
       role="radio"
       aria-checked={isSelected}
-      onClick={isInteractive ? () => onSelect(rawValue) : undefined}
-      style={{
-        display:       'flex',
-        alignItems:    'center',
-        gap:           space[4],
-        width:         '100%',
-        padding:       `${space[3]} ${space[4]}`,
-        background:    bg,
-        border:        `2px solid ${borderColor}`,
-        borderRadius:  '8px',
-        cursor:        isInteractive ? 'pointer' : 'default',
-        textAlign:     'left',
-        minHeight:     touch.minSize,
-        fontSize:      typography.fontSize.base,
-        color:         revealState === 'locked' ? color.textMuted : color.text,
-        pointerEvents: revealState === 'locked' ? 'none' : 'auto',
-      }}
+      onClick={!revealState ? () => onSelect(rawValue) : undefined}
+      className={cn(
+        'flex items-center gap-4 w-full px-4 py-3 rounded-lg border-2 text-left min-h-touch text-base transition-all duration-150',
+        'focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 outline-none',
+        BTN[stateKey],
+      )}
     >
-      {/* Radio glyph */}
-      <span style={{
-        flexShrink:     0,
-        width:          '20px',
-        height:         '20px',
-        borderRadius:   '50%',
-        border:         `2px solid ${borderColor}`,
-        background:     radioFill ?? 'transparent',
-        display:        'flex',
-        alignItems:     'center',
-        justifyContent: 'center',
-      }}>
-        {showInnerDot && (
-          <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: color.surface, display: 'block' }} />
-        )}
+      {/* Radio circle */}
+      <span className={cn(
+        'shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors duration-150',
+        RADIO_BORDER[stateKey],
+      )}>
+        {filled && <span className="w-2 h-2 rounded-full bg-white block" />}
       </span>
 
       {/* Option content */}
-      <span style={{ flex: 1 }}>
+      <span className="flex-1 text-left">
         <MathText html={optionHtml} />
-        {revealState === 'correct' && (
-          <span style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}>
-            Correct answer
-          </span>
-        )}
+        {revealState === 'correct' && <span className="sr-only">Correct answer</span>}
       </span>
 
-      {/* Status slot — 18px reserved so glyphs never reflow the row */}
-      <span
-        aria-hidden="true"
-        style={{
-          flexShrink: 0,
-          width:      '18px',
-          textAlign:  'center',
-          fontSize:   '16px',
-          color:      statusColor,
-          fontWeight: typography.fontWeight.bold,
-          lineHeight: '1',
-        }}
-      >
+      {/* Status glyph slot — 18px reserved width prevents layout reflow */}
+      <span aria-hidden="true" className={cn('shrink-0 w-[18px] text-center text-base font-bold leading-none', glyphColor)}>
         {statusGlyph}
       </span>
     </button>

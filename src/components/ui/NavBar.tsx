@@ -3,53 +3,22 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { YEAR_7 } from '@/lib/curriculum'
-import { color, typography, space } from '@/theme/tokens'
 
 export function NavBar() {
   const pathname = usePathname()
 
-  const isPractice = pathname?.startsWith('/practice') || pathname?.startsWith('/year')
-
   return (
-    <header style={{
-      background: '#fff',
-      borderBottom: `1px solid ${color.border}`,
-      position: 'sticky',
-      top: 0,
-      zIndex: 100,
-    }}>
-      <nav style={{
-        maxWidth: '1100px',
-        margin: '0 auto',
-        padding: `0 ${space[6]}`,
-        height: '56px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        gap: space[4],
-      }}>
+    <header className="bg-surface border-b border-edge sticky top-0 z-50">
+      <nav className="max-w-[1100px] mx-auto px-6 h-14 flex items-center justify-between gap-4">
+
         {/* Logo */}
-        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: space[2] }}>
-          <span style={{
-            fontWeight: typography.fontWeight.bold,
-            fontSize: typography.fontSize.lg,
-            color: color.primary,
-            letterSpacing: '-0.02em',
-          }}>
-            AusMaths
-          </span>
-          <span style={{
-            fontSize: typography.fontSize.sm,
-            color: color.textMuted,
-            fontWeight: typography.fontWeight.medium,
-            background: '#F3F4F6',
-            borderRadius: '4px',
-            padding: '2px 6px',
-          }}>Year 7</span>
+        <Link href="/" className="no-underline flex items-center gap-2">
+          <span className="font-bold text-lg text-primary tracking-tight">AusMaths</span>
+          <span className="text-xs text-ink-muted font-medium bg-canvas rounded px-1.5 py-0.5">Year 7</span>
         </Link>
 
         {/* Centre links */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: space[1] }}>
+        <div className="flex items-center gap-0.5">
           <NavLink href="/year/7" active={pathname?.startsWith('/year/7') ?? false}>
             Topics
           </NavLink>
@@ -66,41 +35,38 @@ export function NavBar() {
         </div>
 
         {/* Right links */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: space[3] }}>
-          <Link href="/teacher/dashboard" style={linkStyle}>Teachers</Link>
-          <Link href="/parent/dashboard" style={linkStyle}>Parents</Link>
+        <div className="flex items-center gap-4">
+          <Link href="/teacher/dashboard" className="text-sm font-medium text-ink-muted no-underline hover:text-ink transition-colors">
+            Teachers
+          </Link>
+          <Link href="/parent/dashboard" className="text-sm font-medium text-ink-muted no-underline hover:text-ink transition-colors">
+            Parents
+          </Link>
         </div>
+
       </nav>
     </header>
   )
 }
 
 function NavLink({ href, active, colour, children }: {
-  href: string
-  active: boolean
-  colour?: string
+  href:     string
+  active:   boolean
+  colour?:  string
   children: React.ReactNode
 }) {
   return (
-    <Link href={href} style={{
-      textDecoration: 'none',
-      fontSize: typography.fontSize.sm,
-      fontWeight: active ? typography.fontWeight.bold : typography.fontWeight.medium,
-      color: active ? (colour ?? color.primary) : color.textMuted,
-      padding: `${space[2]} ${space[3]}`,
-      borderRadius: '6px',
-      background: active ? `${colour ?? color.primary}15` : 'transparent',
-      transition: 'background 0.15s',
-      borderBottom: active ? `2px solid ${colour ?? color.primary}` : '2px solid transparent',
-    }}>
+    <Link
+      href={href}
+      className="no-underline text-sm font-medium px-3 py-2 rounded-md transition-all duration-150"
+      style={{
+        color:        active ? (colour ?? '#1B5E9B') : '#4B5563',
+        background:   active ? `${colour ?? '#1B5E9B'}18` : 'transparent',
+        borderBottom: active ? `2px solid ${colour ?? '#1B5E9B'}` : '2px solid transparent',
+        fontWeight:   active ? '700' : '500',
+      }}
+    >
       {children}
     </Link>
   )
-}
-
-const linkStyle: React.CSSProperties = {
-  textDecoration: 'none',
-  fontSize: typography.fontSize.sm,
-  fontWeight: typography.fontWeight.medium,
-  color: color.textMuted,
 }

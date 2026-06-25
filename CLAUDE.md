@@ -25,11 +25,17 @@ Binding rules: `docs/CONTRACT.md` (read it). Plan: `docs/PLAN.md`.
 - If a change touches auth, DB schema, RLS, privacy, data residency, or anything scope-locked
   → STOP and ask.
 
+## Deployment
+
+**Platform:** Hetzner VPS · Caddy + Docker Compose · **not Vercel, not PM2**  
+**Guide:** `docs/DEPLOY.md` — read this before touching deploys.  
+**Short version:** `sshpass` password auth only (SSH keys don't work on this server); rsync → docker build → docker stop/rm → up -d; verify on port 3005.  
+**Live URL:** https://maths.graphsight.app (basic auth: admin / waqar)
+
 ## Stack (working decision — Option A; revisit only with sign-off)
 
-Next.js (web-first, SSR) · Supabase (Postgres + auth + RLS, Sydney) · KaTeX for math · Vercel
-edge pinned to Sydney for anything touching user data.
-Commands: `<dev>` / `<test>` / `<build>` / `<deploy>` — fill in as the repo takes shape.
+Next.js (web-first, SSR) · Supabase (Postgres + auth + RLS, Sydney) · KaTeX for math.
+Commands: `npm run dev` / `npm test` / `npm run build` / see `docs/DEPLOY.md` for deploy.
 
 ## Where things live
 

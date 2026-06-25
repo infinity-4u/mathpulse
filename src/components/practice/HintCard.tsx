@@ -1,9 +1,8 @@
 /**
- * Displays a hint in the repair flow.
+ * Single hint card in the repair flow.
  * Hint text is pre-rendered KaTeX HTML from the server.
  */
 import { MathText } from '@/components/ui/MathText'
-import { color, typography, space } from '@/theme/tokens'
 
 interface HintCardProps {
   hintHtml:   string
@@ -16,42 +15,22 @@ export function HintCard({ hintHtml, hintNumber }: HintCardProps) {
     <div
       role="note"
       aria-label={`Hint ${hintNumber}`}
-      style={{
-        background:   color.repairLight,
-        border:       `1px solid ${color.repair}`,
-        borderLeft:   `4px solid ${color.repair}`,
-        borderRadius: '6px',
-        padding:      `${space[3]} ${space[4]}`,
-        marginTop:    space[3],
-      }}
+      className="bg-repair-light border border-repair border-l-4 rounded-md px-4 py-3 mt-3"
     >
       {/* Header: numbered badge + label */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: space[2], marginBottom: space[2] }}>
+      <div className="flex items-center gap-2 mb-2">
         <span
           aria-hidden="true"
-          style={{
-            width:          '20px',
-            height:         '20px',
-            borderRadius:   '50%',
-            background:     color.surface,
-            border:         `1px solid ${color.repair}`,
-            color:          color.repair,
-            fontSize:       '11px',
-            fontWeight:     typography.fontWeight.bold,
-            display:        'flex',
-            alignItems:     'center',
-            justifyContent: 'center',
-            flexShrink:     0,
-          }}
+          className="shrink-0 w-5 h-5 rounded-full bg-surface border border-repair text-repair text-[11px] font-bold flex items-center justify-center leading-none"
         >
           {hintNumber}
         </span>
-        <span style={{ fontSize: typography.fontSize.sm, fontWeight: typography.fontWeight.medium, color: color.repair }}>
-          Hint {hintNumber}
-        </span>
+        <span className="text-sm font-medium text-repair">Hint {hintNumber}</span>
       </div>
 
-      <MathText html={hintHtml} block />
+      <div className="text-ink leading-normal text-base">
+        <MathText html={hintHtml} block />
+      </div>
     </div>
   )
 }

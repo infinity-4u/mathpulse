@@ -25,7 +25,7 @@ import { RepairBand } from './RepairBand'
 import { HintCard } from './HintCard'
 import { WorkedSolution } from './WorkedSolution'
 import { SpacedRetrievalBand } from './SpacedRetrievalBand'
-import { color, typography, space } from '@/theme/tokens'
+import { cn } from '@/lib/cn'
 import type { PreRenderedQuestion } from '@/lib/content'
 
 type QuestionState = 'idle' | 'correct' | 'incorrect'
@@ -285,15 +285,15 @@ export function PracticeSession({ questions, substrandCode }: PracticeSessionPro
   // ── No session ────────────────────────────────────────────────────────────
   if (!session) {
     return (
-      <div style={{ textAlign: 'center', padding: space[16] }}>
-        <p style={{ color: color.textMuted, marginBottom: space[4] }}>Session expired.</p>
-        <a href="/practice" style={{ color: color.primary, display: 'block', marginBottom: space[4] }}>Enter your PIN to continue →</a>
+      <div className="text-center py-16 px-6">
+        <p className="text-ink-muted mb-4">Session expired.</p>
+        <a href="/practice" className="text-primary block mb-4">Enter your PIN to continue →</a>
         <button
           onClick={() => {
             const now = Math.floor(Date.now() / 1000)
             setSession({ token: 'demo', studentId: 'demo-student', classIds: [], expiresAt: now + 8 * 3600 })
           }}
-          style={{ background: 'none', border: `1px solid ${color.border}`, borderRadius: '8px', padding: `${space[3]} ${space[5]}`, color: color.textMuted, fontSize: typography.fontSize.sm, cursor: 'pointer' }}
+          className="bg-transparent border border-edge rounded-lg px-5 py-3 text-sm text-ink-muted cursor-pointer hover:bg-canvas transition-colors"
         >
           Continue as guest
         </button>
@@ -315,21 +315,19 @@ export function PracticeSession({ questions, substrandCode }: PracticeSessionPro
 
   // ── Finished screen ───────────────────────────────────────────────────────
   if (finished) {
-    const correct  = correctRef.current
+    const correct   = correctRef.current
     const attempted = attemptedRef.current
     const pct = attempted > 0 ? Math.round((correct / attempted) * 100) : 0
     return (
-      <div style={{ maxWidth: '480px', margin: '0 auto', padding: `${space[16]} ${space[6]}`, textAlign: 'center' }}>
-        <h1 style={{ fontSize: typography.fontSize['3xl'], fontWeight: typography.fontWeight.bold, color: color.text, marginBottom: space[3] }}>
-          Session complete
-        </h1>
-        <p style={{ fontSize: typography.fontSize['2xl'], fontWeight: typography.fontWeight.bold, color: pct >= 80 ? color.success : color.repair, marginBottom: space[2] }}>
+      <div className="max-w-[480px] mx-auto px-6 py-16 text-center">
+        <h1 className="text-3xl font-bold text-ink mb-3">Session complete</h1>
+        <p className={cn('text-2xl font-bold mb-2', pct >= 80 ? 'text-success' : 'text-repair')}>
           {correct}/{attempted} correct
         </p>
-        <p style={{ color: color.textMuted, marginBottom: space[8] }}>{substrandCode}</p>
+        <p className="text-ink-muted mb-8">{substrandCode}</p>
         <a
           href="/practice"
-          style={{ background: color.primary, color: color.surface, borderRadius: '8px', padding: `${space[3]} ${space[8]}`, fontSize: typography.fontSize.base, fontWeight: typography.fontWeight.medium, textDecoration: 'none', display: 'inline-block' }}
+          className="inline-block bg-primary text-white no-underline rounded-xl px-8 py-3 text-base font-semibold hover:bg-primary-dark transition-colors"
         >
           Practise again
         </a>
@@ -355,14 +353,10 @@ export function PracticeSession({ questions, substrandCode }: PracticeSessionPro
     : null
 
   return (
-    <div style={{ maxWidth: '600px', margin: '0 auto', padding: `${space[6]} ${space[4]}` }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: space[5] }}>
-        <a href="/practice" style={{ color: color.textMuted, fontSize: typography.fontSize.sm, textDecoration: 'none' }}>
-          ← Back
-        </a>
-        <span style={{ fontFamily: 'ui-monospace, monospace', fontSize: typography.fontSize.sm, color: color.textMuted }}>
-          {substrandCode}
-        </span>
+    <div className="max-w-[600px] mx-auto px-4 py-6">
+      <div className="flex justify-between items-center mb-5">
+        <a href="/practice" className="text-ink-muted text-sm no-underline hover:text-ink transition-colors">← Back</a>
+        <span className="font-mono text-sm text-ink-muted">{substrandCode}</span>
       </div>
 
       {question && (

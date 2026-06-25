@@ -1,13 +1,12 @@
 'use client'
 
 /**
- * Displays the worked solution one step at a time.
- * Steps are split on double newlines (\n\n) in the pre-rendered HTML.
- * Each step is revealed by a "Next step →" button; focus moves to the new step.
+ * Step-by-step worked solution.
+ * Steps split on double newlines. Each step revealed individually;
+ * focus moves to the newly revealed step for keyboard/screen-reader users.
  */
 import { useState, useRef, useEffect } from 'react'
 import { MathText } from '@/components/ui/MathText'
-import { color, typography, space, touch } from '@/theme/tokens'
 
 interface WorkedSolutionProps {
   solutionHtml: string
@@ -22,14 +21,11 @@ export function WorkedSolution({ solutionHtml, onNext }: WorkedSolutionProps) {
   const steps = splitSteps(solutionHtml)
   const [visibleCount, setVisibleCount] = useState(1)
 
-  const stepRefs = useRef<(HTMLDivElement | null)[]>([])
+  const stepRefs    = useRef<(HTMLDivElement | null)[]>([])
   const isFirstRender = useRef(true)
 
   useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false
-      return
-    }
+    if (isFirstRender.current) { isFirstRender.current = false; return }
     stepRefs.current[visibleCount - 1]?.focus()
   }, [visibleCount])
 
@@ -39,43 +35,26 @@ export function WorkedSolution({ solutionHtml, onNext }: WorkedSolutionProps) {
     <div
       role="note"
       aria-label="Worked solution"
-      style={{
-        background:   color.successLight,
-        border:       `1px solid ${color.success}`,
-        borderLeft:   `4px solid ${color.success}`,
-        borderRadius: '6px',
-        padding:      `${space[4]} ${space[5]}`,
-        marginTop:    space[4],
-      }}
+      className="bg-success-light border border-success border-l-4 rounded-md px-5 py-4 mt-4"
     >
-      <h3 style={{
-        fontSize:      typography.fontSize.sm,
-        fontWeight:    typography.fontWeight.bold,
-        color:         color.success,
-        marginBottom:  space[3],
-        textTransform: 'uppercase',
-        letterSpacing: '0.05em',
-      }}>
+      <h3 className="text-sm font-bold text-success mb-4 uppercase tracking-widest">
         Worked solution
       </h3>
 
-      <div style={{ color: color.text, lineHeight: typography.lineHeight.loose }}>
+      <div className="text-ink">
         {steps.slice(0, visibleCount).map((step, i) => (
           <div
             key={i}
             ref={el => { stepRefs.current[i] = el }}
             tabIndex={-1}
-            style={{
-              marginBottom:  i < visibleCount - 1 ? space[3] : 0,
-              paddingBottom: i < visibleCount - 1 ? space[3] : 0,
-              borderBottom:  i < visibleCount - 1 ? `1px solid ${color.border}` : 'none',
-              outline:       'none',
-            }}
+            className={`outline-none ${i < visibleCount - 1 ? 'mb-4 pb-4 border-b border-edge' : ''}`}
           >
-            <p style={{ fontSize: typography.fontSize.sm, color: color.textMuted, margin: `0 0 ${space[1]}` }}>
+            <p className="text-xs font-semibold text-ink-muted uppercase tracking-wider mb-1.5">
               Step {i + 1}
             </p>
-            <MathText html={step} block />
+            <div className="leading-relaxed">
+              <MathText html={step} block />
+            </div>
           </div>
         ))}
       </div>
@@ -84,18 +63,7 @@ export function WorkedSolution({ solutionHtml, onNext }: WorkedSolutionProps) {
         <button
           onClick={() => setVisibleCount(c => c + 1)}
           aria-label={`Show step ${visibleCount + 1} of ${steps.length}`}
-          style={{
-            marginTop:    space[4],
-            background:   'transparent',
-            color:        color.success,
-            border:       `1px solid ${color.success}`,
-            borderRadius: '6px',
-            padding:      `${space[2]} ${space[5]}`,
-            fontSize:     typography.fontSize.base,
-            fontWeight:   typography.fontWeight.medium,
-            cursor:       'pointer',
-            minHeight:    touch.minSize,
-          }}
+          className="mt-4 bg-transparent text-success border border-success rounded-lg px-5 py-2.5 text-base font-semibold cursor-pointer min-h-touch hover:bg-success/10 active:scale-[0.98] transition-all duration-150 focus-visible:ring-2 focus-visible:ring-success focus-visible:ring-offset-1 outline-none"
         >
           Next step →
         </button>
@@ -104,18 +72,7 @@ export function WorkedSolution({ solutionHtml, onNext }: WorkedSolutionProps) {
       {allVisible && onNext && (
         <button
           onClick={onNext}
-          style={{
-            marginTop:    space[5],
-            background:   color.primary,
-            color:        color.surface,
-            border:       'none',
-            borderRadius: '6px',
-            padding:      `${space[3]} ${space[6]}`,
-            fontSize:     typography.fontSize.base,
-            fontWeight:   typography.fontWeight.medium,
-            cursor:       'pointer',
-            minHeight:    touch.minSize,
-          }}
+          className="mt-5 bg-primary text-white border-0 rounded-lg px-6 py-3 text-base font-semibold cursor-pointer min-h-touch hover:bg-primary-dark active:scale-[0.98] transition-all duration-150 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 outline-none"
         >
           Next question →
         </button>

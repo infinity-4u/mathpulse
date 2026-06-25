@@ -44,3 +44,4 @@ from_claude_unpacked/
 
 # Deploy script contains server credentials — never commit
 deploy.sh
+.deploy.env
